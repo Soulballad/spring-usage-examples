@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>kafka-usage</artifactId>
+    <artifactId>usage-mybatis</artifactId>
 
 
 </project>

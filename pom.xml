@@ -8,14 +8,14 @@
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
-        <module>spring-usage</module>
-        <module>mybatis-usage</module>
-        <module>redis-usage</module>
-        <module>dubbo-usage</module>
-        <module>zookeeper-usage</module>
-        <module>netty-usage</module>
-        <module>kafka-usage</module>
-        <module>rabbitmq-usage</module>
+        <module>usage-spring</module>
+        <module>usage-mybatis</module>
+        <module>usage-redis</module>
+        <module>usage-dubbo</module>
+        <module>usage-zookeeper</module>
+        <module>usage-netty</module>
+        <module>usage-kafka</module>
+        <module>usage-rabbitmq</module>
     </modules>
 
     <name>java-component-usage</name>
@@ -29,9 +29,7 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
 
-            </dependency>
         </dependencies>
     </dependencyManagement>
 

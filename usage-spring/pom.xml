@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>mybatis-usage</artifactId>
+    <artifactId>usage-spring</artifactId>
 
 
 </project>
