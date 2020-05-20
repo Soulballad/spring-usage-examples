@@ -1,4 +1,4 @@
-package com.soulballad.usage.springboot.config.config;
+package com.soulballad.usage.springboot.config;
 
 import org.hibernate.validator.constraints.Range;
 import org.springframework.boot.context.properties.ConfigurationProperties;

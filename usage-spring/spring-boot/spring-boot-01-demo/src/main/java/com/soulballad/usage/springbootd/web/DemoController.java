@@ -1,4 +1,4 @@
-package com.soulballad.usage.springbootd.demo.web;
+package com.soulballad.usage.springbootd.web;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

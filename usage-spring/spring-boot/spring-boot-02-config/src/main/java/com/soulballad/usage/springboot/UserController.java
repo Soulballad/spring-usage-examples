@@ -1,7 +1,7 @@
-package com.soulballad.usage.springboot.config.web;
+package com.soulballad.usage.springboot;
 
-import com.soulballad.usage.springboot.config.config.UserProperties;
-import com.soulballad.usage.springboot.config.config.UserProps;
+import com.soulballad.usage.springboot.config.UserProperties;
+import com.soulballad.usage.springboot.config.UserProps;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,4 +1,4 @@
-package com.soulballad.usage.springboot.config.config;
+package com.soulballad.usage.springboot.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

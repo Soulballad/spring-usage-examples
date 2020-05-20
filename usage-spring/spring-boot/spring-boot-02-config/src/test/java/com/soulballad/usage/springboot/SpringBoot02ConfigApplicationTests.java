@@ -1,4 +1,4 @@
-package com.soulballad.usage.springboot.config;
+package com.soulballad.usage.springboot;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
