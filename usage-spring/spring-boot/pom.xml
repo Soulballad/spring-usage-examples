@@ -10,9 +10,12 @@
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>spring-boot</artifactId>
+    <packaging>pom</packaging>
 
     <modules>
         <module>spring-boot-01-demo</module>
         <module>spring-boot-02-config</module>
+        <module>spring-boot-03-web</module>
+        <module>spring-boot-04-form-validate</module>
     </modules>
 </project>
