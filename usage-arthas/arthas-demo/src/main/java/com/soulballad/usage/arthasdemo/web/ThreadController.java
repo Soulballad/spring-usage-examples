@@ -1,13 +1,15 @@
 package com.soulballad.usage.arthasdemo.web;
 
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@Slf4j
 @Controller
 public class ThreadController {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(ThreadController.class);
 
     private boolean interrupted = false;
 
@@ -17,7 +19,7 @@ public class ThreadController {
         interrupted = false;
         new Thread(() -> {
             while (!interrupted) {
-                log.info("thread occupy ...");
+                LOGGER.info("thread occupy ...");
             }
         }, "occupy-thread").start();
 
@@ -39,7 +41,7 @@ public class ThreadController {
             while (!interrupted) {
                 try {
                     Thread.sleep(1500);
-                    log.info("thread normal ...");
+                    LOGGER.info("thread normal ...");
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -58,15 +60,15 @@ public class ThreadController {
         new Thread(() -> {
             synchronized (objectA) {
                 String threadName = Thread.currentThread().getName();
-                log.info("thread [{}] got objectA", threadName);
+                LOGGER.info("thread [{}] got objectA", threadName);
                 try {
                     Thread.sleep(3000);
                 } catch (InterruptedException e) {
-                    log.error("thread [{}] sleep occurs error, {}", threadName, e);
+                    LOGGER.error("thread [{}] sleep occurs error, {}", threadName, e);
                 }
-                log.info("thread [{}] sleep end", threadName);
+                LOGGER.info("thread [{}] sleep end", threadName);
                 synchronized (objectB) {
-                    log.info("thread [{}] got objectB", threadName);
+                    LOGGER.info("thread [{}] got objectB", threadName);
                 }
             }
         }, "dead-thread-1").start();
@@ -74,15 +76,15 @@ public class ThreadController {
         new Thread(() -> {
             synchronized (objectB) {
                 String threadName = Thread.currentThread().getName();
-                log.info("thread [{}] got objectB", threadName);
+                LOGGER.info("thread [{}] got objectB", threadName);
                 try {
                     Thread.sleep(3000);
                 } catch (InterruptedException e) {
-                    log.error("thread [{}] sleep occurs error, {}", threadName, e);
+                    LOGGER.error("thread [{}] sleep occurs error, {}", threadName, e);
                 }
-                log.info("thread [{}] sleep end", threadName);
+                LOGGER.info("thread [{}] sleep end", threadName);
                 synchronized (objectA) {
-                    log.info("thread [{}] got objectA", threadName);
+                    LOGGER.info("thread [{}] got objectA", threadName);
                 }
             }
         }, "dead-thread-2").start();
