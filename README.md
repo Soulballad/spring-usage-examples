@@ -14,3 +14,4 @@ https://start.spring.io/actuator/info
 - usage-kafka
 - usage-rabbitmq
 - usage-arthas
+- usage-elasticsearch

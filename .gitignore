@@ -5,3 +5,6 @@
 /.project
 /.settings
 **/target
+*.class
+*.classpath
+**/.mvn

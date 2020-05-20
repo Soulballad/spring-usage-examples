@@ -18,6 +18,7 @@
         <module>usage-kafka</module>
         <module>usage-rabbitmq</module>
         <module>usage-arthas</module>
+        <module>usage-elasticsearch</module>
     </modules>
 
     <name>java-component-usage</name>
