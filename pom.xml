@@ -5,7 +5,6 @@
 
     <groupId>com.soulballad.usage</groupId>
     <artifactId>java-component-usage</artifactId>
-    <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
 
     <modules>
@@ -19,10 +18,12 @@
         <module>usage-rabbitmq</module>
         <module>usage-arthas</module>
         <module>usage-elasticsearch</module>
+        <module>usage-pattern</module>
     </modules>
 
     <name>java-component-usage</name>
     <description>Java Component Usage</description>
+    <packaging>pom</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -61,21 +62,6 @@
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>log4j</groupId>
-                <artifactId>log4j</artifactId>
-                <version>${log4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>${slf4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-log4j12</artifactId>
-                <version>${slf4j.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
