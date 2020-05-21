@@ -9,9 +9,9 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring-boot-03-web</artifactId>
+    <artifactId>spring-boot-03-webmvc</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-03-web</name>
+    <name>spring-boot-03-webmvc</name>
     <description>Spring Boot web demo</description>
 
     <properties>
