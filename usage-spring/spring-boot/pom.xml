@@ -17,6 +17,6 @@
         <module>spring-boot-01-demo</module>
         <module>spring-boot-02-config</module>
         <module>spring-boot-03-web</module>
-        <module>spring-boot-04-form-validate</module>
+        <module>spring-boot-04-bean-validate</module>
     </modules>
 </project>

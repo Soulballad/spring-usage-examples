@@ -1,0 +1,64 @@
+###
+# test "/user/list"
+GET http://localhost:8080/user/list
+Accept: application/json
+
+###
+# test "/user/get"
+GET http://localhost:8080/user/get/1
+Accept: application/json
+
+###
+# test "/user/add" success
+POST http://localhost:8080/user/add
+Content-Type: application/json
+Accept: */*
+Cache-Control: no-cache
+
+{
+  "name": "zhaoliu",
+  "age": 43,
+  "idCard": "110101200303072399"
+}
+
+###
+# test "/user/add" idCard&name&age illegal
+POST http://localhost:8080/user/add
+Content-Type: application/json
+Accept: */*
+Cache-Control: no-cache
+Accept-Language: zh_CN
+Content-Language: zh_CN
+lang: zh_CN
+
+{
+  "name": "s",
+  "age": 243,
+  "idCard": "1101003072399"
+}
+
+###
+# test "/user/update" success
+PUT http://localhost:8080/user/update
+Content-Type: application/json
+Accept: */*
+Cache-Control: no-cache
+Accept-Language: zh_CN
+Content-Language: zh_CN
+
+{
+  "id": 2,
+  "name": "sunqi",
+  "age": 43,
+  "idCard": "110101200303072399"
+}
+
+###
+# test "/user/delete" success
+DELETE http://localhost:8080/user/delete/1
+Content-Type: application/json
+Accept: */*
+Cache-Control: no-cache
+Accept-Language: zh_CN
+Content-Language: zh_CN
+

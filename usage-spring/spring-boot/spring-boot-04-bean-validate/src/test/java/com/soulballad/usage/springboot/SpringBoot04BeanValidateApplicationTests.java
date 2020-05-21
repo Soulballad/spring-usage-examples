@@ -3,7 +3,7 @@ package com.soulballad.usage.springboot;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringBoot04FormValidateApplicationTests {
+public class SpringBoot04BeanValidateApplicationTests {
 
     void contextLoads() {}
 

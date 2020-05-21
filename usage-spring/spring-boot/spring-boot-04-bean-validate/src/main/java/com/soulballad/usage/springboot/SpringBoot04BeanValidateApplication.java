@@ -4,10 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBoot04FormValidateApplication {
+public class SpringBoot04BeanValidateApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBoot04FormValidateApplication.class, args);
+        SpringApplication.run(SpringBoot04BeanValidateApplication.class, args);
     }
-
 }
