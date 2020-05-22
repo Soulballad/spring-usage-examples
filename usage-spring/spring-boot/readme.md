@@ -3,8 +3,7 @@ springboot 的常见用法
 - spring-boot-02-config
 - spring-boot-03-webmvc
 - spring-boot-04-bean-validate
-
-- spring-boot-05-demo
+- spring-boot-05-basis
 
 
 
