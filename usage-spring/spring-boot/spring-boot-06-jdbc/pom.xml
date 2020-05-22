@@ -9,16 +9,14 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring-boot-05-basis</artifactId>
+    <artifactId>spring-boot-06-jdbc</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <name>spring-boot-06-jdbc</name>
+    <description>Spring Boot Jdbc Demo</description>
     <packaging>pom</packaging>
-    <name>spring-boot-05-basis</name>
-    <description>Demo project for Spring Boot</description>
 
     <modules>
-        <module>spring-boot-banner</module>
-        <module>spring-boot-actuator</module>
-        <module>spring-boot-admin</module>
-        <module>spring-boot-email</module>
+        <module>spring-boot-jpa-demo</module>
+        <module>spring-boot-multi-datasource</module>
     </modules>
 </project>

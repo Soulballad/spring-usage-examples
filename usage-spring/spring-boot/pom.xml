@@ -18,5 +18,7 @@
         <module>spring-boot-02-config</module>
         <module>spring-boot-03-webmvc</module>
         <module>spring-boot-04-bean-validate</module>
+        <module>spring-boot-05-basis</module>
+        <module>spring-boot-06-jdbc</module>
     </modules>
 </project>

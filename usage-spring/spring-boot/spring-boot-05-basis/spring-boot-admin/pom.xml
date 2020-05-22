@@ -4,21 +4,19 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>spring-boot</artifactId>
+        <artifactId>spring-boot-05-basis</artifactId>
         <groupId>com.soulballad.usage</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring-boot-05-basis</artifactId>
+    <artifactId>spring-boot-admin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <name>spring-boot-05-basis</name>
+    <name>spring-boot-admin</name>
     <description>Demo project for Spring Boot</description>
+    <packaging>pom</packaging>
 
     <modules>
-        <module>spring-boot-banner</module>
-        <module>spring-boot-actuator</module>
-        <module>spring-boot-admin</module>
-        <module>spring-boot-email</module>
+        <module>spring-boot-admin-server</module>
+        <module>spring-boot-admin-client</module>
     </modules>
 </project>
