@@ -16,3 +16,4 @@ https://start.spring.io/actuator/info
 - usage-arthas arthas用法
 - usage-elasticsearch elasticsearch用法
 - usage-pattern pattern用法
+- usage-mock mock用法
