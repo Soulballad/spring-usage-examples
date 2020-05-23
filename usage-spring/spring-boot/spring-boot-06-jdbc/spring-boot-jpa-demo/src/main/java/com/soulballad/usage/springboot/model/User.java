@@ -3,7 +3,9 @@ package com.soulballad.usage.springboot.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * @author ：soulballad
@@ -12,13 +14,16 @@ import javax.persistence.Id;
  * @since ：2020/5/22 22:17
  */
 @Entity
+@Table(name = "t_user")
 public class User {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(nullable = false, unique = true, length = 32)
     private String name;
+    @Column(nullable = false)
+    private Integer age;
     private String birthday;
     private String address;
     @Column(nullable = false, length = 16)
@@ -26,15 +31,16 @@ public class User {
 
     public User() {}
 
-    public Long getId() {
-        return id;
-    }
-
-    public User(String name, String birthday, String address, String phone) {
+    public User(String name, Integer age, String birthday, String address, String phone) {
         this.name = name;
+        this.age = age;
         this.birthday = birthday;
         this.address = address;
         this.phone = phone;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public void setId(Long id) {
@@ -43,6 +49,14 @@ public class User {
 
     public String getName() {
         return name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 
     public void setName(String name) {

@@ -16,6 +16,8 @@ springboot 的常见用法
         - spring-boot-admin-client [admin-client](http://localhost:9090/)
     - spring-boot-email
 - spring-boot-jdbc(jpa,multi-datasource)
+    - spring-boot-jpa-demo(简单查询，关联查询，分页查询，复杂条件查询，更新)
+    - spring-boot-multi-datasource(多数据源)
 - spring-boot-webflux
 - spring-boot-factoriesLoader
 - spring-boot-starter-xxx(自定义starter)

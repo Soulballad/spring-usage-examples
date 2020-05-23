@@ -9,5 +9,4 @@ public class SpringBootJpaDemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringBootJpaDemoApplication.class, args);
     }
-
 }

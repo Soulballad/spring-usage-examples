@@ -1,10 +1,13 @@
 package com.soulballad.usage.springboot.model;
 
+import java.math.BigDecimal;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.math.BigDecimal;
+import javax.persistence.Table;
 
 /**
  * @author ：soulballad
@@ -13,14 +16,15 @@ import java.math.BigDecimal;
  * @since ：2020/5/22 22:20
  */
 @Entity
+@Table(name = "t_order")
 public class Order {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     @Column(nullable = false)
     private Long userId;
     @Column(nullable = false, unique = true)
-    private String oderCode;
+    private String orderCode;
     @Column(nullable = false)
     private BigDecimal totalMoney;
     @Column(nullable = false)
@@ -28,9 +32,9 @@ public class Order {
 
     public Order() {}
 
-    public Order(Long userId, String oderCode, BigDecimal totalMoney, String orderDate) {
+    public Order(Long userId, String orderCode, BigDecimal totalMoney, String orderDate) {
         this.userId = userId;
-        this.oderCode = oderCode;
+        this.orderCode = orderCode;
         this.totalMoney = totalMoney;
         this.orderDate = orderDate;
     }
@@ -51,12 +55,12 @@ public class Order {
         this.userId = userId;
     }
 
-    public String getOderCode() {
-        return oderCode;
+    public String getOrderCode() {
+        return orderCode;
     }
 
-    public void setOderCode(String oderCode) {
-        this.oderCode = oderCode;
+    public void setOrderCode(String oderCode) {
+        this.orderCode = oderCode;
     }
 
     public BigDecimal getTotalMoney() {

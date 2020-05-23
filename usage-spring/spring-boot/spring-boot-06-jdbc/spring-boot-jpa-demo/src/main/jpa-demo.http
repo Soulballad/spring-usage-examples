@@ -1,0 +1,70 @@
+### user all
+GET http://localhost:8080/user/list
+Accept: application/json
+
+### user lisi
+GET http://localhost:8080/user/findByName/lisi
+Accept: application/json
+
+### user 13666666666
+GET http://localhost:8080/user/findByPhone/13666666666
+Accept: application/json
+
+### user page
+GET http://localhost:8080/user/page
+Accept: application/json
+Content-Type: application/json
+
+{
+  "pageable":{
+     "pageNumber":1,
+     "pageSize":3,
+     "orderBy":"age desc"
+  }
+}
+
+### user updateByName
+PUT http://localhost:8080/user/updateByName
+Content-Type: application/json
+
+{
+  "name": "zhangsan",
+  "phone": "13456789012"
+}
+
+### user deleteByName
+DELETE http://localhost:8080/user/deleteByName/zhangsan
+Content-Type: application/json
+
+
+### order all
+GET http://localhost:8080/order/list
+Accept: application/json
+
+### order queryByCode
+GET http://localhost:8080/order/queryByCode/OC2020052312050002
+Accept: application/json
+
+### order queryByExample
+GET http://localhost:8080/order/queryByExample
+Accept: application/json
+Content-Type: application/json
+
+{
+"userId":2,
+"orderCode":"OC202005231",
+"orderDate": "2020-05-20"
+}
+
+### order queryByCondition
+GET http://localhost:8080/order/queryByCondition
+Accept: application/json
+Content-Type: application/json
+
+{
+  "userId": 2,
+  "orderCode": "OC20200523",
+  "totalMoney": 20,
+  "orderStartDate": "2020-02-10 16:17:12",
+  "orderEndDate": "2020-05-30 16:17:12"
+}
