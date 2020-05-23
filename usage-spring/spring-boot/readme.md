@@ -13,7 +13,7 @@ springboot 的常见用法
 - spring-boot-06-jdbc
     - spring-boot-data-jpa(简单查询，关联查询，分页查询，复杂条件查询，更新，删除)
     - spring-boot-multi-datasource(多数据源)
-    - spring-boot-jdbc-template(使用jdbc-template操作数据库)
+    - spring-boot-jdbc-template(使用jdbc-template操作数据库, jdbc-template多数据源)
 
     
 
