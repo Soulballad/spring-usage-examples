@@ -16,7 +16,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>spring-boot-jpa-demo</module>
+        <module>spring-boot-data-jpa</module>
         <module>spring-boot-multi-datasource</module>
+        <module>spring-boot-jdbc-template</module>
     </modules>
 </project>

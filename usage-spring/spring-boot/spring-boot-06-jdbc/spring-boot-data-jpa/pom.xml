@@ -9,9 +9,9 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring-boot-jpa-demo</artifactId>
+    <artifactId>spring-boot-data-jpa</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-jpa-demo</name>
+    <name>spring-boot-data-jpa</name>
     <description>Spring Boot JDBC JPA</description>
 
     <properties>
