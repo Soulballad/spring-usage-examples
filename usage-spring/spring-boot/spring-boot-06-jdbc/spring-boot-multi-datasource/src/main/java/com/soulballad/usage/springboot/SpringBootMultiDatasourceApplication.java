@@ -9,5 +9,4 @@ public class SpringBootMultiDatasourceApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringBootMultiDatasourceApplication.class, args);
     }
-
 }

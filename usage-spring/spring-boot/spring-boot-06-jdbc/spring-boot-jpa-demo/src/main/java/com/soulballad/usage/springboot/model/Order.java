@@ -81,12 +81,7 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Order{" +
-                "id=" + id +
-                ", userId=" + userId +
-                ", orderCode='" + orderCode + '\'' +
-                ", totalMoney=" + totalMoney +
-                ", orderDate='" + orderDate + '\'' +
-                '}';
+        return "Order{" + "id=" + id + ", userId=" + userId + ", orderCode='" + orderCode + '\'' + ", totalMoney="
+            + totalMoney + ", orderDate='" + orderDate + '\'' + '}';
     }
 }

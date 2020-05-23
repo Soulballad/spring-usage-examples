@@ -3,7 +3,6 @@ package com.soulballad.usage.springboot.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -11,26 +10,27 @@ import javax.persistence.Table;
  * @author ：soulballad
  * @version : v1.0
  * @apiNote : user
- * @since ：2020/5/22 22:17
+ * @since ：2020/5/23 17:42
  */
 @Entity
 @Table(name = "t_user")
-public class User {
+public class UserModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Long id;
     @Column(nullable = false, unique = true, length = 32)
     private String name;
     @Column(nullable = false)
     private Integer age;
+    @Column(length = 32)
     private String birthday;
     private String address;
     @Column(nullable = false, length = 16)
     private String phone;
 
-    public User() {}
+    public UserModel() {}
 
-    public User(String name, Integer age, String birthday, String address, String phone) {
+    public UserModel(String name, Integer age, String birthday, String address, String phone) {
         this.name = name;
         this.age = age;
         this.birthday = birthday;
@@ -88,7 +88,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", name='" + name + '\'' + ", age=" + age + ", birthday='" + birthday + '\''
+        return "UserModel{" + "id=" + id + ", name='" + name + '\'' + ", age=" + age + ", birthday='" + birthday + '\''
             + ", address='" + address + '\'' + ", phone='" + phone + '\'' + '}';
     }
 }
