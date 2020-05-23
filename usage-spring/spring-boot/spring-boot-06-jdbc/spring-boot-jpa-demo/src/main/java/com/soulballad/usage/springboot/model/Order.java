@@ -78,4 +78,15 @@ public class Order {
     public void setOrderDate(String orderDate) {
         this.orderDate = orderDate;
     }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", orderCode='" + orderCode + '\'' +
+                ", totalMoney=" + totalMoney +
+                ", orderDate='" + orderDate + '\'' +
+                '}';
+    }
 }
