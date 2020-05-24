@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootWebfluxRouteApplication {
+public class SpringBootWebfluxRouterApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootWebfluxRouteApplication.class, args);
+        SpringApplication.run(SpringBootWebfluxRouterApplication.class, args);
     }
 
 }
