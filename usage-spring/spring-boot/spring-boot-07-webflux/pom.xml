@@ -19,4 +19,7 @@
         <java.version>1.8</java.version>
     </properties>
 
+    <modules>
+        <module>spring-boot-webflux-demo</module>
+    </modules>
 </project>
