@@ -21,5 +21,6 @@
 
     <modules>
         <module>spring-boot-webflux-demo</module>
+        <module>spring-boot-webflux-route</module>
     </modules>
 </project>

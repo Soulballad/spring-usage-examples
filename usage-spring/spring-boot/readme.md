@@ -15,7 +15,8 @@ springboot 的常见用法
     - spring-boot-multi-datasource(多数据源)
     - spring-boot-jdbc-template(使用jdbc-template操作数据库, jdbc-template多数据源)
 - spring-boot-07-webflux
-
+    - spring-boot-webflux-demo(使用注解方式)
+    - spring-boot-webflux-route(使用route路由)
 
 
 - spring-boot-factoriesLoader
