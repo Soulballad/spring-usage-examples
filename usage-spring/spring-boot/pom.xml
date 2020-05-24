@@ -21,5 +21,6 @@
         <module>spring-boot-05-basis</module>
         <module>spring-boot-06-jdbc</module>
         <module>spring-boot-07-webflux</module>
+        <module>spring-boot-08-template</module>
     </modules>
 </project>

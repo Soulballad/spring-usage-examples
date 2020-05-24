@@ -17,10 +17,13 @@ springboot 的常见用法
 - spring-boot-07-webflux
     - spring-boot-webflux-demo(使用注解方式)
     - spring-boot-webflux-router(使用route路由)
+- spring-boot-08-template(freemarker/velocity/thymeleaf)
+    - ~~spring-boot-template-velocity~~(spring-boot 1.4.2 放弃了velocity)
+    - spring-boot-template-freemarker
+    - spring-boot-template-thymeleaf
 
 
 - spring-boot-factoriesLoader
 - spring-boot-starter-xxx(自定义starter)
 - spring-boot-message-converter
-- spring-boot-template(freemarker/velocity/thymeleaf)
 - spring-boot-ui(swagger/knife4j)
