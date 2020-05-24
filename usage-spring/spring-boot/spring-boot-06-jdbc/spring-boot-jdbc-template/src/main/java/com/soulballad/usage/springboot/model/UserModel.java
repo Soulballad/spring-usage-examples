@@ -16,8 +16,7 @@ public class UserModel {
 
     public UserModel() {}
 
-    public UserModel(Long id, String name, Integer age, String birthday, String address, String phone) {
-        this.id = id;
+    public UserModel(String name, Integer age, String birthday, String address, String phone) {
         this.name = name;
         this.age = age;
         this.birthday = birthday;

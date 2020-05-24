@@ -3,7 +3,11 @@ package com.soulballad.usage.springboot.service.impl;
 import java.sql.PreparedStatement;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
@@ -22,7 +26,10 @@ import com.soulballad.usage.springboot.service.UserService;
 @Service
 public class UserServiceImpl implements UserService {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
+
     @Autowired
+    @Qualifier("masterJdbcTemplate")
     private JdbcTemplate jdbcTemplate;
 
     @Override
@@ -40,7 +47,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserModel> findAll() {
         String sql = "select id, `name`, age, birthday, address, phone from t_user";
-        return jdbcTemplate.queryForList(sql, UserModel.class);
+        // List<Map<String, Object>> maps = jdbcTemplate.queryForList(sql);
+        return jdbcTemplate.query(sql, new BeanPropertyRowMapper(UserModel.class));
     }
 
     @Override
@@ -80,6 +88,7 @@ public class UserServiceImpl implements UserService {
             return ps;
         }, keyHolder);
         long pk = keyHolder.getKey().longValue();
+        LOGGER.info("insertAndGetPK pk is {}", pk);
         return findUserById(pk);
     }
 

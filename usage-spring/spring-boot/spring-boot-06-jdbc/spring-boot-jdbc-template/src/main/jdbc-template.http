@@ -1,0 +1,64 @@
+### GET /user/list
+GET http://localhost:8080/user/list
+Accept: application/json
+
+### GET /user/findByName
+GET http://localhost:8080/user/findByName/zhangsan
+Accept: application/json
+
+### GET /user/findById
+GET http://localhost:8080/user/findById/2
+Accept: application/json
+
+### POST /user/add
+POST http://localhost:8080/user/add
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "aa123",
+  "age": 31,
+  "birthday": "1989-05-21",
+  "address": "hangzhou",
+  "phone": "15666666666"
+}
+
+### POST /user/insert
+POST http://localhost:8080/user/insert
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "bb123",
+  "age": 32,
+  "birthday": "1988-06-07",
+  "address": "xian",
+  "phone": "13455555555"
+}
+
+### POST /user/insertAndGet
+POST http://localhost:8080/user/insertAndGet
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "cc123",
+  "age": 42,
+  "birthday": "1978-03-15",
+  "address": "nanjing",
+  "phone": "13999999999"
+}
+
+### PUT /user/updateAddressById
+PUT http://localhost:8080/user/updateAddressById
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 8,
+  "address": "suzhou"
+}
+
+### DELETE /user/deleteById
+DELETE http://localhost:8080/user/deleteById/7
+Accept: application/json
