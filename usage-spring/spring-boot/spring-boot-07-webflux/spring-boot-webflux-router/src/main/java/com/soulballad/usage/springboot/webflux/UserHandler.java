@@ -27,6 +27,7 @@ public class UserHandler {
     private UserRepository userRepository;
 
     public Mono<ServerResponse> list(ServerRequest request) {
+        //ServerResponse.ok().body(Flux.fromIterable(userRepository.findAll()), UserModel.class);
         return ServerResponse.ok().body(Flux.fromStream(userRepository.findAll().stream()), UserModel.class);
     }
 

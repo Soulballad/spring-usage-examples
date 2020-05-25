@@ -21,6 +21,7 @@ springboot 的常见用法
     - ~~spring-boot-template-velocity~~(spring-boot 1.4.2 放弃了velocity)
     - spring-boot-template-freemarker
     - spring-boot-template-thymeleaf
+    - spring-boot-starter-template-groovy(暂无)
 
 
 - spring-boot-factoriesLoader
