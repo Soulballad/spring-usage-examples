@@ -6,7 +6,7 @@
 </head>
 <body>
     <div>
-        <button><a href="/user/detail/0">新增</a></button>
+        <div><a href="/user/detail/0" role="button">新增</a></div>
         <table style="width: 1000px;height: auto" cellpadding="1" cellspacing="1" broder="solid">
             <tr>
                 <th>编号</th>

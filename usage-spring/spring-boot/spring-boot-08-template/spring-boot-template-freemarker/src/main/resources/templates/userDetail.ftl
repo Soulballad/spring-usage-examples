@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-        <form name="addForm" action="/user/add" method="post">
+        <form name="addForm" action="/user/update" method="post">
              <input type="hidden" name="id" value="${user.id!}"><br/>
             name: <input type="text" name="name" value="${user.name!}"><br/>
             age: <input type="text" name="age" value="${user.age!}"><br/>

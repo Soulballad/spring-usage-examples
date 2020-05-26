@@ -43,8 +43,8 @@ public class UserController {
         return "userDetail";
     }
 
-    @PostMapping(value = "/add")
-    public String add(Model model, @ModelAttribute("form") UserModel userModel) {
+    @PostMapping(value = "/update")
+    public String update(Model model, @ModelAttribute("form") UserModel userModel) {
         if (Objects.nonNull(userModel.getId())) {
             userService.update(userModel);
         }else{

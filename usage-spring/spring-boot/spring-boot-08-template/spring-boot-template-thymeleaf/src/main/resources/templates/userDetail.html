@@ -5,6 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
+    <!--<form th:action="@{/user/update}" method="post" class="form-horizontal"></form>-->
         <form name="addForm" action="/user/update" method="post">
             <input type="hidden" name="id" th:value="${user.id}"><br/>
             name: <input type="text" name="name" th:value="${user.name}"><br/>
