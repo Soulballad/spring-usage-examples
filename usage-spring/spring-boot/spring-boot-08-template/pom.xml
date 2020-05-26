@@ -23,5 +23,6 @@
         <module>spring-boot-template-freemarker</module>
         <module>spring-boot-template-thymeleaf</module>
         <module>spring-boot-template-groovy</module>
+        <module>spring-boot-template-beetl</module>
     </modules>
 </project>
