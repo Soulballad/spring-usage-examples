@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>用户列表</title>
+    </head>
+    <body>
+        <div><a href="/user/detail/0" role="button">新增</a></div>
+        <table class='width="400" border="1" cellspacing="1" cellpadding="1"'>
+            <legend>
+                <strong>用户列表</strong>
+            </legend>
+            <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>地址</th>
+                    <th>生日</th>
+                    <th>手机</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="user : ${userList}">
+                    <th scope="row" th:text="${user.id}"></th>
+                    <td th:text="${user.name}"></td>
+                    <td th:text="${user.age}"></td>
+                    <td th:text="${user.address}"></td>
+                    <td th:text="${user.birthday}"></td>
+                    <td th:text="${user.phone}"></td>
+                    <td>
+                        <a th:href="@{/user/detail/{userId}(userId=${user.id})}">修改</a>
+                        <a th:href="@{/user/delete/{userId}(userId=${user.id})}">删除</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>user add&edit</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <form name="addForm" action="/user/update" method="post">
+            <input type="hidden" name="id" th:value="${user.id}"><br/>
+            name: <input type="text" name="name" th:value="${user.name}"><br/>
+            age: <input type="text" name="age" th:value="${user.age}"><br/>
+            birthday: <input type="text" name="birthday" th:value="${user.birthday}"><br/>
+            address: <input type="text" name="address" th:value="${user.address}"><br/>
+            phone: <input type="text" name="phone" th:value="${user.phone}"><br/>
+            <input type="submit">
+        </form>
+    </body>
+</html>
