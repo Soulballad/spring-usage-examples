@@ -10,7 +10,6 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 import com.soulballad.usage.springboot.model.UserModel;
 import com.soulballad.usage.springboot.repository.UserRepository;
 
-import javassist.NotFoundException;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -27,7 +26,7 @@ public class UserHandler {
     private UserRepository userRepository;
 
     public Mono<ServerResponse> list(ServerRequest request) {
-        //ServerResponse.ok().body(Flux.fromIterable(userRepository.findAll()), UserModel.class);
+        // ServerResponse.ok().body(Flux.fromIterable(userRepository.findAll()), UserModel.class);
         return ServerResponse.ok().body(Flux.fromStream(userRepository.findAll().stream()), UserModel.class);
     }
 
@@ -64,7 +63,7 @@ public class UserHandler {
     public Mono<ServerResponse> deleteById(ServerRequest request) {
         Long id = Long.valueOf(request.pathVariable("id"));
         return Mono.justOrEmpty(userRepository.findById(id))
-            .switchIfEmpty(Mono.error(new NotFoundException(String.valueOf(id)))) // 控制台异常：NotFoundException: 30
+            .switchIfEmpty(Mono.error(new RuntimeException(id + "not found!"))) // 控制台异常：RuntimeException: 30
             .then(ServerResponse.ok().body(Mono.justOrEmpty(userRepository.deleteById(id)), UserModel.class));
     }
 

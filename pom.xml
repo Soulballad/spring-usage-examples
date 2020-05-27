@@ -39,6 +39,7 @@
         <slf4j.version>1.7.25</slf4j.version>
         <javassist.version>3.18.1-GA</javassist.version>
         <swagger.version>2.9.2</swagger.version>
+        <knife4j.version>1.9.6</knife4j.version>
     </properties>
 
     <dependencyManagement>
@@ -49,11 +50,6 @@
                 <version>${junit-jupiter.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.javassist</groupId>
-                <artifactId>javassist</artifactId>
-                <version>${javassist.version}</version>
             </dependency>
             <!-- Spring Boot 依赖 -->
             <dependency>
@@ -89,6 +85,18 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${swagger.version}</version>
+            </dependency>
+            <!-- knife4j-(swagger-bootstrap-ui) -->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>swagger-bootstrap-ui</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>2.0.3</version>
+                <type>pom</type>
             </dependency>
         </dependencies>
     </dependencyManagement>

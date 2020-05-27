@@ -2,9 +2,9 @@
 GET http://localhost:8080/user/list
 Accept: application/json
 
-### GET /user/list
-GET http://localhost:8080/user/find/1 // 200 OK
-#GET http://localhost:8080/user/find/100 // 404 Not Found
+### GET /user/find
+GET http://localhost:8080/user/find/1
+#GET http://localhost:8080/user/find/100
 Accept: application/json
 
 ### POST /user/add
@@ -50,5 +50,5 @@ Content-Type: application/json
 
 ### DELETE /user/delete/3
 #DELETE http://localhost:8080/user/delete/30
-DELETE http://localhost:8080/user/delete/3 // 200 OK
+DELETE http://localhost:8080/user/delete/3
 Accept: application/json
