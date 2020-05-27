@@ -1,5 +1,7 @@
 package com.soulballad.usage.springboot.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -18,6 +20,7 @@ public class UserModel {
     @ApiModelProperty(value = "用户年龄")
     private Integer age;
     @ApiModelProperty(value = "用户生日")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private String birthday;
     @ApiModelProperty(value = "用户地址")
     private String address;
@@ -86,6 +89,6 @@ public class UserModel {
     @Override
     public String toString() {
         return "UserModel{" + "id=" + id + ", name='" + name + '\'' + ", age=" + age + ", birthday='" + birthday + '\''
-                + ", address='" + address + '\'' + ", phone='" + phone + '\'' + '}';
+            + ", address='" + address + '\'' + ", phone='" + phone + '\'' + '}';
     }
 }

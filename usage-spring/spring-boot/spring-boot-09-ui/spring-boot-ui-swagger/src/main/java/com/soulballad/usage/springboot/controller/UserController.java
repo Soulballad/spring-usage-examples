@@ -45,7 +45,7 @@ public class UserController {
 
     @GetMapping(value = "/query/{id}")
     @ApiOperation("查询单个用户")
-    @ApiImplicitParam(name = "id", value = "用户id", required = true, example = "1")
+    @ApiImplicitParam(name = "id", value = "用户id", required = true, defaultValue = "1")
     @ResponseBody
     public UserModel query(@PathVariable Long id) {
         return userService.findById(id);
@@ -79,7 +79,7 @@ public class UserController {
     @DeleteMapping(value = "/delete/{id}")
     @ApiOperation("删除用户")
     @ResponseBody
-    @ApiImplicitParam(name = "id", value = "用户id", required = true, example = "1")
+    @ApiImplicitParam(name = "id", value = "用户id", required = true, defaultValue = "1")
     public UserModel deleteById(@PathVariable Long id) {
         return userService.deleteById(id);
     }
