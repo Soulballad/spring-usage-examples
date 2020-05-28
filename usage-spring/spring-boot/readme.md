@@ -27,6 +27,9 @@ springboot 的常见用法
     - spring-boot-ui-swagger
     - spring-boot-ui-knife4j
 - spring-boot-10-message-converter
+    需要使用 @RestController，使用 @Controller 无效
+- spring-boot-11-custom-starter
+
 
 
 - spring-boot-factoriesLoader

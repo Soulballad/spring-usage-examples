@@ -4,15 +4,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>spring-boot</artifactId>
+        <artifactId>spring-boot-11-custom-starter</artifactId>
         <groupId>com.soulballad.usage</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring-boot-10-message-converter</artifactId>
+    <artifactId>demo-spring-boot-starter</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-10-message-converter</name>
-    <description>Spring Boot Message Converter</description>
+    <name>demo-spring-boot-starter</name>
+    <description>Spring Boot Demo Starter</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -21,9 +21,20 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

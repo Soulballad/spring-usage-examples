@@ -22,5 +22,8 @@
         <module>spring-boot-06-jdbc</module>
         <module>spring-boot-07-webflux</module>
         <module>spring-boot-08-template</module>
+        <module>spring-boot-09-ui</module>
+        <module>spring-boot-10-message-converter</module>
+        <module>spring-boot-11-custom-starter</module>
     </modules>
 </project>
