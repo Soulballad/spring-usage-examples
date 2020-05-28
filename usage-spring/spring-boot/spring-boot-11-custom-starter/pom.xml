@@ -17,6 +17,7 @@
 
     <modules>
         <module>demo-spring-boot-starter</module>
+        <module>test-spring-boot-starter</module>
     </modules>
 
 </project>
