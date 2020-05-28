@@ -1,0 +1,25 @@
+
+### POST
+POST http://localhost:8080/user/add1
+Accept: application/json;charset=utf-8
+Content-Type: text/properties;charset=utf-8
+
+name=wangwu
+age=22
+birthday=1996-05-05
+salary=6666.66
+phone=13555555555
+
+
+### POST
+POST http://localhost:8080/user/add2
+Accept: text/properties;charset=utf-8
+Content-Type: application/json;charset=utf-8
+
+{
+"name": "wangwu",
+"age": "22",
+"birthday": "1996-05-05",
+"salary": "6666.66",
+"phone": "13555555555"
+}
