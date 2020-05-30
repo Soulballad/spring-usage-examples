@@ -29,7 +29,9 @@ springboot 的常见用法
 - spring-boot-10-message-converter
     需要使用 @RestController，使用 @Controller 无效
 - spring-boot-11-custom-starter
-
+    - demo-spring-boot-starter(自定义starter)
+    - test-spring- 
+          -starter(测试自定义starter)
 
 
 - spring-boot-factoriesLoader

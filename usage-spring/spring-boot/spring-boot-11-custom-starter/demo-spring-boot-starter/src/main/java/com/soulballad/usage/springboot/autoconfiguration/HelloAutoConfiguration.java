@@ -30,19 +30,19 @@ public class HelloAutoConfiguration {
 
     @Bean
     @Primary
-    @ConditionalOnProperty(prefix = HelloProperties.HELLO_PREFIX + ".world", name = "enable", value = "true")
+    @ConditionalOnProperty(prefix = HelloProperties.HELLO_PREFIX + ".world", name = "enable", havingValue = "true")
     public Hello helloWorld() {
         return new HelloWorld();
     }
 
     @Bean
-    @ConditionalOnProperty(prefix = HelloProperties.HELLO_PREFIX + ".java", name = "enable", value = "true")
+    @ConditionalOnProperty(prefix = HelloProperties.HELLO_PREFIX + ".java", name = "enable", havingValue = "true")
     public Hello helloJava() {
         return new HelloJava();
     }
 
     @Bean
-    @ConditionalOnProperty(prefix = HelloProperties.HELLO_PREFIX + ".girl", name = "enable", value = "true")
+    @ConditionalOnProperty(prefix = HelloProperties.HELLO_PREFIX + ".girl", name = "enable", havingValue = "true")
     public Hello helloGirl() {
         return new HelloGirl();
     }
