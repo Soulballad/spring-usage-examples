@@ -13,4 +13,7 @@
     <artifactId>spring-cloud-netflix</artifactId>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>spring-cloud-netflix-01-archaius</module>
+    </modules>
 </project>

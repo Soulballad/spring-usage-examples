@@ -1,0 +1,5 @@
+### GET config/default 从默认的 config.properties 中读取配置信息
+GET http://localhost:8080/config/default
+
+### GET config/default 从自定义的 other.properties 中读取配置信息
+GET http://localhost:8080/config/extend

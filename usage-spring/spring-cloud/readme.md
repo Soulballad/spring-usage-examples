@@ -22,6 +22,7 @@
     - spring-cloud-official-sleuth(zipkin)
     - spring-cloud-official-circuit breaker
     - spring-cloud-official-task
+    - spring-cloud-official-security
 
 (Consul)spring-cloud-consul
 
