@@ -1,0 +1,2 @@
+### GET config 从数据库中查询配置信息
+GET http://localhost:8080/config
