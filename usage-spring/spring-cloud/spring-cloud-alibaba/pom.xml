@@ -3,14 +3,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
-        <artifactId>usage-spring</artifactId>
+        <artifactId>spring-cloud</artifactId>
         <groupId>com.soulballad.usage</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>spring-cloud-alibaba</artifactId>
     <packaging>pom</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-dubbo</artifactId>
+            <version>2.2.0.RELEASE</version>
+        </dependency>
+    </dependencies>
 </project>
