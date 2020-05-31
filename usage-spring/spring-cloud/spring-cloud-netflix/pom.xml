@@ -15,5 +15,6 @@
 
     <modules>
         <module>spring-cloud-netflix-01-archaius</module>
+        <module>spring-cloud-netflix-02-eureka</module>
     </modules>
 </project>

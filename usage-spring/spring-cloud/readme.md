@@ -1,5 +1,8 @@
 - spring-cloud-netflix 组件：
     - spring-cloud-netflix-archaius
+        - archaius-file-config：从文件中读取配置
+        - archaius-db-config：从数据库读取配置<br/>
+        支持从配置中心读取配置，如 zookeeper
     - spring-cloud-netflix-eureka
     - spring-cloud-netflix-feign
     - spring-cloud-netflix-hystrix
