@@ -10,7 +10,7 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>archaius-config-file</artifactId>
+    <artifactId>archaius-file-config</artifactId>
 
     <properties>
         <java.version>1.8</java.version>

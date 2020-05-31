@@ -16,7 +16,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>archaius-config-file</module>
+        <module>archaius-file-config</module>
+        <module>archaius-db-config</module>
     </modules>
 
 </project>
