@@ -17,6 +17,7 @@
 
     <modules>
         <module>netflix-hystrix-demo</module>
+        <module>netflix-hystrix-dashboard-turbine</module>
     </modules>
 
 </project>
