@@ -1,0 +1,6 @@
+### GET /demo?time={value}
+GET http://localhost:8080/demo?time=120
+
+
+### GET /hello
+GET http://localhost:8080/hello
