@@ -11,10 +11,10 @@
             - user-service-provider
             - user-service-consumer
         - netflix-eureka-server
-    - spring-cloud-netflix-feign
+    - ~~spring-cloud-netflix-feign~~
     - spring-cloud-netflix-hystrix
     - spring-cloud-netflix-ribbon
-    - spring-cloud-netflix-trubine
+    - spring-cloud-netflix-turbine
     - spring-cloud-netflix-zuul
 - spring-cloud-alibaba 组件：
     - spring-cloud-alibaba-nacos
