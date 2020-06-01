@@ -6,6 +6,11 @@
         - archaius-db-config：从数据库读取配置<br/>
         支持从配置中心读取配置，如 zookeeper
     - spring-cloud-netflix-eureka
+        - netflix-eureka-client
+            - user-api
+            - user-service-provider
+            - user-service-consumer
+        - netflix-eureka-server
     - spring-cloud-netflix-feign
     - spring-cloud-netflix-hystrix
     - spring-cloud-netflix-ribbon
