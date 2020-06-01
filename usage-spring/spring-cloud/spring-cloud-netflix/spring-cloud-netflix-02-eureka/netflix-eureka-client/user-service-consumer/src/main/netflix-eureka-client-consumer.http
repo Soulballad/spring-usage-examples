@@ -1,0 +1,38 @@
+###  GET /consumer/user/list
+GET http://localhost:8080/consumer/user/list
+Accept: application/json
+
+###  GET /consumer/user/query/{id}
+GET http://localhost:8080/consumer/user/query/1
+Accept: application/json
+
+###  POST /consumer/user/add
+POST http://localhost:8080/consumer/user/add
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "wangwu",
+  "age": 20,
+  "birthday": "2000-01-01",
+  "address": "wuhan",
+  "phone": "15999999999"
+}
+
+###  PUT /consumer/user/update
+PUT http://localhost:8080/consumer/user/update
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 2,
+  "name": "lisi",
+  "age": 40,
+  "birthday": "1980-01-01",
+  "address": "shanghang-pudong",
+  "phone": "13888888888"
+}
+
+###  DELETE /consumer/user/delete/{id}
+DELETE http://localhost:8080/consumer/user/delete/3
+Accept: application/json
