@@ -18,5 +18,6 @@
         <module>spring-cloud-netflix-02-eureka</module>
         <module>spring-cloud-netflix-03-hystrix</module>
         <module>spring-cloud-netflix-04-ribbon</module>
+        <module>spring-cloud-netflix-05-zuul</module>
     </modules>
 </project>
