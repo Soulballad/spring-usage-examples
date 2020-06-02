@@ -9,9 +9,9 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>hystrix-dashboard-turbine-eureka</artifactId>
+    <artifactId>turbine-eureka</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>hystrix-dashboard-turbine-eureka</name>
+    <name>turbine-eureka</name>
     <description>Spring Cloud Netflix Hystrix Turbine</description>
 
     <properties>

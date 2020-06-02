@@ -16,6 +16,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>hystrix-dashboard-eureka</module>
+        <module>turbine-eureka</module>
+        <module>turbine-hystrix</module>
     </modules>
 </project>
