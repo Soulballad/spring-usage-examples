@@ -16,7 +16,7 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>netflix-eureka-client</module>
-		<module>netflix-eureka-server</module>
+		<module>eureka-client</module>
+		<module>eureka-server</module>
 	</modules>
 </project>
