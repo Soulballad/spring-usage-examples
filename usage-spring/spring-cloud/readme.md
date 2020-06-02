@@ -14,6 +14,7 @@
     - ~~spring-cloud-netflix-feign~~
     - spring-cloud-netflix-hystrix(服务熔断)
         - hystrix-demo
+        - hystrix-dashboard-demo
         - hystrix-dashboard-turbine(集群监控)<br/>
         eureka dashboard 
     - spring-cloud-netflix-ribbon
