@@ -13,31 +13,10 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-cloud-netflix-05-zuul</name>
     <description>Spring Cloud Netflix Zuul</description>
+    <packaging>pom</packaging>
 
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-
+    <modules>
+        <module>zuul-server</module>
+        <module>zuul-client</module>
+    </modules>
 </project>
