@@ -9,10 +9,10 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>zuul-server</artifactId>
+    <artifactId>zuul-eureka</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>zuul-server</name>
-    <description>Spring Cloud Netflix Zuul Server</description>
+    <name>zuul-eureka</name>
+    <description>Spring Cloud Netflix Zuul Eureka</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -21,12 +21,9 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
