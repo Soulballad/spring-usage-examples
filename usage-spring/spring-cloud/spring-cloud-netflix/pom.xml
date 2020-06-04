@@ -19,5 +19,6 @@
         <module>spring-cloud-netflix-03-hystrix</module>
         <module>spring-cloud-netflix-04-ribbon</module>
         <module>spring-cloud-netflix-05-zuul</module>
+        <module>spring-cloud-netflix-06-assemble</module>
     </modules>
 </project>
