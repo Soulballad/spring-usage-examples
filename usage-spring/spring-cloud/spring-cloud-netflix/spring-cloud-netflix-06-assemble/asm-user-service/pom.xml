@@ -9,10 +9,10 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>asm-eureka</artifactId>
+    <artifactId>asm-user-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>asm-eureka</name>
-    <description>Spring Cloud Netflix Assemble Eureka</description>
+    <name>asm-user-service</name>
+    <description>Spring Cloud Netflix Assemble User</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -20,12 +20,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
