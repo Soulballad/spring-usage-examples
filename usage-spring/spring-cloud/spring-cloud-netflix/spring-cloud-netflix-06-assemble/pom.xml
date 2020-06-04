@@ -15,4 +15,7 @@
     <description>Spring Cloud Netflix Component Assemble</description>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>asm-eureka</module>
+    </modules>
 </project>
