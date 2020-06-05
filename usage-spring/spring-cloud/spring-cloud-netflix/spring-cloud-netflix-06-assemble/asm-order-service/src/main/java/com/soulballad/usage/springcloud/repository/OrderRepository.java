@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
  * @author ：soulballad
  * @version : v1.0
  * @apiNote : user
- * @since ：2020/6/5 21:18
+ * @since ：2020/6/5 21:38
  */
 @Repository
 public interface OrderRepository extends JpaRepository<OrderModel, Long>, JpaSpecificationExecutor<OrderModel> {
