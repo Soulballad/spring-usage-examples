@@ -19,5 +19,6 @@
         <module>asm-eureka</module>
         <module>asm-user-service</module>
         <module>asm-order-service</module>
+        <module>asm-zuul</module>
     </modules>
 </project>
