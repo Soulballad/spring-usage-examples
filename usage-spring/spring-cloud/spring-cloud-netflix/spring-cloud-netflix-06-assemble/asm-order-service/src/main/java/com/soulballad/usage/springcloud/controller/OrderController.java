@@ -40,12 +40,12 @@ public class OrderController {
         return orderService.findByOrderCode(orderCode);
     }
 
-    @PutMapping(value = "/create")
+    @PostMapping(value = "/create")
     public OrderModel create(@RequestBody OrderModel orderModel) {
         return orderService.createOrder(orderModel);
     }
 
-    @PostMapping(value = "/pay")
+    @PutMapping(value = "/pay")
     public Integer updateOrderPay(@RequestBody OrderModel orderModel) {
         return orderService.updateOrderPay(orderModel);
     }
