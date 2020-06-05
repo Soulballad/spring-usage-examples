@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.soulballad.usage.springcloud.model.OrderModel;
+import com.soulballad.usage.springcloud.model.UserModel;
 import com.soulballad.usage.springcloud.service.UserService;
 
 /**
@@ -29,23 +29,23 @@ public class UserController {
     private UserService userService;
 
     @GetMapping(value = "/list")
-    public List<OrderModel> list() {
+    public List<UserModel> list() {
         return userService.findAll();
     }
 
     @GetMapping(value = "/query/{id}")
-    public OrderModel query(@PathVariable Long id) {
+    public UserModel query(@PathVariable Long id) {
         return userService.findById(id);
     }
 
     @GetMapping(value = "/find")
-    public OrderModel find(@RequestParam(name = "name") String name) {
+    public UserModel find(@RequestParam(name = "name") String name) {
         return userService.findByUserName(name);
     }
 
     @PostMapping(value = "/update")
-    public OrderModel update(@RequestBody OrderModel orderModel) {
-        return userService.update(orderModel);
+    public UserModel update(@RequestBody UserModel userModel) {
+        return userService.update(userModel);
     }
 
     @DeleteMapping(value = "/delete")

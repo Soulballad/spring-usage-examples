@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.soulballad.usage.springcloud.model.UserModel;
-import com.soulballad.usage.springcloud.repository.UserRepository;
+import com.soulballad.usage.springcloud.model.OrderModel;
+import com.soulballad.usage.springcloud.repository.OrderRepository;
 import com.soulballad.usage.springcloud.service.UserService;
 
 /**
@@ -20,32 +20,32 @@ import com.soulballad.usage.springcloud.service.UserService;
 public class UserServiceImpl implements UserService {
 
     @Autowired
-    private UserRepository userRepository;
+    private OrderRepository orderRepository;
 
     @Override
-    public List<UserModel> findAll() {
-        return userRepository.findAll();
+    public List<OrderModel> findAll() {
+        return orderRepository.findAll();
     }
 
     @Override
-    public UserModel findById(Long id) {
-        Optional<UserModel> userOpt = userRepository.findById(id);
+    public OrderModel findById(Long id) {
+        Optional<OrderModel> userOpt = orderRepository.findById(id);
         return userOpt.get();
     }
 
     @Override
-    public UserModel findByUserName(String name) {
-        return userRepository.findUserByName(name);
+    public OrderModel findByUserName(String name) {
+        return orderRepository.findUserByName(name);
     }
 
     @Override
-    public UserModel update(UserModel userModel) {
-        userRepository.save(userModel);
-        return findByUserName(userModel.getName());
+    public OrderModel update(OrderModel orderModel) {
+        orderRepository.save(orderModel);
+        return findByUserName(orderModel.getName());
     }
 
     @Override
     public Integer deleteByName(String name) {
-        return userRepository.deleteByName(name);
+        return orderRepository.deleteByName(name);
     }
 }

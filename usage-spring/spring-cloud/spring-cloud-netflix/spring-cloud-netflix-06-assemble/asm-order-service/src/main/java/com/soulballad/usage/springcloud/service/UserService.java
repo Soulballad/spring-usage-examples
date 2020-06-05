@@ -1,8 +1,8 @@
 package com.soulballad.usage.springcloud.service;
 
-import com.soulballad.usage.springcloud.model.UserModel;
-
 import java.util.List;
+
+import com.soulballad.usage.springcloud.model.OrderModel;
 
 /**
  * @author ：soulballad
@@ -12,13 +12,13 @@ import java.util.List;
  */
 public interface UserService {
 
-    List<UserModel> findAll();
+    List<OrderModel> findAll();
 
-    UserModel findById(Long id);
+    OrderModel findById(Long id);
 
-    UserModel findByUserName(String name);
+    OrderModel findByUserName(String name);
 
-    UserModel update(UserModel userModel);
+    OrderModel update(OrderModel orderModel);
 
     Integer deleteByName(String name);
 }
