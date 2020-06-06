@@ -1,5 +1,6 @@
 package com.soulballad.usage.springcloud.service.impl;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -7,7 +8,6 @@ import java.util.Optional;
 
 import javax.persistence.criteria.Predicate;
 
-import com.soulballad.usage.springcloud.vo.OrderStatusEnum;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -18,7 +18,10 @@ import org.springframework.stereotype.Service;
 import com.soulballad.usage.springcloud.model.OrderModel;
 import com.soulballad.usage.springcloud.repository.OrderRepository;
 import com.soulballad.usage.springcloud.service.OrderService;
+import com.soulballad.usage.springcloud.service.RibbonService;
 import com.soulballad.usage.springcloud.vo.OrderParam;
+import com.soulballad.usage.springcloud.vo.OrderStatusEnum;
+import com.soulballad.usage.springcloud.vo.UserVo;
 
 /**
  * @author ：soulballad
@@ -31,6 +34,9 @@ public class OrderServiceImpl implements OrderService {
 
     @Autowired
     private OrderRepository orderRepository;
+
+    @Autowired
+    private RibbonService ribbonService;
 
     @Override
     public List<OrderModel> findAll() {
@@ -56,6 +62,18 @@ public class OrderServiceImpl implements OrderService {
         if (!orderOpt.isPresent() || !OrderStatusEnum.WAIT.getKey().equals(orderModel.getStatus())) {
             return 0;
         }
+        UserVo userVo = ribbonService.queryUserInfo(orderModel.getUserId());
+        if (userVo.getMoney().compareTo(orderModel.getTotalMoney()) < 0) {
+            // 余额不足
+            return 0;
+        }
+        // 支付，省略
+        // 更新订单状态
+        orderModel.setStatus(OrderStatusEnum.PAID.getKey());
+        orderRepository.save(orderModel);
+        // 更新用户积分
+        userVo.setPoints(orderModel.getTotalMoney().divide(new BigDecimal(100), BigDecimal.ROUND_FLOOR).intValue());
+        ribbonService.updateUserPoint(userVo);
         return null;
     }
 
