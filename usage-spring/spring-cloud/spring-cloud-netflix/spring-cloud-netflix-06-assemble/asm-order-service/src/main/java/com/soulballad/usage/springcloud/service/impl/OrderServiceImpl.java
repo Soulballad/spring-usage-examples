@@ -55,26 +55,27 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public Integer updateOrderPay(OrderModel orderModel) {
+    public UserVo updateOrderPay(OrderModel orderModel) {
         // 先查询订单状态，再查用户余额，支付（省略），然后更新订单状态（已支付），最后更新用户积分
         Optional<OrderModel> orderOpt = orderRepository.findById(orderModel.getId());
-        // 不存在或者不是未支付
-        if (!orderOpt.isPresent() || !OrderStatusEnum.WAIT.getKey().equals(orderModel.getStatus())) {
-            return 0;
+        OrderModel dbOrder = orderOpt.orElseGet(OrderModel::new);
+        // 不是未支付，不存在肯定不是未支付
+        if (!OrderStatusEnum.WAIT.getKey().equals(dbOrder.getStatus())) {
+            return null;
         }
-        UserVo userVo = ribbonService.queryUserInfo(orderModel.getUserId());
-        if (userVo.getMoney().compareTo(orderModel.getTotalMoney()) < 0) {
+        UserVo userVo = ribbonService.queryUserInfo(dbOrder.getUserId());
+        if (userVo.getMoney().compareTo(dbOrder.getTotalMoney()) < 0) {
             // 余额不足
-            return 0;
+            return null;
         }
         // 支付，省略
         // 更新订单状态
-        orderModel.setStatus(OrderStatusEnum.PAID.getKey());
-        orderRepository.save(orderModel);
+        dbOrder.setStatus(OrderStatusEnum.PAID.getKey());
+        orderRepository.save(dbOrder);
         // 更新用户积分
-        userVo.setPoints(orderModel.getTotalMoney().divide(new BigDecimal(100), BigDecimal.ROUND_FLOOR).intValue());
-        ribbonService.updateUserPoint(userVo);
-        return null;
+        int points = dbOrder.getTotalMoney().divide(new BigDecimal(100), BigDecimal.ROUND_FLOOR).intValue();
+        userVo.setPoints(userVo.getPoints() + points);
+        return ribbonService.updateUserPoint(userVo);
     }
 
     @Override

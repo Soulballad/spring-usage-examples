@@ -1,0 +1,40 @@
+###### asm-archaius
+### GET /orderPoint
+GET http://localhost:7010/config/orderPoint
+
+### GET /userLevel
+GET http://localhost:7010/config/userLevel
+
+
+###### asm-eureka
+### GET 8011
+GET http://localhost:8011/
+### GET 8012
+GET http://localhost:8012/
+
+
+###### asm-order-service
+### GET /order/list
+GET http://localhost:7016/order/list
+### GET /order/find?orderCode=?
+GET http://localhost:7016/order/find?orderCode=OC20200609211952001
+### POST /order/create
+POST http://localhost:7016/order/create
+Accept: application/json
+Content-Type: application/json
+
+{
+  "userId": 2,
+  "orderCode": "OC20200609213933001",
+  "totalMoney": 12343.48,
+  "orderDate": "2020-06-09 21:39:33",
+  "status": "wait"
+}
+### PUT /order/pay
+PUT http://localhost:7016/order/pay
+Content-Type: application/json
+
+{
+  "id": 5
+}
+

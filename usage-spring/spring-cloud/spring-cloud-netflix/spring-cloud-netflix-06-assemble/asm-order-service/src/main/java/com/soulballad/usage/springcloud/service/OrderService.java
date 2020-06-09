@@ -3,6 +3,7 @@ package com.soulballad.usage.springcloud.service;
 import java.util.List;
 
 import com.soulballad.usage.springcloud.vo.OrderParam;
+import com.soulballad.usage.springcloud.vo.UserVo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -22,7 +23,7 @@ public interface OrderService {
 
     OrderModel createOrder(OrderModel orderModel);
 
-    Integer updateOrderPay(OrderModel orderModel);
+    UserVo updateOrderPay(OrderModel orderModel);
 
     Page<OrderModel> selectByCondition(OrderParam orderParam, Pageable pageable);
 }

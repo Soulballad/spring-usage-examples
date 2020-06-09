@@ -1,0 +1,3 @@
+insert into t_user(`name`, `age`, `birthday`, `address`, `phone`, `money`, `points`) values('zhangsan', 20, '2020-01-01', 'beijing', '13666666666', '15468', 1235);
+insert into t_user(`name`, `age`, `birthday`, `address`, `phone`, `money`, `points`) values('lisi', 30, '1990-02-02', 'shanghai', '14777777777', '56412', 5301);
+insert into t_user(`name`, `age`, `birthday`, `address`, `phone`, `money`, `points`) values('wangwu', 40, '1980-03-03', 'shenzhen', '15888888888', '1000', 124);

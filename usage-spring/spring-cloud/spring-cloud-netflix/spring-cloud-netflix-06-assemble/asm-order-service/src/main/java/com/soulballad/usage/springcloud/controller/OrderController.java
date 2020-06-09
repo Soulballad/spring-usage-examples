@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.soulballad.usage.springcloud.model.OrderModel;
 import com.soulballad.usage.springcloud.service.OrderService;
 import com.soulballad.usage.springcloud.vo.OrderParam;
+import com.soulballad.usage.springcloud.vo.UserVo;
 
 /**
  * @author ：soulballad
@@ -24,7 +25,7 @@ import com.soulballad.usage.springcloud.vo.OrderParam;
  * @since ：2020/6/5 22:19
  */
 @RestController
-@RequestMapping(value = "/user")
+@RequestMapping(value = "/order")
 public class OrderController {
 
     @Autowired
@@ -46,7 +47,7 @@ public class OrderController {
     }
 
     @PutMapping(value = "/pay")
-    public Integer updateOrderPay(@RequestBody OrderModel orderModel) {
+    public UserVo updateOrderPay(@RequestBody OrderModel orderModel) {
         return orderService.updateOrderPay(orderModel);
     }
 
