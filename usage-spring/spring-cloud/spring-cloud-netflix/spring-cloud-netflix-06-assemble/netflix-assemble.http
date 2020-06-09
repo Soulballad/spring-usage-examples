@@ -1,4 +1,4 @@
-###### asm-archaius
+################################################ asm-archaius ################################################
 ### GET /orderPoint
 GET http://localhost:7010/config/orderPoint
 
@@ -6,18 +6,18 @@ GET http://localhost:7010/config/orderPoint
 GET http://localhost:7010/config/userLevel
 
 
-###### asm-eureka
+################################################ asm-eureka ################################################
 ### GET 8011
 GET http://localhost:8011/
 ### GET 8012
 GET http://localhost:8012/
 
 
-###### asm-order-service
+################################################ asm-order-service ################################################
 ### GET /order/list
-GET http://localhost:7016/order/list
+GET http://localhost:7012/order/list
 ### GET /order/find?orderCode=?
-GET http://localhost:7016/order/find?orderCode=OC20200609211952001
+GET http://localhost:7012/order/find?orderCode=OC20200609211952001
 ### POST /order/create
 POST http://localhost:7016/order/create
 Accept: application/json
@@ -37,4 +37,19 @@ Content-Type: application/json
 {
   "id": 5
 }
+### GET /order/queryByCondition
+GET http://localhost:7016/order/queryByCondition
+Accept: application/json
+Content-Type: application/json
+
+{
+  "userId": 2,
+  "orderCode": "OC20200609",
+  "totalMoney": 20,
+  "orderStartDate": "2020-02-10 16:17:12",
+  "orderEndDate": "2020-06-30 16:17:12"
+}
+
+
+################################################ asm-user-service ################################################
 

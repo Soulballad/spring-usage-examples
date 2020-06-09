@@ -2,9 +2,14 @@ package com.soulballad.usage.springcloud.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.soulballad.usage.springcloud.service.RibbonService;
 import com.soulballad.usage.springcloud.vo.UserVo;
 
@@ -32,8 +37,17 @@ public class RibbonServiceImpl implements RibbonService {
 
     @Override
     public UserVo updateUserPoint(UserVo userVo) {
-        restTemplate.put(USER_SERVICE_PREFIX + "/update", UserVo.class);
-        return queryUserInfo(userVo.getId());
+        try {
+            String jsonStr = new ObjectMapper().writeValueAsString(userVo);
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.APPLICATION_JSON_UTF8);
+            HttpEntity httpEntity = new HttpEntity(jsonStr, headers);
+            restTemplate.put(USER_SERVICE_PREFIX + "/update", httpEntity);
+            return queryUserInfo(userVo.getId());
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     @Override
