@@ -13,4 +13,6 @@ public interface RibbonService {
     UserVo queryUserInfo(Long userId);
 
     UserVo updateUserPoint(UserVo userVo);
+
+    String getOrderPoint();
 }

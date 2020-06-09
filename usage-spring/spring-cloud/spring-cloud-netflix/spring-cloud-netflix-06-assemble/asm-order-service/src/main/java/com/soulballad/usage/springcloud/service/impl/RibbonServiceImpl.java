@@ -1,6 +1,7 @@
 package com.soulballad.usage.springcloud.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -18,6 +19,9 @@ public class RibbonServiceImpl implements RibbonService {
 
     private static final String USER_SERVICE_PREFIX = "http://asm-user-service" + "/user";
 
+    @Value("asm.archaius.address")
+    private String ASM_ARCHAIUS_PREFIX;
+
     @Autowired
     private RestTemplate restTemplate;
 
@@ -30,5 +34,10 @@ public class RibbonServiceImpl implements RibbonService {
     public UserVo updateUserPoint(UserVo userVo) {
         restTemplate.put(USER_SERVICE_PREFIX + "/update", UserVo.class);
         return queryUserInfo(userVo.getId());
+    }
+
+    @Override
+    public String getOrderPoint() {
+        return restTemplate.getForObject(ASM_ARCHAIUS_PREFIX + "/orderPoint", String.class);
     }
 }
