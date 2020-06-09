@@ -9,5 +9,4 @@ public class AsmArchaiusApplication {
     public static void main(String[] args) {
         SpringApplication.run(AsmArchaiusApplication.class, args);
     }
-
 }
