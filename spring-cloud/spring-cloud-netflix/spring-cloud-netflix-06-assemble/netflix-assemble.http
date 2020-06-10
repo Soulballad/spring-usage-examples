@@ -15,9 +15,9 @@ GET http://localhost:8012/
 
 ################################################ asm-order-service ################################################
 ### GET /order/list
-GET http://localhost:7012/order/list
+GET http://localhost:7016/order/list
 ### GET /order/find?orderCode=?
-GET http://localhost:7012/order/find?orderCode=OC20200609211952001
+GET http://localhost:7016/order/find?orderCode=OC20200609211952001
 ### POST /order/create
 POST http://localhost:7016/order/create
 Accept: application/json
@@ -52,4 +52,21 @@ Content-Type: application/json
 
 
 ################################################ asm-user-service ################################################
+### GET /user/list
+GET http://localhost:7016/user/list
+### GET /user/query/{id}
+GET http://localhost:7016/user/query/1
+### GET /user/find?name=?
+GET http://localhost:7016/user/find?name=zhangsan
+### GET /user/udpate
+POST http://localhost:7016/user/udpate
+Accept: application/json
+Content-Type: application/json
 
+{
+  "userId": 2,
+  "orderCode": "OC20200609213933001",
+  "totalMoney": 12343.48,
+  "orderDate": "2020-06-09 21:39:33",
+  "status": "wait"
+}
