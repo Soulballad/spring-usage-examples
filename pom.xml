@@ -4,25 +4,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.soulballad.usage</groupId>
-    <artifactId>java-component-usage</artifactId>
+    <artifactId>spring-usage-examples</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <modules>
-        <module>usage-spring</module>
-        <module>usage-mybatis</module>
-        <module>usage-redis</module>
-        <module>usage-dubbo</module>
-        <module>usage-zookeeper</module>
-        <module>usage-netty</module>
-        <module>usage-kafka</module>
-        <module>usage-rabbitmq</module>
-        <module>usage-arthas</module>
-        <module>usage-elasticsearch</module>
-        <module>usage-pattern</module>
+        <module>spring-boot</module>
+        <module>spring-cloud</module>
     </modules>
 
-    <name>java-component-usage</name>
-    <description>Java Component Usage</description>
+    <name>spring-usage-examples</name>
+    <description>Spring Usage Examples</description>
     <packaging>pom</packaging>
 
     <properties>
@@ -57,7 +48,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- Spring Cloud 官方依赖 -->
+            <!-- Spring Cloud 官方 依赖 -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
