@@ -79,3 +79,7 @@ Content-Type: application/json
 ### asm-order-service
 ### GET /order/find?orderCode=?
 GET http://localhost:9090/asm-order-service/order/find?orderCode=OC20200609211952001
+
+### asm-user-service
+### GET /user/find?name=?
+GET http://localhost:9090/asm-user-service/user/find?name=zhangsan
