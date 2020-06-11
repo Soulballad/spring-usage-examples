@@ -1,5 +1,7 @@
 package com.soulballad.usage.springcloud.config;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.refresh.ContextRefresher;
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +18,8 @@ import java.util.Set;
 @Configuration
 public class RefreshConfig {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(RefreshConfig.class);
+
     private final ContextRefresher contextRefresher;
 
     @Autowired
@@ -28,7 +32,7 @@ public class RefreshConfig {
     public void autoRefresh() {
         Set<String> refresh = contextRefresher.refresh();
         if (!refresh.isEmpty()) {
-            System.err.println("context refresh configs: " + refresh);
+            LOGGER.info("context refresh configs: " + refresh);
         }
     }
 }
