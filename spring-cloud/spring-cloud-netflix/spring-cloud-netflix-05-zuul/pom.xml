@@ -18,5 +18,6 @@
     <modules>
         <module>zuul-server</module>
         <module>zuul-client</module>
+        <module>zuul-eureka</module>
     </modules>
 </project>
