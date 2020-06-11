@@ -1,0 +1,7 @@
+### 通过url获取配置结果
+### GET /name
+GET http://localhost:11010/name
+
+### GET /actuator/refresh 手动触发配置刷新
+POST http://localhost:11010/actuator/refresh
+

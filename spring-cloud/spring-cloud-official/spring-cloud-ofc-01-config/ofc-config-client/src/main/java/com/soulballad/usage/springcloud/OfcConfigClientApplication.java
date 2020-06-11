@@ -9,5 +9,4 @@ public class OfcConfigClientApplication {
     public static void main(String[] args) {
         SpringApplication.run(OfcConfigClientApplication.class, args);
     }
-
 }

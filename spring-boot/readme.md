@@ -4,7 +4,7 @@ springboot 的常见用法
 - spring-boot-03-webmvc
 - spring-boot-04-bean-validate
 - spring-boot-05-basis
-    - spring-boot-banner([在线1](http://patorjk.com/software/taag/), [在线1](https://www.bootschool.net/ascii), [在线3](http://www.network-science.de/ascii/), [在线4-支持图片转文字](https://www.degraeve.com/img2txt.php))
+    - spring-boot-banner([在线1](http://patorjk.com/software/taag/), [在线2](https://www.bootschool.net/ascii), [在线3](http://www.network-science.de/ascii/), [在线4-支持图片转文字](https://www.degraeve.com/img2txt.php))
     - spring-boot-actuator [actuator](http://localhost:8080/actuator)
     - spring-boot-admin
         - spring-boot-admin-server [admin-server](http://localhost:8080/)
@@ -35,3 +35,4 @@ springboot 的常见用法
 
 - spring-boot-factoriesLoader
 - springboot 异常处理
+- spring-boot-starter-hateoas

@@ -1,0 +1,12 @@
+### 可以通过url读取获取配置文件内容
+### GET soulballad-default 默认配置
+GET http://localhost:11000/soulballad-default.properties
+
+### GET soulballad-dev dev环境配置
+GET http://localhost:11000/soulballad-dev.properties
+
+### GET soulballad-test test环境配置
+GET http://localhost:11000/soulballad-test.properties
+
+### GET soulballad-prod prod环境配置
+GET http://localhost:11000/soulballad-prod.properties
