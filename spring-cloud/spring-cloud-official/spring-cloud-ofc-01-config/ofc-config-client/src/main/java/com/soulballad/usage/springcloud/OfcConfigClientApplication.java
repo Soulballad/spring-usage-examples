@@ -4,9 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringCloudOfc01ConfigApplication {
+public class OfcConfigClientApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringCloudOfc01ConfigApplication.class, args);
+        SpringApplication.run(OfcConfigClientApplication.class, args);
     }
+
 }

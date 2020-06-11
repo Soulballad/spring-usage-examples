@@ -20,11 +20,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <spring.boot.version>2.1.14.RELEASE</spring.boot.version>
+        <spring-boot.version>2.1.14.RELEASE</spring-boot.version>
         <spring-boot-admin.version>2.1.6</spring-boot-admin.version>
-        <spring.cloud.official.version>Greenwich.SR5</spring.cloud.official.version>
-        <spring.cloud.netflix.version>2.2.0.RELEASE</spring.cloud.netflix.version>
-        <spring.cloud.alibaba.version>2.2.0.RELEASE</spring.cloud.alibaba.version>
+        <spring-cloud-official.version>Greenwich.SR5</spring-cloud-official.version>
+        <spring-cloud-netflix.version>2.2.0.RELEASE</spring-cloud-netflix.version>
+        <spring-cloud-alibaba.version>2.2.0.RELEASE</spring-cloud-alibaba.version>
+        <spring-cloud-services.version>2.1.7.RELEASE</spring-cloud-services.version>
         <maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
         <swagger.version>2.9.2</swagger.version>
         <knife4j.version>1.9.6</knife4j.version>
@@ -37,7 +38,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring.boot.version}</version>
+                <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -52,7 +53,15 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring.cloud.official.version}</version>
+                <version>${spring-cloud-official.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- Spring Cloud Services 依赖 -->
+            <dependency>
+                <groupId>io.pivotal.spring.cloud</groupId>
+                <artifactId>spring-cloud-services-dependencies</artifactId>
+                <version>${spring-cloud-services.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -60,7 +69,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-netflix-dependencies</artifactId>
-                <version>${spring.cloud.netflix.version}</version>
+                <version>${spring-cloud-netflix.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -68,7 +77,7 @@
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>${spring.cloud.alibaba.version}</version>
+                <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -127,7 +136,7 @@
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>${spring.boot.version}</version>
+                    <version>${spring-boot.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
