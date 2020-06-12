@@ -1,0 +1,15 @@
+################################################ csl-registry-provider ################################################
+### GET /hello
+GET http://localhost:21010/hello
+
+################################################ csl-registry-consumer ################################################
+### GET /services
+GET http://localhost:21011/services
+
+### GET /discover
+GET http://localhost:21011/discover
+
+### GET /call
+GET http://localhost:21011/call
+
+
