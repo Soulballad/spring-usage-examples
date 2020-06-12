@@ -14,6 +14,6 @@
 
     <modules>
         <module>spring-cloud-ofc-01-config</module>
-        <module>spring-cloud-ofc-03-zookeeper</module>
+        <module>spring-cloud-ofc-02-zookeeper</module>
     </modules>
 </project>

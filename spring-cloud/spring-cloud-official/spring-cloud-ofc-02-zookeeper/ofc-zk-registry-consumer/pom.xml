@@ -4,15 +4,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>spring-cloud-official</artifactId>
+        <artifactId>spring-cloud-ofc-02-zookeeper</artifactId>
         <groupId>com.soulballad.usage</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring-cloud-ofc-03-zookeeper</artifactId>
+    <artifactId>ofc-zk-registry-consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-cloud-ofc-03-zookeeper</name>
-    <description>Spring Cloud Official Zookeeper</description>
+    <name>ofc-zk-registry-consumer</name>
+    <description>Spring Cloud Official Zookeeper Consumer</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -20,8 +20,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>
         </dependency>
 
         <dependency>
