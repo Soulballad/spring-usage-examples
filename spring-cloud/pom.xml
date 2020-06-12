@@ -16,5 +16,6 @@
         <module>spring-cloud-netflix</module>
         <module>spring-cloud-alibaba</module>
         <module>spring-cloud-official</module>
+        <module>spring-cloud-consul</module>
     </modules>
 </project>

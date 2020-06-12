@@ -25,6 +25,7 @@
         <spring-cloud-official.version>Greenwich.SR5</spring-cloud-official.version>
         <spring-cloud-netflix.version>2.2.0.RELEASE</spring-cloud-netflix.version>
         <spring-cloud-alibaba.version>2.2.0.RELEASE</spring-cloud-alibaba.version>
+        <spring-cloud-consul.version>2.2.0.RELEASE</spring-cloud-consul.version>
         <spring-cloud-services.version>2.1.7.RELEASE</spring-cloud-services.version>
         <maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
         <swagger.version>2.9.2</swagger.version>
@@ -70,6 +71,13 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-netflix-dependencies</artifactId>
                 <version>${spring-cloud-netflix.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-consul-dependencies</artifactId>
+                <version>${spring-cloud-consul.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
