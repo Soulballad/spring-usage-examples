@@ -4,10 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringCloudOfc02ConsulApplication {
+public class SpringCloudCsl01ConfigApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringCloudOfc02ConsulApplication.class, args);
+        SpringApplication.run(SpringCloudCsl01ConfigApplication.class, args);
     }
-
 }

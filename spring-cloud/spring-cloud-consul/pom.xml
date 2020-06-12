@@ -17,5 +17,6 @@
 
     <modules>
         <module>spring-cloud-csl-01-config</module>
+        <module>spring-cloud-csl-02-registry</module>
     </modules>
 </project>
