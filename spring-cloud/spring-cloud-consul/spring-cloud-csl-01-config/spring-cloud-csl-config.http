@@ -1,0 +1,7 @@
+### consul 作为配置中心使用
+
+### GET /user/name 获取 @Value 注入的配置：userName
+GET http://localhost:21000/user/name
+
+### GET /user/info 获取 @ConfigurationProperties 注入的配置
+GET http://localhost:21000/user/info
