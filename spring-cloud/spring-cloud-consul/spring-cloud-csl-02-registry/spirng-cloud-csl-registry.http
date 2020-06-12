@@ -2,6 +2,9 @@
 ### GET /hello
 GET http://localhost:21010/hello
 
+### GET /health-check
+GET http://localhost:21010/health-check
+
 ################################################ csl-registry-consumer ################################################
 ### GET /services
 GET http://localhost:21011/services
