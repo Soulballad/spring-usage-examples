@@ -6,9 +6,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-public class CslRegistryProducerApplication {
+public class CslRegistryProviderApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CslRegistryProducerApplication.class, args);
+        SpringApplication.run(CslRegistryProviderApplication.class, args);
     }
 }
