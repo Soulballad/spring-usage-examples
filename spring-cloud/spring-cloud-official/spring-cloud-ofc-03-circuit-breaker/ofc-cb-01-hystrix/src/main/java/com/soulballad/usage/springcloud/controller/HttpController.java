@@ -20,42 +20,74 @@ import java.util.Map;
  * @since ：2020/6/13 22:27
  */
 @RestController
-public class DemoController {
+public class HttpController {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(DemoController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(HttpController.class);
 
-    private HttpService httpService;
-    private CircuitBreakerFactory circuitBreakerFactory;
+    private final HttpRestService restService;
+    private final HttpReactiveService reactiveService;
+    private final CircuitBreakerFactory circuitBreakerFactory;
 
-    public DemoController(HttpService httpService, CircuitBreakerFactory circuitBreakerFactory) {
-        this.httpService = httpService;
+    public HttpController(HttpRestService restService, HttpReactiveService reactiveService, CircuitBreakerFactory circuitBreakerFactory) {
+        this.restService = restService;
+        this.reactiveService = reactiveService;
         this.circuitBreakerFactory = circuitBreakerFactory;
     }
 
+    /**
+     * 使用 webFlux 方式
+     */
     @GetMapping(value = "/get")
     public Mono<Map> get() {
-        return httpService.get();
+        return reactiveService.get();
     }
 
+    /**
+     * 使用 webFlux 方式
+     */
     @GetMapping(value = "/delay/{seconds}")
     public Mono<Map> delay(@PathVariable int seconds) {
         return new ReactiveHystrixCircuitBreaker("mono", HystrixCommandProperties.Setter()
-                .withExecutionTimeoutInMilliseconds(3000)).run(httpService.delay(seconds),
+                .withExecutionTimeoutInMilliseconds(3000)).run(reactiveService.delay(seconds),
                 t -> {
-                    Map<String, String> fallback = new HashMap<>();
                     LOGGER.warn("mono delay for seconds failed, fallback!");
+                    Map<String, String> fallback = new HashMap<>();
                     fallback.put("sorry", "mono delay time out");
                     return Mono.just(fallback);
                 });
     }
 
+    /**
+     * 使用 webFlux 方式
+     */
     @GetMapping(value = "/fluxDelay/{seconds}")
     public Flux<String> fluxDelay(@PathVariable int seconds) {
         return new ReactiveHystrixCircuitBreaker("flux", HystrixCommandProperties.Setter()
-                .withExecutionTimeoutInMilliseconds(3000)).run(httpService.fluxDelay(seconds),
+                .withExecutionTimeoutInMilliseconds(3000)).run(reactiveService.fluxDelay(seconds),
                 t -> {
                     LOGGER.warn("flux delay for seconds failed, fallback!");
                     return Flux.just("sorry", "flux delay time out");
                 });
+    }
+
+    /**
+     * 使用 webMvc restTemplate 方式
+     */
+    @GetMapping(value = "/webGet")
+    public Map webGet() {
+        return restService.get();
+    }
+
+    /**
+     * 使用 webMvc restTemplate 方式
+     */
+    @GetMapping(value = "/webDelay/{seconds}")
+    public Map webDelay(@PathVariable int seconds) {
+        return circuitBreakerFactory.create("delay").run(restService.delaySupplier(seconds), t -> {
+            LOGGER.warn("web delay for seconds failed, fallback!");
+            Map<String, String> fallback = new HashMap<>();
+            fallback.put("sorry", "web delay time out");
+            return fallback;
+        });
     }
 }

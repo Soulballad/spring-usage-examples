@@ -12,15 +12,15 @@ import java.util.function.Supplier;
 /**
  * @author ：soulballad
  * @version : v1.0
- * @apiNote : bin
+ * @apiNote : reactive
  * @since ：2020/6/13 21:32
  */
 @Service
-public class HttpService {
+public class HttpReactiveService {
 
     private WebClient webClient;
 
-    public HttpService(WebClient.Builder builder) {
+    public HttpReactiveService(WebClient.Builder builder) {
         this.webClient = builder.baseUrl("http://www.soulballad.com").build();
     }
 

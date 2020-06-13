@@ -17,5 +17,6 @@
 
     <modules>
         <module>ofc-cb-01-hystrix</module>
+        <module>ofc-cb-02-resilience4j</module>
     </modules>
 </project>
