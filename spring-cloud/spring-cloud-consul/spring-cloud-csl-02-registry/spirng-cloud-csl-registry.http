@@ -1,3 +1,5 @@
+### 当前只有 provider 注册到了 consul，可以在 http://172.16.11.125:8500/ui/ 的 services 节点下看到注册的服务
+
 ################################################ csl-registry-provider ################################################
 ### GET /hello
 GET http://localhost:21010/hello

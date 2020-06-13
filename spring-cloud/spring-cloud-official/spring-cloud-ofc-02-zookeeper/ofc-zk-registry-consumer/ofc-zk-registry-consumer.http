@@ -1,0 +1,13 @@
+
+################################################ ofc-zk-registry-provider ################################################
+### GET /provider/hello
+GET http://localhost:11020/provider/hello
+
+
+################################################ ofc-zk-registry-consumer ################################################
+### GET /consumer/services
+GET http://localhost:11021/consumer/services
+
+### GET /consumer/demo
+GET http://localhost:11021/consumer/demo
+

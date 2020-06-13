@@ -9,6 +9,7 @@ user:
  birthday: 1995-03-14
  phohe: 13666666666
 ```
+url： http://172.16.11.125:8500/ui/  <br/>
 注册中心配置示例：![spring-cloud-csl-config.png](./spring-cloud-csl-config.png)
 
 配置说明：
