@@ -19,11 +19,13 @@
     </properties>
 
     <dependencies>
+        <!-- RetryConfig 依赖 -->
         <dependency>
             <groupId>io.github.resilience4j</groupId>
-            <artifactId>resilience4j-ratelimiter</artifactId>
+            <artifactId>resilience4j-retry</artifactId>
             <version>1.1.0</version>
         </dependency>
+        <!-- BulkheadConfig 依赖 -->
         <dependency>
             <groupId>io.github.resilience4j</groupId>
             <artifactId>resilience4j-bulkhead</artifactId>
