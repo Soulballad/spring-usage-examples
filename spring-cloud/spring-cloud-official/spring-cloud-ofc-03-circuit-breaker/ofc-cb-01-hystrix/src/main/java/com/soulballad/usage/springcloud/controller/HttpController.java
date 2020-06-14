@@ -71,7 +71,7 @@ public class HttpController {
     }
 
     /**
-     * 使用 webMvc restTemplate 方式
+     * 使用 webMvc 方式
      */
     @GetMapping(value = "/webGet")
     public Map webGet() {
@@ -79,7 +79,7 @@ public class HttpController {
     }
 
     /**
-     * 使用 webMvc restTemplate 方式
+     * 使用 webMvc 方式
      */
     @GetMapping(value = "/webDelay/{seconds}")
     public Map webDelay(@PathVariable int seconds) {
