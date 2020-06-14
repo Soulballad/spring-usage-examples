@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>spring-cloud-official</artifactId>
         <groupId>com.soulballad.usage</groupId>
+        <artifactId>spring-cloud-official</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
@@ -18,5 +18,8 @@
     <modules>
         <module>ofc-cb-01-hystrix</module>
         <module>ofc-cb-02-resilience4j</module>
+        <module>ofc-cb-03-sentinel</module>
+        <module>ofc-cb-04-retry</module>
     </modules>
+
 </project>

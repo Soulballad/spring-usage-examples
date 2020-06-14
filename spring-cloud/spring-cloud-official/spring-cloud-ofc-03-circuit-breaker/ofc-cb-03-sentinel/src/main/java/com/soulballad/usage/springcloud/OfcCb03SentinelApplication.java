@@ -9,5 +9,4 @@ public class OfcCb03SentinelApplication {
     public static void main(String[] args) {
         SpringApplication.run(OfcCb03SentinelApplication.class, args);
     }
-
 }

@@ -1,6 +1,5 @@
 package com.soulballad.usage.springboot.repository;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.soulballad.usage.springboot.SpringBootJpaDemoApplicationTests;
 import com.soulballad.usage.springboot.model.User;
 import net.minidev.json.JSONValue;
@@ -39,7 +38,7 @@ public class UserRepositoryTest extends SpringBootJpaDemoApplicationTests {
     @Test
     public void test_findByPage() {
         int pageNum = 1, pageSize = 3;
-        Sort ageDesc = new Sort(Sort.Direction.DESC, "age");
+        Sort ageDesc = Sort.by(Sort.Direction.DESC, "age");
         PageRequest pageRequest = PageRequest.of(pageNum, pageSize, ageDesc);
         Page<User> userPage = userRepository.findByPage(pageRequest);
         System.err.println(JSONValue.toJSONString(userPage));

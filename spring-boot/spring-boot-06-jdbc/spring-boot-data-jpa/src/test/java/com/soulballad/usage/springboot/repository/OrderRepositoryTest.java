@@ -55,7 +55,7 @@ public class OrderRepositoryTest extends SpringBootJpaDemoApplicationTests {
         orderParam.setTotalMoney(BigDecimal.valueOf(200));
 
         int pageNum = 1, pageSize = 2;
-        Sort dateDesc = new Sort(Sort.Direction.DESC, "orderDate");
+        Sort dateDesc = Sort.by(Sort.Direction.DESC, "orderDate");
         PageRequest pageRequest = PageRequest.of(pageNum, pageSize, dateDesc);
 
         Page<Order> page = orderService.selectByCondition(orderParam, pageRequest);

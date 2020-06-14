@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>spring-cloud-ofc-01-config</artifactId>
         <groupId>com.soulballad.usage</groupId>
+        <artifactId>spring-cloud-ofc-01-config</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 

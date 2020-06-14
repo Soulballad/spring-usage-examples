@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>spring-cloud-official</artifactId>
         <groupId>com.soulballad.usage</groupId>
+        <artifactId>spring-cloud-official</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
