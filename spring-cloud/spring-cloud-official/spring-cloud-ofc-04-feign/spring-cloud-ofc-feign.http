@@ -1,0 +1,37 @@
+################################################ ofc-feign-eureka ################################################
+### GET eureka
+GET http://localhost:11040/
+
+################################################ ofc-feign-user-server ################################################
+### GET /user/list
+GET http://localhost:11041/user/list
+
+### POST /user/save
+POST http://localhost:11041/user/save
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "wangwu",
+  "age": 30,
+  "birthday": "1980-03-01",
+  "address": "guangzhou",
+  "phone": "13666666666"
+}
+
+################################################ ofc-feign-user-client ################################################
+### GET /user/list
+GET http://localhost:11042/user/list
+
+### POST /user/save
+POST http://localhost:11042/user/save
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "zhaoliu",
+  "age": 40,
+  "birthday": "1970-04-02",
+  "address": "wuhan",
+  "phone": "13555555555"
+}

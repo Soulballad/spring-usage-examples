@@ -16,7 +16,7 @@ import java.util.List;
  * @since ：2020/6/14 16:00
  */
 // 服务提供方的应用名称
-@FeignClient(value = "ofc-feign-user-service", fallback = UserServiceFallback.class)
+@FeignClient(value = "ofc-feign-user-server", fallback = UserServiceFallback.class)
 public interface UserService {
 
     @GetMapping(value = "/user/list")
