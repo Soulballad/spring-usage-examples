@@ -17,5 +17,6 @@
     <modules>
         <module>ofc-gateway-eureka</module>
         <module>ofc-gateway-router</module>
+        <module>ofc-gateway-service-a</module>
     </modules>
 </project>
