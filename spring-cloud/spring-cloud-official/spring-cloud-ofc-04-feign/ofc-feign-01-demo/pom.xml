@@ -17,5 +17,7 @@
 
     <modules>
         <module>ofc-user-api</module>
+        <module>ofc-user-service</module>
+        <module>ofc-user-client</module>
     </modules>
 </project>

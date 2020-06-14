@@ -9,9 +9,9 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>ofc-user-api</artifactId>
+	<artifactId>ofc-user-client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ofc-user-api</name>
+	<name>ofc-user-client</name>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -22,6 +22,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
