@@ -34,6 +34,7 @@
         <feign.version>1.4.4.RELEASE</feign.version>
         <knife4j.version>1.9.6</knife4j.version>
         <knife4j-spring-boot.version>2.0.3</knife4j-spring-boot.version>
+        <fastjson.version>1.2.9</fastjson.version>
     </properties>
 
     <dependencyManagement>
@@ -129,6 +130,13 @@
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-spring-boot-starter</artifactId>
                 <version>${knife4j-spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
