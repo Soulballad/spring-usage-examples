@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringCloudOfc05GatewayApplication {
+public class OfcGatewayRouterApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringCloudOfc05GatewayApplication.class, args);
+        SpringApplication.run(OfcGatewayRouterApplication.class, args);
     }
 
 }
