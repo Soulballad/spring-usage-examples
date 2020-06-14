@@ -16,5 +16,6 @@
         <module>spring-cloud-ofc-01-config</module>
         <module>spring-cloud-ofc-02-zookeeper</module>
         <module>spring-cloud-ofc-03-circuit-breaker</module>
+        <module>spring-cloud-ofc-04-feign</module>
     </modules>
 </project>
