@@ -18,5 +18,6 @@
         <module>spring-cloud-ofc-03-circuit-breaker</module>
         <module>spring-cloud-ofc-04-feign</module>
         <module>spring-cloud-ofc-05-gateway</module>
+        <module>spring-cloud-ofc-06-stream</module>
     </modules>
 </project>
