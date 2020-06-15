@@ -19,5 +19,6 @@
         <module>ofc-gateway-router</module>
         <module>ofc-gateway-service-a</module>
         <module>ofc-gateway-service-b</module>
+        <module>ofc-gateway-target</module>
     </modules>
 </project>
