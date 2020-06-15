@@ -17,5 +17,6 @@
 
     <modules>
         <module>ofc-stream-kafka</module>
+        <module>ofc-stream-rabbitmq</module>
     </modules>
 </project>
