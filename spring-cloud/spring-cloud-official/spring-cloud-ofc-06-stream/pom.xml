@@ -15,5 +15,7 @@
     <description>Spring Cloud Official Stream</description>
     <packaging>pom</packaging>
 
-    <modules></modules>
+    <modules>
+        <module>ofc-stream-kafka</module>
+    </modules>
 </project>
