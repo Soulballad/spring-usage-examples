@@ -1,0 +1,24 @@
+server:
+  port: 11060
+spring:
+  application:
+    name: ofc-stream-kafka
+  cloud:
+    stream:
+      bindings:
+        # 配置 channel
+        user_input:
+          destination: ofc-stream-kafka-topic # 配置监听的 topic
+        user_output:
+          destination: ofc-stream-kafka-topic # 配置消息发送的 topic
+      default-binder: kafka
+
+  kafka:
+    bootstrap-servers: 172.16.11.125:9092
+    consumer:
+      group-id: ofc-stream-kafka-consumer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.ByteArraySerializer
+      value-serializer: org.apache.kafka.common.serialization.ByteArraySerializer
+      client-id: ofc-stream-kafka-producer
+
