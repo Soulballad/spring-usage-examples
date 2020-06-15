@@ -1,0 +1,4 @@
+### GET /sendMessage
+http://localhost:11060/sendMessage?content=12345
+
+### 日志中打印了 ofc-stream-kafka receive message is [12345]
