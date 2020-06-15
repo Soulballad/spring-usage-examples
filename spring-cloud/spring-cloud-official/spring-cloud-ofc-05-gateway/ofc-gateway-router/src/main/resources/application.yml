@@ -2,6 +2,29 @@
 server:
   port: 11055
 
+# eureka
+eureka:
+  server:
+    port: 11050
+  instance:
+    # 使用 ip 代替实例名
+    prefer-ip-address: true
+    # 实例的主机名
+    hostname: localhost
+    # 实例的 ID 规则
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+  client:
+    serviceUrl:
+      # 注册中心地址
+      defaultZone: http://${eureka.instance.hostname}:${eureka.server.port}/eureka/
+
+# 日志
+logging:
+  level:
+    # log 级别
+    org.springframework.cloud.gateway: debug
+
+
 spring:
   profiles:
     # 指定配置
@@ -12,7 +35,7 @@ spring:
     # route_hystrix：熔断
     # route_requestRateLimiter：限流
     # route_all：综合
-    active: route_simple
+    active: route_all
 
 ---
 
@@ -34,31 +57,11 @@ spring:
       # 路由标识（id：标识，具有唯一性）   简单尝试
       - id: route_simple
         # 目标服务地址（uri：地址，请求转发后的地址）
-        uri: https://www.zouwencong.com
+        uri: http://localhost:11056/index
         # 路由条件（predicates：断言，匹配 HTTP 请求内容）
         predicates:
-        ## 转发地址格式为 uri/archive
-        - Path=/archive
-
-eureka:
-  server:
-    port: 11050
-  instance:
-    # 使用 ip 代替实例名
-    prefer-ip-address: true
-    # 实例的主机名
-    hostname: localhost
-    # 实例的 ID 规则
-    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
-  client:
-    serviceUrl:
-      # 注册中心地址
-      defaultZone: http://${eureka.instance.hostname}:${eureka.server.port}/eureka/
-
-logging:
-  level:
-    # log 级别
-    org.springframework.cloud.gateway: debug
+        ## 转发地址格式为 uri/index
+        - Path=/index
 
 ---
 
@@ -68,7 +71,7 @@ spring:
   profiles: route_stripPrefix
   application:
     # 应用名称
-    name: gateway-master
+    name: ofc-gateway-router
   cloud:
     gateway:
       discovery:
@@ -80,32 +83,14 @@ spring:
       # 路由标识（id：标识，具有唯一性）   截取请求
       - id: route_simple
         # 目标服务地址（uri：地址，请求转发后的地址）
-        uri: https://www.zouwencong.com
+        uri: http://localhost:11056/access
         # 路由条件（predicates：断言，匹配 HTTP 请求内容）
         predicates:
-        ## 转发地址格式为 uri/archive，/str 部分会被下面的过滤器给截取掉
-        - Path=/str/archive
+        ## 转发地址格式为 uri/access，/str 部分会被下面的过滤器给截取掉
+        - Path=/test/access
         filters:
         ## 截取路径位数
         - StripPrefix=1
-
-eureka:
-  instance:
-    # 使用 ip 代替实例名
-    prefer-ip-address: true
-    # 实例的主机名
-    hostname: ${spring.cloud.client.ip-address}
-    # 实例的 ID 规则
-    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
-  client:
-    serviceUrl:
-      # 注册中心地址
-      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
-
-logging:
-  level:
-    # log 级别
-    org.springframework.cloud.gateway: debug
 
 ---
 
@@ -115,7 +100,7 @@ spring:
   profiles: route_uri
   application:
     # 应用名称
-    name: gateway-master
+    name: ofc-gateway-router
   cloud:
     gateway:
       discovery:
@@ -127,7 +112,7 @@ spring:
       # 路由标识（id：标识，具有唯一性）   转发指定地址并传入参数
       - id: route_uri
         # 目标服务地址（uri：地址，请求转发后的地址）
-        uri: http://localhost:9000
+        uri: http://localhost:11052
         # 路由条件（predicates：断言，匹配 HTTP 请求内容）
         predicates:
         ## 匹配 GET 请求
@@ -135,25 +120,7 @@ spring:
         # 过滤器（filters：过滤器，过滤规则）
         filters:
         ## 添加指定参数
-        - AddRequestParameter=name, zwc
-
-eureka:
-  instance:
-    # 使用 ip 代替实例名
-    prefer-ip-address: true
-    # 实例的主机名
-    hostname: ${spring.cloud.client.ip-address}
-    # 实例的 ID 规则
-    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
-  client:
-    serviceUrl:
-      # 注册中心地址
-      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
-
-logging:
-  level:
-    # log 级别
-    org.springframework.cloud.gateway: debug
+        - AddRequestParameter=name, lisi
 
 ---
 
@@ -163,7 +130,7 @@ spring:
   profiles: route_addRequestParameter
   application:
     # 应用名称
-    name: gateway-master
+    name: ofc-gateway-router
   cloud:
     gateway:
       discovery:
@@ -175,7 +142,7 @@ spring:
       # 路由标识（id：标识，具有唯一性）   转发指定服务并传入参数
       - id: route_addRequestParameter
         # 目标服务地址（uri：地址，请求转发后的地址）
-        uri: lb://gateway-service
+        uri: lb://ofc-gateway-service
         # 路由条件（predicates：断言，匹配 HTTP 请求内容）
         predicates:
         ## 匹配 GET 请求
@@ -183,25 +150,7 @@ spring:
         # 过滤器（filters：过滤器，过滤规则）
         filters:
         ## 添加指定参数
-        - AddRequestParameter=age, three
-
-eureka:
-  instance:
-    # 使用 ip 代替实例名
-    prefer-ip-address: true
-    # 实例的主机名
-    hostname: ${spring.cloud.client.ip-address}
-    # 实例的 ID 规则
-    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
-  client:
-    serviceUrl:
-      # 注册中心地址
-      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
-
-logging:
-  level:
-    # log 级别
-    org.springframework.cloud.gateway: debug
+        - AddRequestParameter=age, eighteen
 
 ---
 
@@ -211,7 +160,7 @@ spring:
   profiles: route_hystrix
   application:
     # 应用名称
-    name: gateway-master
+    name: ofc-gateway-router
   cloud:
     gateway:
       discovery:
@@ -223,7 +172,7 @@ spring:
       # 路由标识（id：标识，具有唯一性）   熔断
       - id: route_hystrix
         # 目标服务地址（uri：地址，请求转发后的地址）
-        uri: lb://gateway-service
+        uri: lb://ofc-gateway-service
         # 路由条件（predicates：断言，匹配 HTTP 请求内容）
         predicates:
         ## 匹配 GET 请求
@@ -231,31 +180,13 @@ spring:
         # 过滤器（filters：过滤器，过滤规则）
         filters:
         ## 添加指定参数
-        - AddRequestParameter=age, three
+        - AddRequestParameter=age, eighteen
         ## 熔断
         - name: Hystrix
           args:
             name: fallbackcmd
-            ### fallback 时调用的方法 http://localhost:8000/fallback
+            ### fallback 时调用的方法 http://localhost:11055/fallback
             fallbackUri: forward:/fallback
-
-eureka:
-  instance:
-    # 使用 ip 代替实例名
-    prefer-ip-address: true
-    # 实例的主机名
-    hostname: ${spring.cloud.client.ip-address}
-    # 实例的 ID 规则
-    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
-  client:
-    serviceUrl:
-      # 注册中心地址
-      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
-
-logging:
-  level:
-    # log 级别
-    org.springframework.cloud.gateway: debug
 
 ---
 
@@ -264,12 +195,12 @@ spring:
   ## 限流
   profiles: route_requestRateLimiter
   redis:
-    host: localhost
+    host: 172.16.11.125
     port: 6379
     database: 0
   application:
     # 应用名称
-    name: gateway-master
+    name: ofc-gateway-router
   cloud:
     gateway:
       discovery:
@@ -281,7 +212,7 @@ spring:
       # 路由标识（id：标识，具有唯一性）   限流
       - id: route_requestRateLimiter
         # 目标服务地址（uri：地址，请求转发后的地址）
-        uri: lb://gateway-service
+        uri: lb://ofc-gateway-service
         # 路由条件（predicates：断言，匹配 HTTP 请求内容）
         predicates:
         ## 匹配 GET 请求
@@ -289,7 +220,7 @@ spring:
         # 过滤器（filters：过滤器，过滤规则）
         filters:
         ## 添加指定参数
-        - AddRequestParameter=age, three
+        - AddRequestParameter=age, eighteen
         ## 限流
         - name: RequestRateLimiter
           args:
@@ -300,24 +231,6 @@ spring:
             ### 用户允许在一秒钟内完成的最大请求数
             redis-rate-limiter.burstCapacity: 3
 
-eureka:
-  instance:
-    # 使用 ip 代替实例名
-    prefer-ip-address: true
-    # 实例的主机名
-    hostname: ${spring.cloud.client.ip-address}
-    # 实例的 ID 规则
-    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
-  client:
-    serviceUrl:
-      # 注册中心地址
-      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
-
-logging:
-  level:
-    # log 级别
-    org.springframework.cloud.gateway: debug
-
 ---
 
 spring:
@@ -325,12 +238,12 @@ spring:
   ## 综合
   profiles: route_all
   redis:
-    host: localhost
+    host: 172.16.11.125
     port: 6379
     database: 0
   application:
     # 应用名称
-    name: gateway-master
+    name: ofc-gateway-router
   cloud:
     gateway:
       discovery:
@@ -342,7 +255,7 @@ spring:
       # 路由标识（id：标识，具有唯一性）   综合
       - id: route_all
         # 目标服务地址（uri：地址，请求转发后的地址）
-        uri: lb://gateway-service
+        uri: lb://ofc-gateway-service
         # 路由条件（predicates：断言，匹配 HTTP 请求内容）
         predicates:
         ## 转发地址格式为 uri/routeAll，/all 部分会被下面的过滤器给截取掉
@@ -370,21 +283,3 @@ spring:
             redis-rate-limiter.replenishRate: 1
             ### 用户允许在一秒钟内完成的最大请求数
             redis-rate-limiter.burstCapacity: 3
-
-eureka:
-  instance:
-    # 使用 ip 代替实例名
-    prefer-ip-address: true
-    # 实例的主机名
-    hostname: ${spring.cloud.client.ip-address}
-    # 实例的 ID 规则
-    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
-  client:
-    serviceUrl:
-      # 注册中心地址
-      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
-
-logging:
-  level:
-    # log 级别
-    org.springframework.cloud.gateway: debug

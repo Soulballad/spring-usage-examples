@@ -9,5 +9,4 @@ public class OfcGatewayTargetApplication {
     public static void main(String[] args) {
         SpringApplication.run(OfcGatewayTargetApplication.class, args);
     }
-
 }

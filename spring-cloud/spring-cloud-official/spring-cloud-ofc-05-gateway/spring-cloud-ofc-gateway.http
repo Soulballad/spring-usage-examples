@@ -1,0 +1,48 @@
+################################################ instruction ################################################
+############################# route_simple #############################
+### GET /index
+GET http://localhost:11055/index
+
+
+############################# route_stripPrefix #############################
+### GET test/access
+GET http://localhost:11055/test/access
+
+
+############################# route_uri #############################
+### GET /name
+GET http://localhost:11055/name
+
+
+############################# route_addRequestParameter #############################
+### GET /name
+GET http://localhost:11055/age
+
+
+############################# route_hystrix #############################
+### GET /name
+GET http://localhost:11055/age
+### GET /name
+GET http://localhost:11055/name
+### POST /fallback
+POST http://localhost:11055/fallback
+
+
+############################# route_requestRateLimiter #############################
+### GET /name
+GET http://localhost:11055/age
+### GET /name
+GET http://localhost:11055/name
+### POST /fallback
+POST http://localhost:11055/fallback
+
+
+############################# route_requestRateLimiter #############################
+### GET /all/routeAll
+GET http://localhost:11055/all/routeAll
+
+### GET /all/routeAll
+GET http://localhost:11055/all/routeAll?token=123
+
+### POST /fallback
+POST http://localhost:11055/fallback
