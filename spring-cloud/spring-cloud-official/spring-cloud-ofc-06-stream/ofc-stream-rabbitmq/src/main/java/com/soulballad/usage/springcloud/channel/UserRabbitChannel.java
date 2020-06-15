@@ -8,30 +8,20 @@ import org.springframework.messaging.SubscribableChannel;
 /**
  * @author ：soulballad
  * @version : v1.0
- * @apiNote :
- * @since ：2020/6/15 21:49
+ * @apiNote : channel
+ * @since ：2020/6/15 22:16
  */
-public interface UserChannel {
+public interface UserRabbitChannel {
 
-    /**
-     * 信道名称
-     */
     String USER_INPUT = "user_input";
-
-    /**
-     * 信道名称
-     */
     String USER_OUTPUT = "user_output";
 
-    /**
-     * 发送消息的 channel
-     */
-    @Output(USER_OUTPUT)
-    MessageChannel sendUserMessage();
-
-    /**
-     * 接收消息的 channel
-     */
     @Input(USER_INPUT)
     SubscribableChannel receiveMessage();
+
+    @Output(USER_OUTPUT)
+    MessageChannel sendMessage();
+
+    @Output
+    MessageChannel sendOtherMessage();
 }

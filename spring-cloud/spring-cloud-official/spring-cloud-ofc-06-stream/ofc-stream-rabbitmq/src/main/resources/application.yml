@@ -1,0 +1,26 @@
+server:
+  port: 11062
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        user_input:
+          destination: ofc-stream-rabbit-topic
+          binder: ofc_rabbit
+          group: ofc-stream-rabbit-consumer
+        user_output:
+          destination: ofc-stream-rabbit-topic
+          binder: ofc_rabbit
+
+      binders:
+        ofc_rabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: 172.16.11.125
+                port: 5672
+                username: guest
+                password: guest
+                virtualhost: /

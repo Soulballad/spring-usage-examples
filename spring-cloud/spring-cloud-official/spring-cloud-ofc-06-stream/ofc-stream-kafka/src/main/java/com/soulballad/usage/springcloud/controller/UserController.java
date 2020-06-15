@@ -1,6 +1,6 @@
 package com.soulballad.usage.springcloud.controller;
 
-import com.soulballad.usage.springcloud.channel.UserChannel;
+import com.soulballad.usage.springcloud.channel.UserKafkaChannel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ public class UserController {
     private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
-    @Qualifier(UserChannel.USER_OUTPUT)
+    @Qualifier(UserKafkaChannel.USER_OUTPUT)
     private MessageChannel userMessageChannel;
 
     @GetMapping(value = "/sendMessage")
@@ -33,7 +33,7 @@ public class UserController {
         return isSuccess ? "success" : "failed";
     }
 
-    @StreamListener(UserChannel.USER_INPUT)
+    @StreamListener(UserKafkaChannel.USER_INPUT)
     public void receive(Message<String> message) {
         LOGGER.info("ofc-stream-kafka receive message is [{}]", message.getPayload());
     }
