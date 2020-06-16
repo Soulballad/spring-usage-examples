@@ -17,5 +17,6 @@
 
     <modules>
         <module>ofc-bus-eureka</module>
+        <module>ofc-bus-config-server</module>
     </modules>
 </project>

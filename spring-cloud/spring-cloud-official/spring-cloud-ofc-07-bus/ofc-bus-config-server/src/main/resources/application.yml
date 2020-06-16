@@ -1,0 +1,46 @@
+server:
+  port: 11072
+
+spring:
+  application:
+    name: ofc-bus-config-server
+  cloud:
+    config:
+      server:
+        git:
+          # 仓库地址
+          uri: https://gitee.com/soulballad/spring-usage-examples.git
+          # 对应 {label} 部分，即 Git 的分支
+          default-label: master
+          # 仓库文件夹名称，多个以逗号分隔
+          search-paths: spring-cloud-ofc-07-bus/config-repo
+          # git 仓库用户名（公开库可以不用填写）
+          username:
+          # git 仓库密码（公开库可以不用填写）
+          password:
+    bus:
+      # 开启消息跟踪
+      enabled: true
+      trace:
+        enabled: true
+  kafka:
+    consumer:
+      group-id:
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+  server:
+    port: 11070
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.server.port}/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        # 开启 endpoint
+        include:
