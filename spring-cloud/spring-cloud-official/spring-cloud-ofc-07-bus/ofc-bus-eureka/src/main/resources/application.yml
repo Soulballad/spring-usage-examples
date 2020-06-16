@@ -1,0 +1,17 @@
+server:
+  port: 11070
+
+spring:
+  application:
+    name: ofc-bus-eureka
+
+eureka:
+  instance:
+    hostname: localhost # 主机名
+    prefer-ip-address: true # 优先使用ip
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port} # 实例id
+  client:
+    register-with-eureka: false # eureka自我注册
+    fetch-registry: false # 是否从注册中心获取注册信息
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ # 注册中心地址
