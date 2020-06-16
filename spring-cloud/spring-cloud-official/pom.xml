@@ -19,5 +19,6 @@
         <module>spring-cloud-ofc-04-feign</module>
         <module>spring-cloud-ofc-05-gateway</module>
         <module>spring-cloud-ofc-06-stream</module>
+        <module>spring-cloud-ofc-07-bus</module>
     </modules>
 </project>
