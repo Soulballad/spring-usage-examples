@@ -1,0 +1,6 @@
+server:
+  port: 11073
+
+spring:
+  application:
+    name: ofc-bus-config-client

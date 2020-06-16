@@ -1,23 +1,17 @@
-server:
-  port: 11072
-
 spring:
-  application:
-    name: ofc-bus-config-server
   cloud:
     config:
-      server:
-        git:
-          # 仓库地址
-          uri: https://gitee.com/soulballad/spring-usage-examples.git
-          # 对应 {label} 部分，即 Git 的分支
-          default-label: master
-          # 仓库文件夹名称，多个以逗号分隔
-          search-paths: spring-cloud-ofc-07-bus/config-repo
-          # git 仓库用户名（公开库可以不用填写）
-          username:
-          # git 仓库密码（公开库可以不用填写）
-          password:
+      # 对应 {label} 部分，即 Git 的分支
+      label: master
+      # 对应 {application} 部分
+      name: system
+      # 对应 {profile} 部分
+      profile: dev
+      discovery:
+        # 开启 Config 服务发现与注册
+        enabled: true
+        # 指定 config-server
+        service-id: ofc-bus-config-server
     bus:
       # 开启消息跟踪
       enabled: true
@@ -28,7 +22,7 @@ spring:
       # 指定默认消费者 group id
       # 如果不设置，将会使用 commons 工程中的 group-id，那时调用 /actuator/bus-refresh 接口只会刷新其中一个 client
       # 因为在同一个组中的 Consumer，同一个主题只会被一个 Consumer 接收
-      group-id: ofc-bus-config-server-consumer-group
+      group-id: ofc-bus-config-client-consumer-group
 
 eureka:
   instance:
@@ -42,8 +36,8 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${eureka.server.port}/eureka/
 
 management:
+  # 开启 endpoint
   endpoints:
     web:
       exposure:
-        # 开启 endpoint
         include: bus-refresh
