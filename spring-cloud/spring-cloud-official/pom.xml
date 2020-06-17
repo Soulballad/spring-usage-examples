@@ -21,5 +21,6 @@
         <module>spring-cloud-ofc-06-stream</module>
         <module>spring-cloud-ofc-07-bus</module>
         <module>spring-cloud-ofc-08-loadbalancer</module>
+        <module>spring-cloud-ofc-09-sleuth</module>
     </modules>
 </project>

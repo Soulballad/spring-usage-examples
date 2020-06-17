@@ -4,9 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringCloudOfc08LoadbalancerApplication {
+public class SpringCloudOfc09SleuthApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringCloudOfc08LoadbalancerApplication.class, args);
+        SpringApplication.run(SpringCloudOfc09SleuthApplication.class, args);
     }
+
 }
