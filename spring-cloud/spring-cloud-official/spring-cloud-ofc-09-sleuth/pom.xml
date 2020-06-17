@@ -19,5 +19,6 @@
         <module>ofc-sleuth-eureka</module>
         <module>ofc-sleuth-zipkin</module>
         <module>ofc-sleuth-gateway</module>
+        <module>ofc-sleuth-client-a</module>
     </modules>
 </project>
