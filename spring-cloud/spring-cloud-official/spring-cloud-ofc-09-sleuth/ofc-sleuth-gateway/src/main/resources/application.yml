@@ -1,0 +1,42 @@
+server:
+  port: 11093
+
+spring:
+  application:
+    name: ofc-sleuth-gateway
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          # 是否和服务注册与发现组件结合，设置为 true 后可以直接使用应用名称调用服务
+          enabled: true
+      routes:
+        # 路由标识（id：标识，具有唯一性）
+        - id: route_simple
+          # 目标服务地址（uri：地址，请求转发后的地址）
+          uri: http://localhost:10095
+          # 路由条件（predicates：断言，匹配 HTTP 请求内容）
+          predicates:
+            # 匹配 GET 请求
+            - Method=GET
+  zipkin:
+    base-url: http://${spring.cloud.client.ip-address}:10092
+  sleuth:
+    sampler:
+      # 将采样比例设置为 1.0，也就是全部都需要。默认是 0.1
+      probability: 1.0
+eureka:
+  instance:
+    hostname: ${spring.cloud.client.ip-address}
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+  server:
+    port: 10090
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.server.port}/eureka/
+
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
