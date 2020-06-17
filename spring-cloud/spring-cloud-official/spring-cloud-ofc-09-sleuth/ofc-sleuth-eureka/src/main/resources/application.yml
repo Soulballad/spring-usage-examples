@@ -1,0 +1,17 @@
+server:
+  port: 11090
+
+spring:
+  application:
+    name: ofc-sleuth-eureka
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
