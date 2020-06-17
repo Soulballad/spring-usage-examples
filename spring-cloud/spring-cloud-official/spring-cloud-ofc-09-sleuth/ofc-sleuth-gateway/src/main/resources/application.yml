@@ -15,7 +15,7 @@ spring:
         # 路由标识（id：标识，具有唯一性）
         - id: route_simple
           # 目标服务地址（uri：地址，请求转发后的地址）
-          uri: http://localhost:10095
+          uri: http://localhost:10095/aPort
           # 路由条件（predicates：断言，匹配 HTTP 请求内容）
           predicates:
             # 匹配 GET 请求
