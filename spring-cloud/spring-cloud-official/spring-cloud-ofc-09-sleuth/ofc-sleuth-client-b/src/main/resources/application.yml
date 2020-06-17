@@ -1,0 +1,23 @@
+server:
+  port: 11096
+
+spring:
+  application:
+    name: ofc-sleuth-client-b
+  zipkin:
+    base-url: http://${spring.cloud.client.ip-address}:11092
+  sleuth:
+    sampler:
+      # 将采样比例设置为 1.0，也就是全部都需要。默认是 0.1
+      probability: 1.0
+
+eureka:
+  instance:
+    hostname: ${spring.cloud.client.ip-address}
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+  server:
+    port: 10090
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.server.port}/eureka/

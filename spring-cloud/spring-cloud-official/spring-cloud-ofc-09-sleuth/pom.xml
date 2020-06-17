@@ -20,5 +20,6 @@
         <module>ofc-sleuth-zipkin</module>
         <module>ofc-sleuth-gateway</module>
         <module>ofc-sleuth-client-a</module>
+        <module>ofc-sleuth-client-b</module>
     </modules>
 </project>
