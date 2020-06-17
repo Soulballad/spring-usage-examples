@@ -13,7 +13,7 @@ spring:
           # 对应 {label} 部分，即 Git 的分支
           default-label: master
           # 仓库文件夹名称，多个以逗号分隔
-          search-paths: spring-cloud-ofc-07-bus/config-repo
+          search-paths: spring-cloud/spring-cloud-official/spring-cloud-ofc-07-bus/config-repo
           # git 仓库用户名（公开库可以不用填写）
           username:
           # git 仓库密码（公开库可以不用填写）

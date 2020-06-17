@@ -3,8 +3,8 @@ spring:
     config:
       # 对应 {label} 部分，即 Git 的分支
       label: master
-      # 对应 {application} 部分
-      name: system
+      # 对应 config-repo 中文件名前缀
+      name: soulballad
       # 对应 {profile} 部分
       profile: dev
       discovery:
