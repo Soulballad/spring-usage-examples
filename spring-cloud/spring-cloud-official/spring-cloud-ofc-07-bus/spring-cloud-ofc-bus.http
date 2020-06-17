@@ -1,0 +1,45 @@
+############################# ofc-bus-eureka #############################
+GET http://localhost:11070/
+
+############################# ofc-bus-config-server #############################
+### GET /config-repo/{profile} 获取配置信息
+#http://localhost:11072/config-repo/dev
+http://localhost:11072/config-repo/test
+
+### GET /soulballad/{profile} 获取配置信息
+#http://localhost:11072/soulballad/dev
+http://localhost:11072/soulballad/test
+
+### GET /soulballad-{profile}.properties 获取指定文件内容
+#http://localhost:11072/soulballad-dev.properties
+http://localhost:11072/soulballad-test.properties
+
+### 接口访问支持以下几种格式
+### /{application}/{profile}[/{label}]
+GET http://localhost:11072/soulballad/dev/master
+### /{application}-{profile}.yml
+GET http://localhost:11072/soulballad-dev.yml
+### /{label}/{application}-{profile}.yml
+GET http://localhost:11072/master/soulballad-dev.yml
+### /{application}-{profile}.properties
+GET http://localhost:11072/soulballad-dev.properties
+### /{label}/{application}-{profile}.properties
+GET http://localhost:11072/master/soulballad-dev.properties
+
+
+############################# ofc-bus-config-client #############################
+### GET /name
+GET http://localhost:11073/name
+
+### 修改server上 soulballad-dev.properties 值： soulballad-dev -> soulballad-dev...changed
+### 再次访问 /name，还是获取到 soulballad-dev，调用 /actuator/bus-refresh 进行刷新
+GET http://localhost:11073/name
+### POST /actuator/bus-refresh
+POST http://localhost:11072/actuator/bus-refresh
+### 再次访问 /name，获取到 soulballad-dev...changed
+### 当有多个 config-client 时，也可以只刷新单个 config-client 的取值，使用如下方式
+### POST http://localhost:8000/actuator/bus-refresh/${spring.application.name}:{server.port}，
+### spring.application.name 和 server.port都是要刷新client的
+POST http://localhost:11072/actuator/bus-refresh/ofc-bus-config-client:11073
+### 再次访问 /name
+GET http://localhost:11073/name

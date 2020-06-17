@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
  * @apiNote : config
  * @since ：2020/6/17 19:32
  */
-@RestController
 @RefreshScope
-public class ConfigController {
+@RestController
+public class OfcBusConfigController {
 
     @Value("${my.name}")
     private String name;
 
     @GetMapping(value = "/name")
-    public String name() {
+    public String getName() {
         return name;
     }
 }
