@@ -1,0 +1,26 @@
+server:
+  port: 11092
+
+spring:
+  application:
+    name: ofc-sleuth-zipkin
+eureka:
+  instance:
+    hostname: ${spring.cloud.client.ip-address}
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+  server:
+    port: 11090
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.server.port}/eureka/
+
+# 关闭自动配置启用所有请求得检测
+management:
+  metrics:
+    web:
+      server:
+        request:
+          autotime:
+            # 避免访问 zipkin 页面报 java.lang.IllegalArgumentException
+            enabled: false
