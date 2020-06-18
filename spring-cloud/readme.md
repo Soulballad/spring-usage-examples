@@ -24,7 +24,7 @@
     - spring-cloud-alibaba-sentinel
     - spring-cloud-alibaba-dubbo
     - spring-cloud-alibaba-rocektmq
-    - spring-cloud-alibaba-seata
+    - spring-cloud-alibaba-seata(fescar)
 - spring-cloud-official 组件：
     - spring-cloud-official-bus
     - spring-cloud-official-config

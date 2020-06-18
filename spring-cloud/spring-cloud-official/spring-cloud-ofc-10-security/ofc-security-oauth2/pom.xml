@@ -5,17 +5,14 @@
 
     <parent>
         <groupId>com.soulballad.usage</groupId>
-        <artifactId>spring-cloud-official</artifactId>
+        <artifactId>spring-cloud-ofc-10-security</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring-cloud-ofc-10-security</artifactId>
+    <artifactId>ofc-security-oauth2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-cloud-ofc-10-security</name>
-    <description>Spring Cloud Official Security</description>
+    <name>ofc-security-oauth2</name>
     <packaging>pom</packaging>
 
-    <modules>
-        <module>ofc-security-oauth2</module>
-    </modules>
+
 </project>
