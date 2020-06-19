@@ -4,3 +4,7 @@ server:
 spring:
   application:
     name: ofc-oauth2-demo
+
+logging:
+  level:
+    org.springframework.security: debug

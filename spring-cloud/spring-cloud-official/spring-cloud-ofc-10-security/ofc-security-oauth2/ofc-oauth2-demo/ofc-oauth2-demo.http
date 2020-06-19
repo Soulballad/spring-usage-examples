@@ -1,0 +1,49 @@
+### oauth2 四种授权模式
+### Authorization Code（授权码模式）：正宗的OAuth2的授权模式，客户端先将用户导向授权服务器，登录后获取授权码，然后进行授权，最后根据授权码获取访问令牌；
+### Implicit（简化模式）：和授权码模式相比，取消了获取授权码的过程，直接获取访问令牌；
+### Resource Owner Password Credentials（密码模式）：客户端直接向用户获取用户名和密码，之后向授权服务器获取访问令牌；
+### Client Credentials（客户端模式）：客户端直接通过客户端授权（比如client_id和client_secret）从授权服务器获取访问令牌。
+
+
+############################################### 密码模式 Password Credentials ###############################################
+### POST
+POST localhost:11101/oauth/token?client_id=soulballad&client_secret=123456&grant_type=password&username=zhangsan&password=123456
+Content-Type: application/json
+
+
+############################################### 简化模式 Implicit ###############################################
+### GET /oauth/authorize
+GET http://localhost:11101/oauth/authorize?response_type=token&client_id=soulballad&redirect_uri=http://www.baidu.com
+## 会自动跳转到 http://localhost:11101/login，然后输入用户名/密码  zhangsan/123456
+### 浏览器会自动跳转到如下地址
+GET https://www.baidu.com/#access_token=298a7bfe-4f41-478c-9a43-3f5bea918df1&token_type=bearer&expires_in=3414&scope=all
+## 可发送如下请求
+### /user?access_token=?
+http://localhost:11101/user?access_token=298a7bfe-4f41-478c-9a43-3f5bea918df1
+
+
+############################################### 授权码模式 Authorization Code ###############################################
+### GET /oauth/authorize
+GET http://localhost:11101/oauth/authorize?response_type=code&client_id=soulballad&redirect_uri=http://www.baidu.com&scope=all&state=normal
+## 会自动跳转到 http://localhost:11101/login，然后输入用户名/密码  zhangsan/123456
+### 浏览器会自动跳转到如下地址
+GET https://www.baidu.com/?code=SV9Dzr&state=normal
+### 使用授权码，获取访问令牌，获取 access_token
+GET http://localhost:11101/oauth/token?grant_type=authorization_code&client_id=soulballad&client_secret=123456&redirect_uri=http://www.baidu.com&code=SV9Dzr
+
+
+############################################### 客户端模式 Client Credentials ###############################################
+GET localhost:11101/oauth/token?client_id=soulballad&client_secret=123456&grant_type=client_credentials
+
+
+############################################### 刷新token refresh_token ###############################################
+GET localhost:11101/oauth/token?client_id=soulballad&client_secret=123456&grant_type=refresh_token&refresh_token=04e57e0e-a984-4c45-bfc9-c91a523ff59a
+
+
+############################################### 使用token获取资源 ###############################################
+### curl  -H "Authorization:bearer 284a5718-0a80-4eab-9d04-1bda3b6ceb62" -X GET  http://localhost:8080/user/get
+GET http://localhost:11101/user/currentUser
+Authorization: bearer 1de148ca-2773-479a-9bde-db274805aa1d
+### 或者如下链接
+GET http://localhost:11101/user/currentUser?access_token=1de148ca-2773-479a-9bde-db274805aa1d
+
