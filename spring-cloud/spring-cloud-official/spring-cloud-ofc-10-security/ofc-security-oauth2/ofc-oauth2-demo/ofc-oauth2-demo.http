@@ -8,7 +8,6 @@
 ############################################### 密码模式 Password Credentials ###############################################
 ### POST
 POST localhost:11101/oauth/token?client_id=soulballad&client_secret=123456&grant_type=password&username=zhangsan&password=123456
-Content-Type: application/json
 
 
 ############################################### 简化模式 Implicit ###############################################

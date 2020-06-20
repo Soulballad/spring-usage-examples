@@ -1,0 +1,2 @@
+### 使用密码模式获取令牌
+POST http://localhost:11102/oauth/token?client_id=soulballad&client_secret=admin123456&grant_type=password&username=zhangsan&password=123456

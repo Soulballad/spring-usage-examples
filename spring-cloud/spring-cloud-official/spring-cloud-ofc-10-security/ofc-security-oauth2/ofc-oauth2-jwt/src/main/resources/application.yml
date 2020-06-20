@@ -6,4 +6,8 @@ spring:
   redis:
     host: 172.16.11.125
     port: 6379
-    database: 0
+    database: 1
+
+logging:
+  level:
+    org.springframework.security: debug

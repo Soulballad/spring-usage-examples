@@ -9,5 +9,4 @@ public class OfcOauth2JwtApplication {
     public static void main(String[] args) {
         SpringApplication.run(OfcOauth2JwtApplication.class, args);
     }
-
 }
