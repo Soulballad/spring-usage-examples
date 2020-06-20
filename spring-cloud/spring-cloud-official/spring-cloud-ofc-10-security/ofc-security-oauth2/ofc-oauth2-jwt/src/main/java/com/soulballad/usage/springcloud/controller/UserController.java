@@ -2,6 +2,7 @@ package com.soulballad.usage.springcloud.controller;
 
 import io.jsonwebtoken.Jwts;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,5 +30,10 @@ public class UserController {
                 .setSigningKey("test_sign_key".getBytes(StandardCharsets.UTF_8))
                 .parseClaimsJws(token)
                 .getBody();
+    }
+
+    @GetMapping(value = "/getUser")
+    public Object getUser() {
+        return SecurityContextHolder.getContext().getAuthentication().getPrincipal();
     }
 }

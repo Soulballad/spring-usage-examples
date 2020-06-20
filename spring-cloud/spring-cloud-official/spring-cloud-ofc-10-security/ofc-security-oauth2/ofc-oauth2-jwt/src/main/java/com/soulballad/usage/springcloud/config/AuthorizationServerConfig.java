@@ -39,17 +39,17 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     private AuthenticationManager authenticationManager;
 
     @Autowired
-//    @Qualifier("jwtTokenStore")
+    @Qualifier("jwtTokenStore")
     private TokenStore tokenStore;
 
     @Autowired
     private UserDetailsService userDetailsService;
 
-//    @Autowired
-//    private JwtAccessTokenConverter jwtAccessTokenConverter;
-//
-//    @Autowired
-//    private JwtTokenEnhancer jwtTokenEnhancer;
+    @Autowired
+    private JwtAccessTokenConverter jwtAccessTokenConverter;
+
+    @Autowired
+    private JwtTokenEnhancer jwtTokenEnhancer;
 
     /**
      * 配置端点
@@ -57,19 +57,19 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
 
-//        TokenEnhancerChain enhancerChain = new TokenEnhancerChain();
-//        List<TokenEnhancer> enhancers = new ArrayList<>();
-//        enhancers.add(jwtTokenEnhancer);
-//        enhancers.add(jwtAccessTokenConverter);
-//        enhancerChain.setTokenEnhancers(enhancers);
+        TokenEnhancerChain enhancerChain = new TokenEnhancerChain();
+        List<TokenEnhancer> enhancers = new ArrayList<>();
+        enhancers.add(jwtTokenEnhancer);
+        enhancers.add(jwtAccessTokenConverter);
+        enhancerChain.setTokenEnhancers(enhancers);
 
         endpoints.authenticationManager(authenticationManager)
                 .userDetailsService(userDetailsService)
                 .tokenServices(tokenServices())
                 // 配置令牌存储策略
-                .tokenStore(tokenStore);
-//                .accessTokenConverter(jwtAccessTokenConverter)
-//                .tokenEnhancer(jwtAccessTokenConverter);
+                .tokenStore(tokenStore)
+                .accessTokenConverter(jwtAccessTokenConverter)
+                .tokenEnhancer(jwtAccessTokenConverter);
     }
 
     /**

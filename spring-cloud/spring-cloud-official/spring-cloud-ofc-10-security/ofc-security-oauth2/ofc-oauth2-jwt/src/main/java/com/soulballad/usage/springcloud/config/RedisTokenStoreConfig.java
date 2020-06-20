@@ -3,8 +3,8 @@ package com.soulballad.usage.springcloud.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
-import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.redis.RedisTokenStore;
 
@@ -20,7 +20,8 @@ public class RedisTokenStoreConfig {
     @Autowired
     private RedisConnectionFactory redisConnectionFactory;
 
-    @Bean
+    @Bean(name = "redisTokenStore")
+//    @Primary
     public TokenStore redisTokenStore() {
         RedisTokenStore redisTokenStore = new RedisTokenStore(redisConnectionFactory);
         redisTokenStore.setPrefix("oauth2-token:");
