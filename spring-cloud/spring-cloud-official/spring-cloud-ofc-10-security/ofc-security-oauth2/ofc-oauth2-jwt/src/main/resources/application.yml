@@ -1,0 +1,9 @@
+server:
+  port: 11102
+spring:
+  application:
+    name: ofc-oauth2-jwt
+  redis:
+    host: 172.16.11.125
+    port: 6379
+    database: 0
