@@ -1,0 +1,6 @@
+server:
+  port: 11103
+
+spring:
+  application:
+    name: ofc-oauth2-sso-server
