@@ -1,0 +1,13 @@
+### nfx-zuul-client
+### GET /user/query/1
+GET http://localhost:8080/user/query/1
+
+
+### nfx-zuul-server
+### GET /client/user/query/1 -> 经过路由，实际还是调用 http://localhost:8080/user/query/1
+GET http://localhost:7070/client/user/query/1
+
+
+### nfx-zuul-eureka
+### 这里 nfx-zuul-eureka 和 nfx-zuul-server 不能在同一个服务，否则一直提示没有可用的 client
+### com.netflix.client.ClientException: Load balancer does not have available server for client: nfx-zuul-client

@@ -14,11 +14,11 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>spring-cloud-netflix-01-archaius</module>
-        <module>spring-cloud-netflix-02-eureka</module>
-        <module>spring-cloud-netflix-03-hystrix</module>
-        <module>spring-cloud-netflix-04-ribbon</module>
-        <module>spring-cloud-netflix-05-zuul</module>
-        <module>spring-cloud-netflix-06-assemble</module>
+        <module>spring-cloud-nfx-01-archaius</module>
+        <module>spring-cloud-nfx-02-eureka</module>
+        <module>spring-cloud-nfx-03-hystrix</module>
+        <module>spring-cloud-nfx-04-ribbon</module>
+        <module>spring-cloud-nfx-05-zuul</module>
+        <module>spring-cloud-nfx-06-assemble</module>
     </modules>
 </project>
