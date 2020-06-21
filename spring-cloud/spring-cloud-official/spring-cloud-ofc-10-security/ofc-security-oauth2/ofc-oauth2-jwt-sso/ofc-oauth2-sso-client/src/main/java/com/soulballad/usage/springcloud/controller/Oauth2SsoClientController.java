@@ -11,22 +11,22 @@ import org.springframework.web.bind.annotation.RestController;
  * @since ：2020/6/21 20:07
  */
 @RestController
-public class Oauth2SSoClientController {
+public class Oauth2SsoClientController {
 
     @GetMapping(value = "/normal")
-    @PreAuthorize("hasAnyAuthority('ROLE_NORMAL')")
+    @PreAuthorize("hasAuthority('ROLE_NORMAL')")
     public String normal() {
         return "normal permission access successful!";
     }
 
     @GetMapping(value = "/medium")
-    @PreAuthorize("hasAnyAuthority('ROLE_MEDIUM')")
+    @PreAuthorize("hasAuthority('ROLE_MEDIUM')")
     public String medium() {
         return "medium permission access successful!";
     }
 
     @GetMapping(value = "/admin")
-    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     public String admin() {
         return "admin permission access successful!";
     }

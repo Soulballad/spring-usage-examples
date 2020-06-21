@@ -29,6 +29,7 @@
         <spring-cloud-consul.version>2.2.0.RELEASE</spring-cloud-consul.version>
         <spring-cloud-services.version>2.2.0.RELEASE</spring-cloud-services.version>
         <spring-cloud-cirbak-retry.version>1.0.0.RELEASE</spring-cloud-cirbak-retry.version>
+        <platform-bom.version>Cairo-SR5</platform-bom.version>
         <maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
         <swagger.version>2.9.2</swagger.version>
         <feign.version>1.4.4.RELEASE</feign.version>
@@ -106,6 +107,13 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-circuitbreaker-spring-retry</artifactId>
                 <version>${spring-cloud-cirbak-retry.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.spring.platform</groupId>
+                <artifactId>platform-bom</artifactId>
+                <version>${platform-bom.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

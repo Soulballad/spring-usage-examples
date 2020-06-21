@@ -16,13 +16,16 @@ import org.springframework.stereotype.Component;
  * @since ：2020/6/21 19:02
  */
 @Component
-public class SoulballadUserService implements UserDetailsService {
+public class BalladUserService implements UserDetailsService {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return new User(username, passwordEncoder.encode("123456"), AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_ADMIN,ROLE_NORMAL,ROLE_MEDIUM"));
+        if (!"soulballad".equals(username)) {
+            throw new UsernameNotFoundException("the user " + username + "not exist!");
+        }
+        return new User(username, passwordEncoder.encode("123456"), AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_NORMAL,ROLE_MEDIUM"));
     }
 }

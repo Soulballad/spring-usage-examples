@@ -9,5 +9,4 @@ public class OfcOauth2SsoClientApplication {
     public static void main(String[] args) {
         SpringApplication.run(OfcOauth2SsoClientApplication.class, args);
     }
-
 }

@@ -8,7 +8,7 @@ spring:
 security:
   oauth2:
     client:
-      client-id: soulballad
+      client-id: ballad1
       client-secret: 123456
       user-authorization-uri: ${ofc-oauth2-sso-server}/oauth/authorize
       access-token-uri: ${ofc-oauth2-sso-server}/oauth/token
