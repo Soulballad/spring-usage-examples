@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class OfcOauth2JwtSsoApplication {
+public class OfcOauth2SsoClientApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(OfcOauth2JwtSsoApplication.class, args);
+        SpringApplication.run(OfcOauth2SsoClientApplication.class, args);
     }
 
 }
