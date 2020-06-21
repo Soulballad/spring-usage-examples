@@ -20,7 +20,7 @@ public class RedisTokenStoreConfig {
     @Autowired
     private RedisConnectionFactory redisConnectionFactory;
 
-    @Bean(name = "redisTokenStore")
+    @Bean
 //    @Primary
     public TokenStore redisTokenStore() {
         RedisTokenStore redisTokenStore = new RedisTokenStore(redisConnectionFactory);
