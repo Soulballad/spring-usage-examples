@@ -1,4 +1,4 @@
-package com.soulballad.usage.springcloud.config.jwt;
+package com.soulballad.usage.springcloud.config;
 
 import org.springframework.security.oauth2.common.DefaultOAuth2AccessToken;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;

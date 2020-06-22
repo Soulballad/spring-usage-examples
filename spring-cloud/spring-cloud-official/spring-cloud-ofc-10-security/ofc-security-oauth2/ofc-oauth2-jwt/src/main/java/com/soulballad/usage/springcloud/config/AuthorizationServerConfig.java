@@ -49,24 +49,32 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     private TokenEnhancer jwtTokenEnhancer;
 
     /**
-     * 配置端点
+     * 配置端点，注意 endpoints 的各个方法调用有序，否则无法生成jwt token
      */
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
 
-        TokenEnhancerChain enhancerChain = new TokenEnhancerChain();
-        List<TokenEnhancer> enhancers = new ArrayList<>();
-        enhancers.add(jwtTokenEnhancer);
-        enhancers.add(jwtAccessTokenConverter);
-        enhancerChain.setTokenEnhancers(enhancers);
+        /**
+         * 普通 jwt 模式
+         */
+         /*endpoints.tokenStore(tokenStore)
+                 .accessTokenConverter(jwtAccessTokenConverter)
+                 .userDetailsService(userDetailsService)
+                 .authenticationManager(authenticationManager);*/
 
-        endpoints.authenticationManager(authenticationManager)
+        /**
+         * jwt 增强模式
+         */
+        TokenEnhancerChain enhancerChain = new TokenEnhancerChain();
+        List<TokenEnhancer> enhancerList = new ArrayList<>();
+        enhancerList.add(jwtTokenEnhancer);
+        enhancerList.add(jwtAccessTokenConverter);
+        enhancerChain.setTokenEnhancers(enhancerList);
+        endpoints.tokenStore(tokenStore)
                 .userDetailsService(userDetailsService)
-                .tokenServices(tokenServices())
-                // 配置令牌存储策略
-                .tokenStore(tokenStore)
-                .accessTokenConverter(jwtAccessTokenConverter)
-                .tokenEnhancer(jwtAccessTokenConverter);
+                .authenticationManager(authenticationManager)
+                .tokenEnhancer(enhancerChain)
+                .accessTokenConverter(jwtAccessTokenConverter);
     }
 
     /**
@@ -86,7 +94,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 // 配置redirect_uri,用于授权成功后的跳转
                 // .redirectUris("http://www.baidu.com")
                 // 单点登录时配置
-                .redirectUris("http://localhost:11102/login")
+                .redirectUris("http://localhost:11103/login")
                 // 自动授权配置
                 .autoApprove(true)
                 // 配置申请的权限范围

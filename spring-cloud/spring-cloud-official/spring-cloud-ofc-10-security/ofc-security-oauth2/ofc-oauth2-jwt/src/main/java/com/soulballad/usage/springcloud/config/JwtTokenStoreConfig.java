@@ -1,4 +1,4 @@
-package com.soulballad.usage.springcloud.config.jwt;
+package com.soulballad.usage.springcloud.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -24,14 +24,14 @@ public class JwtTokenStoreConfig {
     }
 
     @Bean
-    public TokenEnhancer jwtTokenEnhancer() {
-        return new JwtTokenEnhancer();
-    }
-
-    @Bean
     public JwtAccessTokenConverter jwtAccessTokenConverter() {
         JwtAccessTokenConverter tokenConverter = new JwtAccessTokenConverter();
         tokenConverter.setSigningKey("test_sign_key");
         return tokenConverter;
+    }
+
+    @Bean
+    public TokenEnhancer jwtTokenEnhancer() {
+        return new JwtTokenEnhancer();
     }
 }
