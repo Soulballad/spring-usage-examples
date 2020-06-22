@@ -9,5 +9,4 @@ public class AlbNacosRegistryApplication {
     public static void main(String[] args) {
         SpringApplication.run(AlbNacosRegistryApplication.class, args);
     }
-
 }
