@@ -26,6 +26,6 @@ public class AlbConsumerController {
 
     @GetMapping(value = "/echo/{str}")
     public String echo(@PathVariable String str) {
-        return restTemplate.getForObject("http://alb-registry-provider/provider/echo" + str, String.class);
+        return restTemplate.getForObject("http://alb-registry-provider/provider/echo/" + str, String.class);
     }
 }

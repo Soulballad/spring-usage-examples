@@ -1,0 +1,7 @@
+### GET provider
+GET http://localhost:14001/provider/echo/1234
+
+
+### GET consumer
+GET http://localhost:14002/consumer/echo/1234
+

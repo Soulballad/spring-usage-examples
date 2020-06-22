@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/provider")
 public class AlbProviderController {
-    @RequestMapping(value = "/echo/${string}", method = RequestMethod.GET)
+    @RequestMapping(value = "/echo/{str}", method = RequestMethod.GET)
     public String echo(@PathVariable String str) {
         return "alb nacos registry provider : " + str;
     }
