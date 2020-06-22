@@ -1,4 +1,4 @@
-ofc-oauth2-sso-server: http://localhost:11103
+ofc-oauth2-sso-server: http://localhost:11104
 server:
   port: 11105
 
