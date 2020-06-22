@@ -1,13 +1,28 @@
 server:
   port: 11102
 spring:
+  profiles:
+    active: oauth2-jwt
+
+logging:
+  level:
+    org.springframework.security: debug
+
+---
+
+spring:
+  profiles: oauth2-redis
   application:
-    name: ofc-oauth2-jwt
+    name: ofc-oauth2-redis
   redis:
     host: 172.16.11.125
     port: 6379
     database: 1
 
-logging:
-  level:
-    org.springframework.security: debug
+
+---
+
+spring:
+  profiles: oauth2-jwt
+  application:
+    name: ofc-oauth2-jwt

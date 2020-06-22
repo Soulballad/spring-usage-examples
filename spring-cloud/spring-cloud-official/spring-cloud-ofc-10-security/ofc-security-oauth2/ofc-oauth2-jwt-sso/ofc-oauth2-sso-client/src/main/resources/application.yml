@@ -15,3 +15,4 @@ security:
     resource:
       jwt:
         key-uri: ${ofc-oauth2-sso-server}/oauth/token_key
+        key-value: testKey # 需和 AuthorizationServerConfig#jwtAccessTokenConverter中配置 signKey 保持一致

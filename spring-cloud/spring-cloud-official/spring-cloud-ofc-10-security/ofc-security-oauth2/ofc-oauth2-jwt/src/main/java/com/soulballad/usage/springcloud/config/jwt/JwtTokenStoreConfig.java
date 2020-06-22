@@ -1,9 +1,9 @@
-package com.soulballad.usage.springcloud.config;
+package com.soulballad.usage.springcloud.config.jwt;
 
-import com.soulballad.usage.springcloud.enhancer.JwtTokenEnhancer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.security.oauth2.provider.token.TokenEnhancer;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
@@ -24,7 +24,7 @@ public class JwtTokenStoreConfig {
     }
 
     @Bean
-    public JwtTokenEnhancer jwtTokenEnhancer() {
+    public TokenEnhancer jwtTokenEnhancer() {
         return new JwtTokenEnhancer();
     }
 

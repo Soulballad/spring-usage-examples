@@ -16,6 +16,7 @@
 
     <modules>
         <module>ofc-oauth2-demo</module>
+        <module>ofc-oauth2-redis</module>
         <module>ofc-oauth2-jwt</module>
         <module>ofc-oauth2-jwt-sso</module>
     </modules>

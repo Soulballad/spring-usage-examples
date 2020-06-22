@@ -1,6 +1,6 @@
 ### 使用密码模式获取令牌
 ### 使用redis存储token
-### 需把 com.soulballad.usage.springcloud.config.RedisTokenStoreConfig.redisTokenStore 加上 @Primary 注解
+### 需把 com.soulballad.usage.springcloud.config.redis.RedisTokenStoreConfig.redisTokenStore 加上 @Primary 注解
 POST http://localhost:11102/oauth/token?client_id=soulballad&client_secret=admin123456&grant_type=password&username=zhangsan&password=123456
 
 ### 访问资源
@@ -8,8 +8,14 @@ GET http://localhost:11102/user/getUser?access_token=4f2b5b61-8f57-4da6-9acd-bc5
 
 
 ### 使用jwt存储token
-### 需把 com.soulballad.usage.springcloud.config.JwtTokenStoreConfig.jwtTokenStore 加上 @Primary 注解，同时去掉 RedisTokenStoreConfig 的 @Primary 注解
-POST http://localhost:11102/oauth/token?client_id=soulballad&client_secret=admin123456&grant_type=password&username=zhangsan&password=123456&scope=all
+### 需把 com.soulballad.usage.springcloud.config.jwt.JwtTokenStoreConfig.jwtTokenStore 加上 @Primary 注解，同时去掉 RedisTokenStoreConfig 的 @Primary 注解
+### POST http://localhost:11102/oauth/token?client_id=soulballad&client_secret=admin123456&grant_type=password&username=zhangsan&password=123456&scope=all
+POST http://localhost:11102/oauth/token?grant_type=password&username=zhangsan&password=123456&scope=all
+Accept: */*
+Cache-Control: no-cache
+Authorization: Basic c291bGJhbGxhZDphZG1pbjEyMzQ1Ng==
+
+
 
 ### 访问资源
 GET http://localhost:11102/user/currentUser

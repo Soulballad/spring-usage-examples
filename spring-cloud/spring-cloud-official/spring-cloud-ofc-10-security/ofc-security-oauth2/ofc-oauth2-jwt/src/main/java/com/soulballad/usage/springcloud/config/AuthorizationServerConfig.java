@@ -1,8 +1,6 @@
 package com.soulballad.usage.springcloud.config;
 
-import com.soulballad.usage.springcloud.enhancer.JwtTokenEnhancer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -39,7 +37,6 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     private AuthenticationManager authenticationManager;
 
     @Autowired
-    @Qualifier("jwtTokenStore")
     private TokenStore tokenStore;
 
     @Autowired
@@ -49,7 +46,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     private JwtAccessTokenConverter jwtAccessTokenConverter;
 
     @Autowired
-    private JwtTokenEnhancer jwtTokenEnhancer;
+    private TokenEnhancer jwtTokenEnhancer;
 
     /**
      * 配置端点
