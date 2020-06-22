@@ -9,5 +9,4 @@ public class OfcOauth2RedisApplication {
     public static void main(String[] args) {
         SpringApplication.run(OfcOauth2RedisApplication.class, args);
     }
-
 }

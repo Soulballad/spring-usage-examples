@@ -9,8 +9,8 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>ofc-oauth2-redis</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <artifactId>ofc-oauth2-redis</artifactId>
     <name>ofc-oauth2-redis</name>
 
     <properties>
@@ -34,7 +34,6 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-security</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

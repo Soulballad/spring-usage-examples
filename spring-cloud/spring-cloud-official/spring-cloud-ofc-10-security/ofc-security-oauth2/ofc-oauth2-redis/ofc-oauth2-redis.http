@@ -1,0 +1,19 @@
+### 使用密码模式获取令牌
+### 使用redis存储token
+POST http://localhost:11102/oauth/token?client_id=soulballad&client_secret=admin123456&grant_type=password&username=zhangsan&password=123456
+
+### 访问资源
+GET http://localhost:11102/user/getUser?access_token=4f2b5b61-8f57-4da6-9acd-bc5f97a61e95
+
+
+### 使用 Authorization 访问
+POST http://localhost:11102/oauth/token?grant_type=password&username=zhangsan&password=123456&scope=all
+Accept: */*
+Cache-Control: no-cache
+Authorization: Basic c291bGJhbGxhZDphZG1pbjEyMzQ1Ng==
+
+
+
+### 访问资源
+GET http://localhost:11102/user/currentUser
+Authorization: bearer a427a0ea-c0ec-4443-9f40-2e0c01a1db32
