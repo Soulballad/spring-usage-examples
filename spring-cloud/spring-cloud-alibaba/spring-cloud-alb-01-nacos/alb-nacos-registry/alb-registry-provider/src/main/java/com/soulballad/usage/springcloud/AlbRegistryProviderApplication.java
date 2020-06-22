@@ -15,12 +15,4 @@ public class AlbRegistryProviderApplication {
     public static void main(String[] args) {
         SpringApplication.run(AlbRegistryProviderApplication.class, args);
     }
-
-    @RestController
-    class EchoController {
-        @RequestMapping(value = "/echo/${string}", method = RequestMethod.GET)
-        public String echo(@PathVariable String str) {
-            return "alb nacos discovery: " +str;
-        }
-    }
 }
