@@ -1,0 +1,9 @@
+server:
+  port: 14001
+spring:
+  application:
+    name: alb-registry-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848

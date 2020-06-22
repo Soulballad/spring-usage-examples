@@ -4,9 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AlbNacosRegistryApplication {
+public class AlbRegistryConsumerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AlbNacosRegistryApplication.class, args);
+        SpringApplication.run(AlbRegistryConsumerApplication.class, args);
     }
+
 }
