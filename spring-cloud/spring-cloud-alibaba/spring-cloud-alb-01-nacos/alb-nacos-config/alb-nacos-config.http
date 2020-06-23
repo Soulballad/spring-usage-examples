@@ -1,10 +1,12 @@
 ### 通过调用 Nacos Open Api 发布配置
 # curl -X POST "http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=example.properties&group=DEFAULT_GROUP&content=useLocalCache=true"
-POST http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=alb-nacos-config.yaml&group=DEFAULT_GROUP&content=alb.nacos.config.info=hello nacos
+### 这种方式一直无法获取到配置信息
+### POST http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=alb-nacos-config.yaml&group=DEFAULT_GROUP&content=alb.nacos.config.info=hello nacos
+POST http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=alb-nacos-config.properties&group=DEFAULT_GROUP&content=albNacosConfigInfo=hello-nacos
 
-###
+### 通过调用 Nacos Open Api 修改配置
 # curl -X POST "http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=example.properties&group=DEFAULT_GROUP&content=useLocalCache=false"
-POST http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=alb-nacos-config.yaml&group=DEFAULT_GROUP&content=alb.nacos.config.info=hello nacos2
+POST http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=alb-nacos-config.properties&group=DEFAULT_GROUP&content=albNacosConfigInfo=hello nacos2
 
 ### GET
 GET http://localhost:14000/configInfo

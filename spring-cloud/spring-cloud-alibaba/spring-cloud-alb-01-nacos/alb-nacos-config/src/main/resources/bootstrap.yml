@@ -1,5 +1,6 @@
 server:
   port: 14000
+
 spring:
   application:
     name: alb-nacos-config
@@ -9,4 +10,4 @@ spring:
         # nacos 地址
         server-addr: 127.0.0.1:8848
         # 指定配置文件类型
-        file-extension: yaml
+        file-extension: properties

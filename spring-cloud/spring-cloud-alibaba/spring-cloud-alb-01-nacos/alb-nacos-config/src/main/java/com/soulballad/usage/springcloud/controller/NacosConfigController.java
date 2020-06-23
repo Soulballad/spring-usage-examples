@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
  * @apiNote : config
  * @since ：2020/6/22 21:19
  */
-@RefreshScope
 @RestController
+@RefreshScope
 public class NacosConfigController {
 
     // dataId 规则： ${prefix}-${spring.profile.active}.${file-extension}  alb-nacos-config.yaml
     // prefix 默认为 spring.application.name 的值，也可以通过配置项 spring.cloud.nacos.config.prefix 来配置
-    @Value("${alb.nacos.config.info}")
+    @Value("${albNacosConfigInfo:nacos-defalut}")
     public String configInfo;
 
     @GetMapping(value = "/configInfo")
