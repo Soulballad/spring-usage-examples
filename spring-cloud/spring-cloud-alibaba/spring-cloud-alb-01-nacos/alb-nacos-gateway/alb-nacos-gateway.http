@@ -1,0 +1,5 @@
+### GET gateway route 1
+GET http://localhost:14007/nacos/echo/hello-world
+
+### GET gateway route 2
+GET http://localhost:14007/nacos/divide?a=8&b=2
