@@ -16,5 +16,6 @@
 
     <modules>
         <module>alb-gateway-router</module>
+        <module>alb-gateway-service</module>
     </modules>
 </project>

@@ -9,9 +9,9 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>alb-gateway-router</artifactId>
+    <artifactId>alb-gateway-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>alb-gateway-router</name>
+    <name>alb-gateway-service</name>
 
     <properties>
         <java.version>1.8</java.version>
@@ -23,8 +23,8 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
