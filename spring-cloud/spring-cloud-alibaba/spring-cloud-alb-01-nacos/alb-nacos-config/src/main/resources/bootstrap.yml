@@ -9,5 +9,5 @@ spring:
       config:
         # nacos 地址
         server-addr: 127.0.0.1:8848
-        # 指定配置文件类型
+        # 指定配置文件类型，目前只支持 properties
         file-extension: properties

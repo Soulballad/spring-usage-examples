@@ -18,5 +18,6 @@
 	<modules>
 		<module>alb-nacos-config</module>
 		<module>alb-nacos-registry</module>
+		<module>alb-nacos-gateway</module>
 	</modules>
 </project>
