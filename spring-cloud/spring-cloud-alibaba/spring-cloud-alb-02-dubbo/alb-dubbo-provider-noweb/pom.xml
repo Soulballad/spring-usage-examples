@@ -10,9 +10,9 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>alb-dubbo-consumer</artifactId>
+    <artifactId>alb-dubbo-provider-noweb</artifactId>
     <version>${revision}</version>
-    <name>alb-dubbo-consumer</name>
+    <name>alb-dubbo-provider-noweb</name>
 
     <properties>
         <java.version>1.8</java.version>
