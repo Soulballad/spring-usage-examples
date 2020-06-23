@@ -20,7 +20,7 @@ public interface RestService {
 
     String pathVariables(String path1, String path2, String param);
 
-    String from(String from);
+    String form(String form);
 
     UserModel requestBodyMap(Map<String, Object> data, String param);
 
