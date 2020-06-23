@@ -14,5 +14,7 @@
     <name>alb-nacos-gateway</name>
     <packaging>pom</packaging>
 
-    <modules></modules>
+    <modules>
+        <module>alb-gateway-router</module>
+    </modules>
 </project>
