@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringCloudAlb02DubboApplication {
+public class AlbDubboConsumerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringCloudAlb02DubboApplication.class, args);
+        SpringApplication.run(AlbDubboConsumerApplication.class, args);
     }
 
 }

@@ -15,5 +15,9 @@
     <description>Spring Cloud Alibaba Dubbo</description>
     <packaging>pom</packaging>
 
-    <modules></modules>
+    <modules>
+        <module>alb-dubbo-api</module>
+        <module>alb-dubbo-consumer</module>
+        <module>alb-dubbo-provider</module>
+    </modules>
 </project>
