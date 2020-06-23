@@ -6,11 +6,12 @@
     <parent>
         <artifactId>spring-boot</artifactId>
         <groupId>com.soulballad.usage</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>spring-boot-06-jdbc</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>spring-boot-06-jdbc</name>
     <description>Spring Boot Jdbc Demo</description>
     <packaging>pom</packaging>

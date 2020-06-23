@@ -6,11 +6,12 @@
     <parent>
         <artifactId>spring-boot</artifactId>
         <groupId>com.soulballad.usage</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>spring-boot-05-basis</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <packaging>pom</packaging>
     <name>spring-boot-05-basis</name>
     <description>Demo project for Spring Boot</description>

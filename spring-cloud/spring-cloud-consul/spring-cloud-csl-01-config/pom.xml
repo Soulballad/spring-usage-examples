@@ -6,11 +6,12 @@
     <parent>
         <artifactId>spring-cloud-consul</artifactId>
         <groupId>com.soulballad.usage</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>spring-cloud-csl-01-config</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>spring-cloud-csl-01-config</name>
     <description>Spring Cloud Consul Config Center</description>
 

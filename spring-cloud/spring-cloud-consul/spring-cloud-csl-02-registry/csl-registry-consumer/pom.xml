@@ -6,11 +6,12 @@
     <parent>
         <artifactId>spring-cloud-csl-02-registry</artifactId>
         <groupId>com.soulballad.usage</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>csl-registry-consumer</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>csl-registry-consumer</name>
     <description>Spring Cloud Consul Registry Consumer</description>
 
