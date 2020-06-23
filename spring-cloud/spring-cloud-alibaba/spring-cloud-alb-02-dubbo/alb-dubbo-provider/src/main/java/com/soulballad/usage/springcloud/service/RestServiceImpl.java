@@ -55,7 +55,7 @@ public class RestServiceImpl implements RestService {
     }
 
     @Override
-    @PostMapping(value = "/requestBodyMap", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @PostMapping(value = "/request/body/map", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public UserModel requestBodyMap(@RequestBody Map<String, Object> data, @RequestParam("param") String param) {
         UserModel user = new UserModel();
         user.setId(((Integer) data.get("id")).longValue());
@@ -65,7 +65,7 @@ public class RestServiceImpl implements RestService {
     }
 
     @Override
-    @PostMapping(value = "/requestBodyUser", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @PostMapping(value = "/request/body/user", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public Map<String, Object> requestBodyUser(@RequestBody UserModel userModel) {
         Map<String, Object> map = new HashMap<>();
         map.put("id", userModel.getId());
