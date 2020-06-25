@@ -3,15 +3,16 @@ package com.soulballad.usage.springcloud.service;
 import com.soulballad.usage.springcloud.model.UserModel;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
-
+import javax.ws.rs.Consumes;
+import javax.ws.rs.FormParam;
+import javax.ws.rs.GET;
+import javax.ws.rs.HeaderParam;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,41 +23,49 @@ import java.util.Map;
  * @since ：2020/6/23 21:51
  */
 @Service(version = "1.0.0", protocol = {"dubbo", "rest"})
+@Path("/")
 public class RestServiceImpl implements RestService {
 
     @Override
-    @GetMapping(value = "/param")
-    public String param(@RequestParam String param) {
+    @Path("param")
+    @GET
+    public String param(@QueryParam("param") String param) {
         return "alb-dubbo-provider param : " + param;
     }
 
     @Override
-    @PostMapping(value = "/params")
-    public String params(@RequestParam Integer a, @RequestParam String b) {
+    @Path("params")
+    @POST
+    public String params(@QueryParam("a") Integer a, @QueryParam("b") String b) {
         return "alb-dubbo-provider params : " + a + ";" + b;
     }
 
     @Override
-    @GetMapping(value = "/headers")
-    public String headers(@RequestHeader("h1") String header1, @RequestHeader("h2") String header2, @RequestParam("val") Integer param) {
+    @Path("headers")
+    @GET
+    public String headers(@HeaderParam("h1") String header1, @HeaderParam("h2") String header2, @QueryParam("val") Integer param) {
         return "alb-dubbo-provider headers : " + header1 + ";" + header2 + ";" + param;
     }
 
     @Override
-    @GetMapping(value = "/pathVariables/{p1}/{p2}")
-    public String pathVariables(@PathVariable("p1") String path1, @PathVariable("p2") String path2, @RequestParam("val") String param) {
+    @Path("pathVariables/{p1}/{p2}")
+    @GET
+    public String pathVariables(@PathParam("p1") String path1, @PathParam("p2") String path2, @QueryParam("val") String param) {
         return "alb-dubbo-provider pathVariables : " + path1 + ";" + path2 + ";" + param;
     }
 
     @Override
-    @PostMapping(value = "/form")
-    public String form(@RequestParam("form") String form) {
+    @Path("form")
+    @POST
+    public String form(@FormParam("form") String form) {
         return "alb-dubbo-provider form : " + form;
     }
 
     @Override
-    @PostMapping(value = "/request/body/map", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public UserModel requestBodyMap(@RequestBody Map<String, Object> data, @RequestParam("param") String param) {
+    @Path("/request/body/map")
+    @POST
+    @Produces(MediaType.APPLICATION_JSON_VALUE)
+    public UserModel requestBodyMap(Map<String, Object> data, @QueryParam("param") String param) {
         UserModel user = new UserModel();
         user.setId(((Integer) data.get("id")).longValue());
         user.setName((String) data.get("name"));
@@ -65,8 +74,10 @@ public class RestServiceImpl implements RestService {
     }
 
     @Override
-    @PostMapping(value = "/request/body/user", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public Map<String, Object> requestBodyUser(@RequestBody UserModel userModel) {
+    @Path("/request/body/user")
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON_VALUE)
+    public Map<String, Object> requestBodyUser(UserModel userModel) {
         Map<String, Object> map = new HashMap<>();
         map.put("id", userModel.getId());
         map.put("name", userModel.getName());
