@@ -6,11 +6,12 @@
     <parent>
         <artifactId>spring-cloud-official</artifactId>
         <groupId>com.soulballad.usage</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>spring-cloud-ofc-02-zookeeper</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>spring-cloud-ofc-02-zookeeper</name>
     <description>Spring Cloud Official Zookeeper</description>
     <packaging>pom</packaging>

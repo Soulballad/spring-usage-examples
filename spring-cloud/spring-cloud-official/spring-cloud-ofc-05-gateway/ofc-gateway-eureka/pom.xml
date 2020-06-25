@@ -6,11 +6,12 @@
     <parent>
         <groupId>com.soulballad.usage</groupId>
         <artifactId>spring-cloud-ofc-05-gateway</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>ofc-gateway-eureka</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>ofc-gateway-eureka</name>
 
     <properties>

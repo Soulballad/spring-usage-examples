@@ -6,11 +6,12 @@
     <parent>
         <groupId>com.soulballad.usage</groupId>
         <artifactId>spring-cloud-official</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>spring-cloud-ofc-03-circuit-breaker</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>spring-cloud-ofc-03-circuit-breaker</name>
     <description>Spring Cloud Circuit Breaker</description>
     <packaging>pom</packaging>

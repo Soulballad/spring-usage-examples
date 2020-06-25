@@ -6,11 +6,12 @@
     <parent>
         <artifactId>spring-boot-11-custom-starter</artifactId>
         <groupId>com.soulballad.usage</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>demo-spring-boot-starter</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>demo-spring-boot-starter</name>
     <description>Spring Boot Demo Starter</description>
 

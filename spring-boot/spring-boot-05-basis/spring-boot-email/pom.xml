@@ -6,11 +6,12 @@
     <parent>
         <artifactId>spring-boot-05-basis</artifactId>
         <groupId>com.soulballad.usage</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>spring-boot-email</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>spring-boot-email</name>
     <description>Spring Boot Email</description>
 

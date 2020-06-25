@@ -6,11 +6,12 @@
     <parent>
         <artifactId>spring-boot-09-ui</artifactId>
         <groupId>com.soulballad.usage</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>spring-boot-ui-knife4j</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>spring-boot-ui-knife4j</name>
     <description>Spring Boot UI Knife4j</description>
 

@@ -6,11 +6,12 @@
     <parent>
         <groupId>com.soulballad.usage</groupId>
         <artifactId>spring-cloud-ofc-07-bus</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>ofc-bus-config-client</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>ofc-bus-config-client</name>
 
     <properties>

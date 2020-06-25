@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>ofc-sleuth-zipkin</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>ofc-sleuth-zipkin</name>
 
     <properties>

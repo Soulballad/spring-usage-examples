@@ -6,11 +6,12 @@
 	<parent>
 		<groupId>com.soulballad.usage</groupId>
 		<artifactId>spring-cloud-ofc-04-feign</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</parent>
+		<version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
 
 	<artifactId>ofc-feign-user-client</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>${revision}</version>
 	<name>ofc-feign-user-client</name>
 
 	<properties>
@@ -21,7 +22,7 @@
 		<dependency>
 			<groupId>com.soulballad.usage</groupId>
 			<artifactId>ofc-feign-user-api</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>

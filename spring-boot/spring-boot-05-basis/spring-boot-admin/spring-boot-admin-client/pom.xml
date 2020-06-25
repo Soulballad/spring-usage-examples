@@ -6,11 +6,12 @@
     <parent>
         <artifactId>spring-boot-admin</artifactId>
         <groupId>com.soulballad.usage</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>spring-boot-admin-client</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>spring-boot-admin-client</name>
     <description>Spring Boot Admin Client</description>
 

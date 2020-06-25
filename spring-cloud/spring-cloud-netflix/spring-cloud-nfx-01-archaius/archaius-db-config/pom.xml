@@ -6,11 +6,12 @@
     <parent>
         <groupId>com.soulballad.usage</groupId>
         <artifactId>spring-cloud-nfx-01-archaius</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>archaius-db-config</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>archaius-db-config</name>
     <description>Spring Cloud Netflix Archaius DB Config</description>
 

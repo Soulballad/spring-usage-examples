@@ -6,11 +6,12 @@
     <parent>
         <groupId>com.soulballad.usage</groupId>
         <artifactId>spring-cloud-ofc-03-circuit-breaker</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>ofc-cb-04-retry</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>ofc-cb-04-retry</name>
     <description>Spring Cloud Circuit Breaker Retry</description>
 

@@ -6,11 +6,12 @@
     <parent>
         <artifactId>hystrix-dashboard-turbine</artifactId>
         <groupId>com.soulballad.usage</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>turbine-eureka</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>turbine-eureka</name>
     <description>Spring Cloud Netflix Hystrix Turbine</description>
 

@@ -6,11 +6,12 @@
     <parent>
         <artifactId>spring-cloud-nfx-06-assemble</artifactId>
         <groupId>com.soulballad.usage</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>nfx-asm-archaius</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>nfx-asm-archaius</name>
     <description>Spring Cloud Netflix Assemble Archaius</description>
 

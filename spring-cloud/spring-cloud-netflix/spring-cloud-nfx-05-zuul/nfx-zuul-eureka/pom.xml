@@ -6,11 +6,12 @@
     <parent>
         <artifactId>spring-cloud-nfx-05-zuul</artifactId>
         <groupId>com.soulballad.usage</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>nfx-zuul-eureka</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>nfx-zuul-eureka</name>
     <description>Spring Cloud Netflix Zuul Eureka</description>
 

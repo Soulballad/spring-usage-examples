@@ -5,11 +5,12 @@
     <parent>
         <artifactId>spring-cloud-netflix</artifactId>
         <groupId>com.soulballad.usage</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>spring-cloud-nfx-01-archaius</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>spring-cloud-nfx-01-archaius</name>
     <description>Spring Cloud Netflix Archaius</description>
     <modelVersion>4.0.0</modelVersion>

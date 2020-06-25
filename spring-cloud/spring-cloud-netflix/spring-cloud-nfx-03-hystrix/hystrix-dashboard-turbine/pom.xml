@@ -6,11 +6,12 @@
     <parent>
         <groupId>com.soulballad.usage</groupId>
         <artifactId>spring-cloud-nfx-03-hystrix</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>hystrix-dashboard-turbine</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>hystrix-dashboard-turbine</name>
     <description>Spring Cloud Netflix Hystrix Dashboard</description>
     <packaging>pom</packaging>

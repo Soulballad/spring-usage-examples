@@ -6,10 +6,11 @@
     <parent>
         <groupId>com.soulballad.usage</groupId>
         <artifactId>ofc-security-oauth2</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <artifactId>ofc-oauth2-redis</artifactId>
     <name>ofc-oauth2-redis</name>
 
