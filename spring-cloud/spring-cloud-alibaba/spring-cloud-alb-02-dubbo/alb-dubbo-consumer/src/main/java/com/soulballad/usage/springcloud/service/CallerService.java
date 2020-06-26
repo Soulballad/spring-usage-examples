@@ -30,7 +30,7 @@ public class CallerService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CallerService.class);
 
-    @Value("${provider.applicaton.name}")
+    @Value("${provider.application.name}")
     private String providerAppName;
 
     @Reference

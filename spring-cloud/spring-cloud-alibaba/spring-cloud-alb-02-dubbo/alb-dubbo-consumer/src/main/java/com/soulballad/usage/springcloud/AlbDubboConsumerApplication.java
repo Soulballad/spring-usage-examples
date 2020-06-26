@@ -25,8 +25,6 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 public class AlbDubboConsumerApplication {
 
-
-
     public static void main(String[] args) {
         new SpringApplicationBuilder(AlbDubboConsumerApplication.class)
                 .properties("spring.profiles.active=nacos").run(args);

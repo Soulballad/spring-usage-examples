@@ -17,7 +17,7 @@ import java.util.Map;
  * @apiNote : feign
  * @since ：2020/6/23 22:11
  */
-@FeignClient("${provider.applicaton.name}")
+@FeignClient("${provider.application.name}")
 public interface FeignService {
 
     @GetMapping(value = "/param")

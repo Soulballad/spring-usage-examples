@@ -6,11 +6,11 @@ dubbo:
     address: spring-cloud://localhost
   cloud:
     # subscribed provider service
-    subscribed-services: ${provider.applicaton.name}
+    subscribed-services: ${provider.application.name}
 
   consumer:
     check: false
 
 provider:
-  applicaton:
+  application:
     name: alb-dubbo-provider

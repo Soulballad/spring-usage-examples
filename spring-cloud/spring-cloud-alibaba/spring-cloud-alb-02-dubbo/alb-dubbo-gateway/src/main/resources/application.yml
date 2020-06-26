@@ -1,0 +1,10 @@
+dubbo:
+  registry:
+    address: spring-cloud://localhost
+
+server:
+  port: 14015
+
+provider:
+  application:
+    name: alb-dubbo-provider

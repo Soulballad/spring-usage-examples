@@ -18,7 +18,7 @@ import java.util.Map;
  * @apiNote : feign
  * @since ：2020/6/23 22:11
  */
-@FeignClient("${provider.applicaton.name}")
+@FeignClient("${provider.application.name}")
 @DubboTransported(protocol = "dubbo")
 public interface DubboFeignService {
 
