@@ -1,6 +1,6 @@
 *.iml
 *.ipr
-*.jws
+*.iws
 **/.classpath
 **/.factorypath
 **/.idea

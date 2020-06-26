@@ -6,11 +6,11 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-public class AlbDubboProviderApplication {
+public class AlbDubboProviderWebApplication {
 
     public static void main(String[] args) {
         // 指定 spring.profiles.active=nacos
-        new SpringApplicationBuilder(AlbDubboProviderApplication.class)
+        new SpringApplicationBuilder(AlbDubboProviderWebApplication.class)
                 .properties("spring.profiles.active=nacos").run(args);
     }
 }
