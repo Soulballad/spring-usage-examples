@@ -19,8 +19,8 @@
     <modules>
         <module>alb-dubbo-api</module>
         <module>alb-dubbo-consumer</module>
+        <module>alb-dubbo-provider-web</module>
         <module>alb-dubbo-provider</module>
-        <module>alb-dubbo-provider-noweb</module>
         <module>alb-dubbo-gateway</module>
     </modules>
 </project>

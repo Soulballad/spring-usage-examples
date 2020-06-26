@@ -1,4 +1,6 @@
 *.iml
+*.ipr
+*.jws
 **/.classpath
 **/.factorypath
 **/.idea

@@ -1,13 +1,6 @@
 package com.soulballad.usage.springcloud;
 
 import com.alibaba.cloud.dubbo.annotation.DubboTransported;
-import com.soulballad.usage.springcloud.model.UserModel;
-import com.soulballad.usage.springcloud.service.RestService;
-import com.soulballad.usage.springcloud.service.UserService;
-import org.apache.dubbo.config.annotation.Reference;
-import org.springframework.boot.ApplicationArguments;
-import org.springframework.boot.ApplicationRunner;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cache.annotation.EnableCaching;

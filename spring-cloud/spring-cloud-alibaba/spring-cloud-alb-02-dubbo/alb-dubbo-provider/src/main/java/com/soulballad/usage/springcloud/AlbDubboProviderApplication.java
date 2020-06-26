@@ -1,5 +1,6 @@
 package com.soulballad.usage.springcloud;
 
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -9,8 +10,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 public class AlbDubboProviderApplication {
 
     public static void main(String[] args) {
-        // 指定 spring.profiles.active=nacos
         new SpringApplicationBuilder(AlbDubboProviderApplication.class)
-                .properties("spring.profiles.active=nacos").run(args);
+                .properties("spring.profiles.active=nacos")
+                .web(WebApplicationType.NONE).run(args);
     }
 }

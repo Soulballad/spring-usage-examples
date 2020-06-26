@@ -13,4 +13,4 @@ dubbo:
 
 provider:
   application:
-    name: alb-dubbo-provider
+    name: alb-dubbo-provider-web
