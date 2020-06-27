@@ -20,6 +20,7 @@
         <module>alb-sentinel-core</module>
         <module>alb-sentinel-webflux</module>
         <module>alb-sentinel-integrate-dubbo</module>
+        <module>alb-sentinel-integrate-gateway</module>
     </modules>
 
 </project>
