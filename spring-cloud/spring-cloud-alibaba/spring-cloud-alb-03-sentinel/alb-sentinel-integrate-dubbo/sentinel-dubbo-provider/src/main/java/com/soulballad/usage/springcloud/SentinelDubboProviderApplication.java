@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AlbSentinelIntegrateDubboApplication {
+public class SentinelDubboProviderApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AlbSentinelIntegrateDubboApplication.class, args);
+        SpringApplication.run(SentinelDubboProviderApplication.class, args);
     }
 
 }
