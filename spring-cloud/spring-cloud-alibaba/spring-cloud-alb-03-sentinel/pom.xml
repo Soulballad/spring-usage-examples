@@ -18,6 +18,7 @@
 
     <modules>
         <module>alb-sentinel-core</module>
+        <module>alb-sentinel-webflux</module>
     </modules>
 
 </project>
