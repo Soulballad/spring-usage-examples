@@ -11,11 +11,13 @@
     </parent>
 
     <artifactId>spring-cloud-alb-03-sentinel</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>spring-cloud-alb-03-sentinel</name>
     <description>Spring Cloud Alibaba Sentinel</description>
     <packaging>pom</packaging>
 
-    <modules></modules>
+    <modules>
+        <module>alb-sentinel-core</module>
+    </modules>
 
 </project>

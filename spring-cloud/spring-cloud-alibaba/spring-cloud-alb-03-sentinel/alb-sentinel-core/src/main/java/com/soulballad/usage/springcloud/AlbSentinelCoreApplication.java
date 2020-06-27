@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringCloudAlb03SentinelApplication {
+public class AlbSentinelCoreApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringCloudAlb03SentinelApplication.class, args);
+        SpringApplication.run(AlbSentinelCoreApplication.class, args);
     }
 
 }
