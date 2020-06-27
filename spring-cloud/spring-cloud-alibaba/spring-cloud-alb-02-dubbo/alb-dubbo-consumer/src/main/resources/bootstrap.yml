@@ -1,12 +1,14 @@
 spring:
   application:
-    name: alb-dubbo-provider-web
+    name: alb-dubbo-consumer
   main:
     allow-bean-definition-overriding: true
 
   # disable default registry
   cloud:
     nacos:
+      username: nacos
+      password: nacos
       discovery:
         enabled: false
         register-enabled: false
@@ -19,18 +21,23 @@ eureka:
   client:
     enabled: false
 
+ribbon:
+  nacos:
+    enabled: false
+
 ---
 spring:
   profiles: nacos
   cloud:
     nacos:
-      username: nacos
-      password: nacos
       discovery:
         enabled: true
         register-enabled: true
         server-addr: 127.0.0.1:8848
 
+ribbon:
+  nacos:
+    enabled: true
 ---
 spring:
   profiles: eureka

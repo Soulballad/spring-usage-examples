@@ -8,12 +8,9 @@ dubbo:
     dubbo:
       name: dubbo
       port: -1
-    rest:
-      name: rest
-      port: 9900
-      server: netty
-  registry:
-    address: spring-cloud://localhost
+  registries:
+    new:
+      address: spring-cloud://localhost
 feign:
   hystrix:
     enabled: true

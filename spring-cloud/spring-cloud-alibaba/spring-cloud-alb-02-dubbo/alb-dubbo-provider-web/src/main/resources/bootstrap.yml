@@ -7,6 +7,8 @@ spring:
   # disable default registry
   cloud:
     nacos:
+      username: nacos
+      password: nacos
       discovery:
         enabled: false
         register-enabled: false
@@ -24,8 +26,6 @@ spring:
   profiles: nacos
   cloud:
     nacos:
-      username: nacos
-      password: nacos
       discovery:
         enabled: true
         register-enabled: true

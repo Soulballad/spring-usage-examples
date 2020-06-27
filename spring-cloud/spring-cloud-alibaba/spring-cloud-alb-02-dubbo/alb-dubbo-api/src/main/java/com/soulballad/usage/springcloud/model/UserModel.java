@@ -1,12 +1,14 @@
 package com.soulballad.usage.springcloud.model;
 
+import java.io.Serializable;
+
 /**
  * @author ：soulballad
  * @version : v1.0
  * @apiNote : user
  * @since ：2020/5/24 14:48
  */
-public class UserModel {
+public class UserModel implements Serializable {
 
     private Long id;
     private String name;

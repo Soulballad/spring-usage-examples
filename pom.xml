@@ -41,7 +41,6 @@
         <fastjson.version>1.2.9</fastjson.version>
         <zipkin.version>2.11.9</zipkin.version>
         <resteasy.version>3.0.19.Final</resteasy.version>
-        <dubbo.version>2.7.6</dubbo.version>
     </properties>
 
     <dependencyManagement>
@@ -195,11 +194,6 @@
                 <version>${resteasy.version}</version>
             </dependency>
             <!-- resteasy end -->
-            <dependency>
-                <groupId>org.apache.dubbo</groupId>
-                <artifactId>dubbo</artifactId>
-                <version>${dubbo.version}</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 

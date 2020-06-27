@@ -23,10 +23,10 @@ import java.util.Map;
 public interface DubboFeignService {
 
     @GetMapping(value = "/param")
-    String param(@RequestParam String param);
+    String param(@RequestParam("param") String param);
 
     @PostMapping(value = "/params")
-    String params(@RequestParam Integer a, @RequestParam String b);
+    String params(@RequestParam("a") Integer a, @RequestParam("b") String b);
 
     @GetMapping(value = "/headers")
     String headers(@RequestHeader("h1") String header1, @RequestHeader("h2") String header2, @RequestParam("val") Integer param);
