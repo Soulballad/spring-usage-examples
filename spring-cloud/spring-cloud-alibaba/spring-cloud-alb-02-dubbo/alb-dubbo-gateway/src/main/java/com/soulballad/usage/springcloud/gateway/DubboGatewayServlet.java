@@ -129,7 +129,7 @@ public class DubboGatewayServlet extends HttpServletBean {
 
         private final HttpServletRequest request;
 
-        public HttpRequestAdapter(HttpServletRequest request) {
+        private HttpRequestAdapter(HttpServletRequest request) {
             this.request = request;
         }
 

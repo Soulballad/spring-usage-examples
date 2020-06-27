@@ -1,12 +1,12 @@
 package com.soulballad.usage.springcloud;
 
 import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @EnableDiscoveryClient
-@SpringBootApplication
+@EnableAutoConfiguration
 public class AlbDubboProviderApplication {
 
     public static void main(String[] args) {

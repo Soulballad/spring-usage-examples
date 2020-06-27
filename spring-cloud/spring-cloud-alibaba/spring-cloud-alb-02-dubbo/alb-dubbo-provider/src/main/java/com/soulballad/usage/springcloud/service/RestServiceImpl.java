@@ -24,7 +24,7 @@ import java.util.Map;
  */
 @Service(version = "1.0.0", protocol = {"dubbo", "rest"})
 @Path("/")
-public class RestServiceImpl  implements RestService {
+public class RestServiceImpl implements RestService {
 
     @Override
     @Path("param")
