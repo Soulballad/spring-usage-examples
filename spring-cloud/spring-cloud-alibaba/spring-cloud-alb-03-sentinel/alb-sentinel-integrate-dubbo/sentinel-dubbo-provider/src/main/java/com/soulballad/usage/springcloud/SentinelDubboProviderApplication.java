@@ -9,5 +9,4 @@ public class SentinelDubboProviderApplication {
     public static void main(String[] args) {
         SpringApplication.run(SentinelDubboProviderApplication.class, args);
     }
-
 }
