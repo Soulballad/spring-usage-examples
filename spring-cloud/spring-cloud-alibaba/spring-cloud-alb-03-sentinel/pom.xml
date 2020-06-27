@@ -22,6 +22,7 @@
         <module>alb-sentinel-integrate-dubbo</module>
         <module>alb-sentinel-integrate-gateway</module>
         <module>alb-sentinel-integrate-feign</module>
+        <module>alb-sentinel-integrate-zuul</module>
     </modules>
 
 </project>
