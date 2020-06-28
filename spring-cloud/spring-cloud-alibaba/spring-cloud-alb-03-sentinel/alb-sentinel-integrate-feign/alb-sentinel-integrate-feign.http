@@ -1,0 +1,5 @@
+### GET provider
+GET http://localhost:14033/echo/hello
+
+### GET consumer
+GET http://localhost:14034/echo-feign/hello
