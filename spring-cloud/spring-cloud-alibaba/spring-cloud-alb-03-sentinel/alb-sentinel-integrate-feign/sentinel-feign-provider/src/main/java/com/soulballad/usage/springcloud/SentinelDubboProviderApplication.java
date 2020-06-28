@@ -4,10 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AlbSentinelIntegrateFeignApplication {
+public class SentinelDubboProviderApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AlbSentinelIntegrateFeignApplication.class, args);
+        SpringApplication.run(SentinelDubboProviderApplication.class, args);
     }
-
 }
