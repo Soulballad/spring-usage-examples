@@ -1,0 +1,15 @@
+### GET /mono
+GET http://localhost:14037/mono
+
+### GET /flux
+GET http://localhost:14037/flux
+
+### GET /test
+GET http://localhost:14037/test
+
+### GET /cbSlow
+GET http://localhost:14037/cbSlow
+
+### GET /cbError
+GET http://localhost:14037/cbError
+

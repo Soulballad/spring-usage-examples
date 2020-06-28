@@ -9,5 +9,4 @@ public class AlbSentinelWebfluxApplication {
     public static void main(String[] args) {
         SpringApplication.run(AlbSentinelWebfluxApplication.class, args);
     }
-
 }
