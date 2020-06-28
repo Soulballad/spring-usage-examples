@@ -1,0 +1,39 @@
+server:
+  port: 14035
+
+spring:
+  application:
+    name: alb-sentinel-integrate-gateway
+  cloud:
+    gateway:
+      enabled: true
+      discovery:
+        locator:
+          lower-case-service-id: true
+      routes:
+      - id: aliyun-route
+        uri: https://www.aliyun.com
+        predicates:
+          - Path=/product/**
+        filters:
+          - RewritePath=/httpbin/(?<segment>.*), /$\{segment}
+
+    sentinel:
+      datasource.ds2.file:
+        file: "classpath: gateway.json"
+        ruleType: gw-flow
+      datasource.ds1.file:
+        file: "classpath: api.json"
+        ruleType: gw-api-group
+      transport:
+        dashboard: 127.0.0.1:8080
+      filter:
+        enabled: true
+      scg.fallback:
+        mode: response
+        response-status: 444
+        response-body: 124
+      scg:
+        order: -100
+
+management.endpoints.web.exposure.include: '*'
