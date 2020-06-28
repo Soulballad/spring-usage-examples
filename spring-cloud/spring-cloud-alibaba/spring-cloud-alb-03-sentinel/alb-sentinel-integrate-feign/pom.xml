@@ -17,5 +17,6 @@
 
     <modules>
         <module>sentinel-feign-provider</module>
+        <module>sentinel-feign-consumer</module>
     </modules>
 </project>
