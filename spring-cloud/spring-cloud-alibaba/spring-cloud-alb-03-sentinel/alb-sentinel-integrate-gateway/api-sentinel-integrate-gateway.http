@@ -1,0 +1,8 @@
+### GET /api
+GET http://localhost:14035/api
+
+### GET /gateway
+GET http://localhost:14035/gateway
+
+### GET /flow
+GET http://localhost:14035/flow
