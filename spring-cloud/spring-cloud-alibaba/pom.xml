@@ -18,5 +18,6 @@
         <module>spring-cloud-alb-02-dubbo</module>
         <module>spring-cloud-alb-03-sentinel</module>
         <module>spring-cloud-alb-04-rocketmq</module>
+        <module>spring-cloud-alb-05-seata</module>
     </modules>
 </project>
