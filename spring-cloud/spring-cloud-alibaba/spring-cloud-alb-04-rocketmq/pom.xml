@@ -16,5 +16,8 @@
     <description>Spring Cloud Alibaba RocketMQ</description>
     <packaging>pom</packaging>
 
-    <modules></modules>
+    <modules>
+        <module>alb-rocketmq-producer</module>
+        <module>alb-rocketmq-consumer</module>
+    </modules>
 </project>
