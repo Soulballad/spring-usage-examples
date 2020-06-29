@@ -15,7 +15,7 @@ spring:
       transport:
         dashboard: 127.0.0.1:8080
       filter:
-        enabled: true
+        enabled: false
 
 management.endpoints.web.exposure.include: '*'
 
@@ -31,7 +31,7 @@ zuul.routes.my-service3.service-id: "my-service3"
 zuul.routes.my-service4.path: "/my-service4/**"
 zuul.routes.my-service4.service-id: "my-service4"
 
-spring.cloud.sentinel.zuul.order.peer: 2000
+spring.cloud.sentinel.zuul.order.pre: 2000
 spring.cloud.sentinel.zuul.order.post: 500
 spring.cloud.sentinel.zuul.order.error: -100
 

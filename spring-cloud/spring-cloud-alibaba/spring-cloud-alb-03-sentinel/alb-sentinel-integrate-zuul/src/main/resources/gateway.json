@@ -12,7 +12,7 @@
     "count": 0,
     "paramItem": {
       "parseStrategy": 2,
-      "filedName": "Spring-Cloud-Alibaba"
+      "fieldName": "Spring-Cloud-Alibaba"
     }
   },
   {
@@ -20,7 +20,7 @@
     "count": 0,
     "paramItem": {
       "parseStrategy": 3,
-      "filedName": "name"
+      "fieldName": "name"
     }
   }
 ]
