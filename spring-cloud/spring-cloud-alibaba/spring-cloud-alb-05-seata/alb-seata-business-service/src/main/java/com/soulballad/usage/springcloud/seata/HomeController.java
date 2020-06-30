@@ -16,9 +16,8 @@
 
 package com.soulballad.usage.springcloud.seata;
 
-import com.soulballad.usage.springcloud.seata.BusinessConfiguration.OrderService;
-import com.soulballad.usage.springcloud.seata.BusinessConfiguration.StorageService;
-
+import com.soulballad.usage.springcloud.feign.OrderService;
+import com.soulballad.usage.springcloud.feign.StorageService;
 import io.seata.spring.annotation.GlobalTransactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,9 +32,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-/**
- * @author xiaojing
- */
 @RestController
 public class HomeController {
 
@@ -111,7 +107,5 @@ public class HomeController {
 		}
 
 		return SUCCESS;
-
 	}
-
 }
