@@ -38,6 +38,7 @@
         <feign.version>1.4.4.RELEASE</feign.version>
         <knife4j.version>1.9.6</knife4j.version>
         <knife4j-spring-boot.version>2.0.3</knife4j-spring-boot.version>
+        <druid-spring-boot.version>1.1.10</druid-spring-boot.version>
         <fastjson.version>1.2.9</fastjson.version>
         <zipkin.version>2.11.9</zipkin.version>
         <resteasy.version>3.0.19.Final</resteasy.version>
@@ -153,6 +154,11 @@
                 <version>${knife4j-spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid-spring-boot.version}</version>
             </dependency>
             <!-- alibaba fastjson -->
             <dependency>
