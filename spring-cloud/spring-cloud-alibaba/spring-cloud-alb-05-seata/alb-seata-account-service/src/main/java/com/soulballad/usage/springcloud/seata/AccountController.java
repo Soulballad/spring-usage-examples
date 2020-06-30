@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.soulballad.usage.springcloud;
+package com.soulballad.usage.springcloud.seata;
 
 import io.seata.core.context.RootContext;
 import org.slf4j.Logger;
@@ -24,9 +24,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Random;
 
-/**
- * @author xiaojing
- */
 @RestController
 public class AccountController {
 

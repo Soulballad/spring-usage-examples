@@ -9,5 +9,4 @@ public class AlbSeataAccountServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(AlbSeataAccountServiceApplication.class, args);
     }
-
 }
