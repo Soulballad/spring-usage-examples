@@ -18,6 +18,8 @@
 
     <modules>
         <module>alb-seata-account-service</module>
+        <module>alb-seata-business-service</module>
+        <module>alb-seata-order-service</module>
     </modules>
 
 </project>
