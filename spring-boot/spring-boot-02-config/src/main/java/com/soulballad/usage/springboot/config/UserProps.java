@@ -14,7 +14,8 @@ public class UserProps {
     @Value("${user.prop.name}")
     private String name;
 
-    @Value("${user.prop.age}")
+    // SPEL 表达式
+    @Value("#{10 * 2}")
     private Integer age;
 
     public String getName() {

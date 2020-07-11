@@ -1,0 +1,5 @@
+### GET 测试 @Value
+GET http://localhost:8080/user/get/value
+
+### GET 测试 @ConfigurationProperties
+GET http://localhost:8080/user/get/config

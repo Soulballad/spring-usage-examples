@@ -15,7 +15,7 @@ import javax.validation.constraints.NotBlank;
  * @since ：2020/5/19 20:29
  */
 @Component
-@Validated
+@Validated // JSR303数据校验
 @ConfigurationProperties(prefix = "user.prop")
 public class UserProperties {
 

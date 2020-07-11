@@ -21,12 +21,12 @@ public class UserController {
     @Autowired
     private UserProps userProps;
 
-    @GetMapping("/user/get/1")
+    @GetMapping("/user/get/value")
     public String getUser1() {
         return userProperties.getName() + "'s age is " + userProperties.getAge();
     }
 
-    @GetMapping("/user/get/2")
+    @GetMapping("/user/get/config")
     public String getUser2() {
         return userProps.getName() + "'s age is " + userProps.getAge();
     }
