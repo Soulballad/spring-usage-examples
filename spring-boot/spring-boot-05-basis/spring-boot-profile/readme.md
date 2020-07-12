@@ -22,4 +22,12 @@ profile 的激活方式
    ```
 6. idea 启动时指定（配置任意一处即可）
    ![IDEA 激活 profile 的三种方式](./IDEA激活profile的三种方式.png)
+   
+7. web.xml 中配置
+   ```xml
+   <context-param> 
+       <param-name>spring.profiles.active</param-name> 
+       <param-value>dev</param-value> 
+   </context-param>
+   ```
 
