@@ -1,0 +1,27 @@
+### GET /user/list
+GET http://localhost:8080/user/list
+
+### GET /user/get/{id}
+GET http://localhost:8080/user/get/1
+
+### POST /user/add
+POST http://localhost:8080/user/add
+Content-Type: application/json
+
+{
+  "name": "zhangsan"
+}
+
+### PUT /user/update
+PUT http://localhost:8080/user/update
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 1,
+  "name": "lisi"
+}
+
+### DELETE /user/delete/{id}
+DELETE http://localhost:8080/user/delete/1
+
