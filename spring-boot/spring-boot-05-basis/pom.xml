@@ -21,5 +21,6 @@
         <module>spring-boot-actuator</module>
         <module>spring-boot-admin</module>
         <module>spring-boot-email</module>
+        <module>spring-boot-profile</module>
     </modules>
 </project>
