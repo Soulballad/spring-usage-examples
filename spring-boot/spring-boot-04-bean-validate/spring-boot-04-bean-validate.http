@@ -1,15 +1,12 @@
-###
-# test "/user/list"
+### GET /user/list
 GET http://localhost:8080/user/list
 Accept: application/json
 
-###
-# test "/user/get"
+### GET /user/get/{id}
 GET http://localhost:8080/user/get/1
 Accept: application/json
 
-###
-# test "/user/add" success
+### POST /user/add success
 POST http://localhost:8080/user/add
 Content-Type: application/json
 Accept: */*
@@ -21,15 +18,11 @@ Cache-Control: no-cache
   "idCard": "110101200303072399"
 }
 
-###
-# test "/user/add" idCard&name&age illegal
+### POST /user/add idCard&name&age illegal
 POST http://localhost:8080/user/add
 Content-Type: application/json
 Accept: */*
-Cache-Control: no-cache
-Accept-Language: zh_CN
-Content-Language: zh_CN
-lang: zh_CN
+#Accept-Language: en_US 使用此配置可选择中、英文错误提示
 
 {
   "name": "s",
@@ -37,14 +30,10 @@ lang: zh_CN
   "idCard": "1101003072399"
 }
 
-###
-# test "/user/update" success
+### PUT /user/update success
 PUT http://localhost:8080/user/update
 Content-Type: application/json
 Accept: */*
-Cache-Control: no-cache
-Accept-Language: zh_CN
-Content-Language: zh_CN
 
 {
   "id": 2,
@@ -53,12 +42,8 @@ Content-Language: zh_CN
   "idCard": "110101200303072399"
 }
 
-###
-# test "/user/delete" success
+### DELETE /user/delete/{id} success
 DELETE http://localhost:8080/user/delete/1
 Content-Type: application/json
 Accept: */*
-Cache-Control: no-cache
-Accept-Language: zh_CN
-Content-Language: zh_CN
 
