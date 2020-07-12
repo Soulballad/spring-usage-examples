@@ -17,6 +17,7 @@ https://start.spring.io/actuator/info
       2. spring-boot-actuator
       3. spring-boot-admin
       4. spring-boot-email
+      5. spring-boot-profile
    6. [spring-boot-06-jdbc](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-boot/spring-boot-06-jdbc)
       1. spring-boot-data-jpa
       2. spring-boot-multi-datasource
