@@ -1,0 +1,14 @@
+############################################# dev #############################################
+### GET /user/get
+GET http://localhost:8080/user/get
+
+### GET /user/dev
+GET http://localhost:8080/user/dev
+
+
+############################################# prod #############################################
+### GET /user/get
+GET http://localhost:9090/user/get
+
+### GET /user/prod
+GET http://localhost:9090/user/prod

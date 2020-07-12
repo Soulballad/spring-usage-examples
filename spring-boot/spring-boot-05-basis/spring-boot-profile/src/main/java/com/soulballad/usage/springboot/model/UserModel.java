@@ -13,9 +13,9 @@ public class UserModel {
     private String name;
 
     @Value("${user.age}")
-    private String age;
+    private Integer age;
 
-    public UserModel(String name, String age) {
+    public UserModel(String name, Integer age) {
         this.name = name;
         this.age = age;
     }
@@ -31,11 +31,11 @@ public class UserModel {
         this.name = name;
     }
 
-    public String getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
