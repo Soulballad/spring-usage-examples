@@ -9,5 +9,4 @@ public class SpringBootBannerApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringBootBannerApplication.class, args);
     }
-
 }
