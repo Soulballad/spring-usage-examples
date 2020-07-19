@@ -9,5 +9,4 @@ public class SpringBootAdminClientApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringBootAdminClientApplication.class, args);
     }
-
 }
