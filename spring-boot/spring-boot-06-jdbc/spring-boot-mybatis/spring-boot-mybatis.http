@@ -1,0 +1,36 @@
+### GET /user/list
+GET http://localhost:8080/user/list
+Accept: application/json
+
+### GET user/findByName/{name}
+GET http://localhost:8080/user/findByName/lisi
+Accept: application/json
+
+### GET user/findByPhone/{phone}
+GET http://localhost:8080/user/findByPhone/13666666666
+Accept: application/json
+
+### POST user/add
+POST http://localhost:8080/user/add
+Content-Type: application/json
+
+{
+  "name": "zhangsan",
+  "age": 33,
+  "birthday": "1987-07-20",
+  "address": "washington",
+  "phone": "15666666666"
+}
+
+### PUT user/updateByName
+PUT http://localhost:8080/user/updateByName
+Content-Type: application/json
+
+{
+  "name": "zhangsan",
+  "phone": "13456789012"
+}
+
+### DELETE user/deleteByName/{name}
+DELETE http://localhost:8080/user/deleteByName/zhangsan
+Content-Type: application/json

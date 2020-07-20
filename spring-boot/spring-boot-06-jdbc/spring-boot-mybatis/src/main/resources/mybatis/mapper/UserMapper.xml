@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.soulballad.usage.springboot.mapper.UserMapper">
+
+    <resultMap id="baseResultMap" type="com.soulballad.usage.springboot.model.UserModel">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="age" property="age" javaType="INTEGER"/>
+        <result column="birthday" property="birthday" jdbcType="VARCHAR"/>
+        <result column="address" property="address" jdbcType="VARCHAR"/>
+        <result column="phone" property="phone" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, `name`, age, birthday, address, phone
+    </sql>
+
+    <select id="findUserByName" parameterType="java.lang.String" resultMap="baseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM t_user
+        WHERE `name` like concat('%', #{name}, '%')
+    </select>
+
+    <select id="findUserByPhone" parameterType="java.lang.String" resultMap="baseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM t_user
+        WHERE phone = ${phone}
+    </select>
+
+
+    <update id="updateByName" parameterType="com.soulballad.usage.springboot.model.UserModel">
+        UPDATE t_user SET phone = #{phone} WHERE `name` = #{name}
+    </update>
+
+    <delete id="deleteByName" parameterType="java.lang.String">
+       DELETE FROM t_user WHERE `name` = #{name}
+    </delete>
+
+</mapper>
