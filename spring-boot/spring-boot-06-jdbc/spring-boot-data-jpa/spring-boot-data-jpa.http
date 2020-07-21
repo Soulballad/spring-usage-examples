@@ -1,16 +1,17 @@
-### user all
+############################################### USER ###############################################
+### GET /user/list
 GET http://localhost:8080/user/list
 Accept: application/json
 
-### user lisi
+### GET /user/findByName/{name}
 GET http://localhost:8080/user/findByName/lisi
 Accept: application/json
 
-### user 13666666666
+### GET /user/findByPhone/{phone}
 GET http://localhost:8080/user/findByPhone/13666666666
 Accept: application/json
 
-### user page
+### GET /user/page
 GET http://localhost:8080/user/page
 Accept: application/json
 Content-Type: application/json
@@ -23,7 +24,7 @@ Content-Type: application/json
   }
 }
 
-### user updateByName
+### PUT /user/updateByName
 PUT http://localhost:8080/user/updateByName
 Content-Type: application/json
 
@@ -32,20 +33,21 @@ Content-Type: application/json
   "phone": "13456789012"
 }
 
-### user deleteByName
+### DELETE /user/deleteByName/{name}
 DELETE http://localhost:8080/user/deleteByName/zhangsan
 Content-Type: application/json
 
 
-### order all
+############################################### ORDER ###############################################
+### GET  /order/list
 GET http://localhost:8080/order/list
 Accept: application/json
 
-### order queryByCode
+### GET /order/queryByCode/{orderCode}
 GET http://localhost:8080/order/queryByCode/OC2020052312050002
 Accept: application/json
 
-### order queryByExample
+### GET /order/queryByExample
 GET http://localhost:8080/order/queryByExample
 Accept: application/json
 Content-Type: application/json
@@ -53,10 +55,10 @@ Content-Type: application/json
 {
 "userId":2,
 "orderCode":"OC202005231",
-"orderDate": "2020-05-20"
+"orderDate": "2020-05-17"
 }
 
-### order queryByCondition
+### GET /order/queryByCondition
 GET http://localhost:8080/order/queryByCondition
 Accept: application/json
 Content-Type: application/json
