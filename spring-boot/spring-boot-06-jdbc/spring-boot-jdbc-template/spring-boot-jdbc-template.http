@@ -2,11 +2,11 @@
 GET http://localhost:8080/user/list
 Accept: application/json
 
-### GET /user/findByName
+### GET /user/findByName/{name}
 GET http://localhost:8080/user/findByName/zhangsan
 Accept: application/json
 
-### GET /user/findById
+### GET /user/findById/{id}
 GET http://localhost:8080/user/findById/2
 Accept: application/json
 
@@ -59,6 +59,6 @@ Content-Type: application/json
   "address": "suzhou"
 }
 
-### DELETE /user/deleteById
+### DELETE /user/deleteById/{id}
 DELETE http://localhost:8080/user/deleteById/7
 Accept: application/json
