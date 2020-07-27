@@ -54,8 +54,8 @@ public class UserRepositoryTest {
 
     @Test
     public void test_findUserByPhone() {
-        UserModel masterUser = masterUserRepository.findByName("13666666666");
-        UserModel slaveUser = slaveUserRepository.findByName("13666666666");
+        UserModel masterUser = masterUserRepository.findByPhone("13666666666");
+        UserModel slaveUser = slaveUserRepository.findByPhone("13666666666");
         System.err.println(masterUser);
         System.err.println(slaveUser);
     }
