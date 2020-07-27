@@ -9,5 +9,4 @@ public class SpringBootWebfluxRouterApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringBootWebfluxRouterApplication.class, args);
     }
-
 }
