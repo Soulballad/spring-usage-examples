@@ -2,7 +2,7 @@
 GET http://localhost:8080/user/list
 Accept: application/json
 
-### GET /user/list
+### GET /user/find/{id}
 GET http://localhost:8080/user/find/1
 Accept: application/json
 
@@ -33,6 +33,6 @@ Content-Type: application/json
   "phone": "13888888882"
 }
 
-### DELETE /user/delete/3
+### DELETE /user/delete/{id}
 DELETE http://localhost:8080/user/delete/3
 Accept: application/json
