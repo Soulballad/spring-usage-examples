@@ -89,8 +89,8 @@ https://start.spring.io/actuator/info
 
 ### [spring-cloud-consul](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-consul)
 
-- [spring-cloud-csl-01-config](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-netflix/spring-cloud-csl-01-config): Spring Cloud 整合 Consule 实现的配置中心方案
-- [spring-cloud-csl-02-registry](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-netflix/spring-cloud-csl-02-registry): Spring Cloud 整合 Consule 实现的注册中心方案
+- [spring-cloud-csl-01-config](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-consul/spring-cloud-csl-01-config): Spring Cloud 整合 Consule 实现的配置中心方案
+- [spring-cloud-csl-02-registry](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-consul/spring-cloud-csl-02-registry): Spring Cloud 整合 Consule 实现的注册中心方案
 - ...
 
 ## 持续更新中......
