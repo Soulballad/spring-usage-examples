@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 /**
  * @author ：soulballad
  * @version : v1.0
- * @apiNote : hello
+ * @apiNote : ribbon 客户端
  * @since ：2020/6/2 21:53
  */
 @RestController
