@@ -15,8 +15,8 @@ import org.springframework.web.client.RestTemplate;
  * @since ：2020/6/2 21:53
  */
 @RestController
-@RequestMapping(value = "/hello")
-public class HelloController {
+@RequestMapping(value = "/client")
+public class RibbonClientController {
 
     @Autowired
     private RestTemplate restTemplate;
@@ -24,17 +24,23 @@ public class HelloController {
     @Autowired
     private LoadBalancerClient loadBalancer;
 
+    /**
+     * 直接使用 ribbon api
+     */
     @GetMapping(value = "/ribbon")
     public String ribbon() {
-        ServiceInstance instance = loadBalancer.choose("service.provider");
+        ServiceInstance instance = loadBalancer.choose("nfx-ribbon-server");
         String host = instance.getHost();
         int port = instance.getPort();
         System.err.println("ribbon request: " + host + ":" + port);
         return "ribbon request: " + host + ":" + port;
     }
 
+    /**
+     * 使用 restTemplate 调用ribbon
+     */
     @GetMapping(value = "/rest")
     public String rest() {
-        return restTemplate.getForObject("http://service.provider/interface", String.class);
+        return restTemplate.getForObject("http://nfx-ribbon-server/server/ribbon", String.class);
     }
 }

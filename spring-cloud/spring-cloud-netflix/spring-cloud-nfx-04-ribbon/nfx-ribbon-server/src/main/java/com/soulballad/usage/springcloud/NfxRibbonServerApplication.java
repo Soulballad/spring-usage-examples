@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringCloudNetflix04RibbonApplication {
+public class NfxRibbonServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringCloudNetflix04RibbonApplication.class, args);
+        SpringApplication.run(NfxRibbonServerApplication.class, args);
     }
 }

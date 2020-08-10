@@ -4,20 +4,26 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
+        <artifactId>spring-cloud-nfx-04-ribbon</artifactId>
         <groupId>com.soulballad.usage</groupId>
-        <artifactId>spring-cloud-netflix</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>spring-cloud-nfx-04-ribbon</artifactId>
+    <artifactId>nfx-ribbon-server</artifactId>
     <version>${revision}</version>
-    <name>spring-cloud-nfx-04-ribbon</name>
-    <description>Spring Cloud Netflix Ribbon</description>
+    <name>nfx-ribbon-server</name>
+    <description>Spring Cloud Netflix Ribbon Server</description>
 
-    <modules>
-        <module>nfx-ribbon-client</module>
-        <module>nfx-ribbon-server</module>
-    </modules>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

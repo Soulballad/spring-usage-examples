@@ -1,0 +1,5 @@
+### GET /client/ribbon （每次返回的地址都是不一样的）
+GET http://localhost:8070/client/ribbon
+
+### GET /client/rest
+GET http://localhost:8070/client/rest
