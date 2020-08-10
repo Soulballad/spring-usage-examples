@@ -3,7 +3,6 @@ package com.soulballad.usage.springcloud.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
-import org.springframework.cloud.netflix.ribbon.RibbonLoadBalancerClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,10 +26,15 @@ public class HelloController {
 
     @GetMapping(value = "/ribbon")
     public String ribbon() {
-        ServiceInstance instance = loadBalancer.choose("hello");
+        ServiceInstance instance = loadBalancer.choose("service.provider");
         String host = instance.getHost();
         int port = instance.getPort();
         System.err.println("ribbon request: " + host + ":" + port);
         return "ribbon request: " + host + ":" + port;
+    }
+
+    @GetMapping(value = "/rest")
+    public String rest() {
+        return restTemplate.getForObject("http://service.provider/interface", String.class);
     }
 }
