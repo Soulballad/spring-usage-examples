@@ -16,11 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/server")
 public class RibbonServerController {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(RibbonServerController.class);
-
     @GetMapping(value = "/ribbon")
     public String ribbon() {
-        LOGGER.info("ribbon server is calling!");
+        System.err.println("ribbon server is calling!");
         return "Ribbon server has started!";
     }
 }
