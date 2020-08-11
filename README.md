@@ -45,7 +45,6 @@ https://start.spring.io/actuator/info
 
 
 
-
 ## [Spring Cloud](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud)
 
 ### [spring-cloud-01-netflix](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-01-netflix)
@@ -60,13 +59,10 @@ https://start.spring.io/actuator/info
 
 
 
-### [spring-cloud-04-alibaba](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-04-alibaba)
+### [spring-cloud-02-consul](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-02-consul)
 
-- [spring-cloud-alb-01-nacos](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-04-alibaba/spring-cloud-alb-01-nacos): Spring Cloud 整合 Nacos 实现分布式注册中心和配置中心
-- [spring-cloud-alb-02-dubbo](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-04-alibaba/spring-cloud-alb-02-dubbo): Spring Cloud 整合 Dubbo 的分布式服务调用方案
-- [spring-cloud-alb-03-sentinel](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-04-alibaba/spring-cloud-alb-03-sentinel): Spring Cloud 整合 Sentinel 实现的分布式限流、熔断方案
-- [spring-cloud-alb-04-rocketmq](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-04-alibaba/spring-cloud-alb-04-rocketmq): Spring Cloud 整合 RocketMQ 实现的分布式消息方案
-- [spring-cloud-alb-05-seata](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-04-alibaba/spring-cloud-alb-05-seata): Spring Cloud 整合 Seata 实现的分布式事务方案
+- [spring-cloud-csl-01-config](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-02-consul/spring-cloud-csl-01-config): Spring Cloud 整合 Consule 实现的配置中心方案
+- [spring-cloud-csl-02-registry](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-02-consul/spring-cloud-csl-02-registry): Spring Cloud 整合 Consule 实现的注册中心方案
 - ...
 
 
@@ -87,10 +83,14 @@ https://start.spring.io/actuator/info
 
 
 
-### [spring-cloud-02-consul](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-02-consul)
+### [spring-cloud-04-alibaba](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-04-alibaba)
 
-- [spring-cloud-csl-01-config](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-02-consul/spring-cloud-csl-01-config): Spring Cloud 整合 Consule 实现的配置中心方案
-- [spring-cloud-csl-02-registry](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-02-consul/spring-cloud-csl-02-registry): Spring Cloud 整合 Consule 实现的注册中心方案
+- [spring-cloud-alb-01-nacos](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-04-alibaba/spring-cloud-alb-01-nacos): Spring Cloud 整合 Nacos 实现分布式注册中心和配置中心
+- [spring-cloud-alb-02-dubbo](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-04-alibaba/spring-cloud-alb-02-dubbo): Spring Cloud 整合 Dubbo 的分布式服务调用方案
+- [spring-cloud-alb-03-sentinel](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-04-alibaba/spring-cloud-alb-03-sentinel): Spring Cloud 整合 Sentinel 实现的分布式限流、熔断方案
+- [spring-cloud-alb-04-rocketmq](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-04-alibaba/spring-cloud-alb-04-rocketmq): Spring Cloud 整合 RocketMQ 实现的分布式消息方案
+- [spring-cloud-alb-05-seata](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-04-alibaba/spring-cloud-alb-05-seata): Spring Cloud 整合 Seata 实现的分布式事务方案
 - ...
+
 
 ## 持续更新中......
