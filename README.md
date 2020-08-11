@@ -5,9 +5,9 @@ spring 组件的使用方法，主要包含 Spring Boot 和 Spring Cloud。
 1. Spring Boot：基于 **2.2.0.RELEASE**；
 2. Spring Cloud：基于 **Hoxton.RELEASE**。包含四种实现：
    - **spring-cloud-01-netflix**: Netflix 实现的 spring cloud 组件；
-   - **spring-cloud-04-alibaba**: Alibaba 实现的 spring cloud 组件；
-   - **spring-cloud-03-official**: Spring 官方实现的组件；
    - **spring-cloud-02-consul**: Consul 实现的 spring cloud 组件；
+   - **spring-cloud-03-official**: Spring 官方实现的组件；
+   - **spring-cloud-04-alibaba**: Alibaba 实现的 spring cloud 组件；
 3. [码云](https://gitee.com/soulballad/spring-usage-examples)
 
 *springboot和springcloud版本对应关系* 
