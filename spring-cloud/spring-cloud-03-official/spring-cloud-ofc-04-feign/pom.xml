@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.soulballad.usage</groupId>
+        <artifactId>spring-cloud-03-official</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>spring-cloud-ofc-04-feign</artifactId>
+    <version>${revision}</version>
+    <name>spring-cloud-ofc-04-feign</name>
+    <description>Spring Cloud Official Feign</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>ofc-feign-eureka</module>
+        <module>ofc-feign-user-api</module>
+        <module>ofc-feign-user-client</module>
+        <module>ofc-feign-user-server</module>
+    </modules>
+</project>

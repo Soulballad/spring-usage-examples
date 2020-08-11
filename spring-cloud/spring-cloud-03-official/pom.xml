@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.soulballad.usage</groupId>
+        <artifactId>spring-cloud</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>spring-cloud-03-official</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>spring-cloud-ofc-01-config</module>
+        <module>spring-cloud-ofc-02-zookeeper</module>
+        <module>spring-cloud-ofc-03-circuit-breaker</module>
+        <module>spring-cloud-ofc-04-feign</module>
+        <module>spring-cloud-ofc-05-gateway</module>
+        <module>spring-cloud-ofc-06-stream</module>
+        <module>spring-cloud-ofc-07-bus</module>
+        <module>spring-cloud-ofc-08-loadbalancer</module>
+        <module>spring-cloud-ofc-09-sleuth</module>
+        <module>spring-cloud-ofc-10-security</module>
+    </modules>
+</project>

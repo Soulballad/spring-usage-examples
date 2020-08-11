@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>spring-cloud-02-consul</artifactId>
+        <groupId>com.soulballad.usage</groupId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>spring-cloud-csl-02-registry</artifactId>
+    <version>${revision}</version>
+    <name>spring-cloud-csl-02-registry</name>
+    <description>Spring Cloud Consul Registry</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>csl-registry-provider</module>
+        <module>csl-registry-consumer</module>
+    </modules>
+
+</project>

@@ -4,20 +4,22 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
+        <artifactId>spring-cloud</artifactId>
         <groupId>com.soulballad.usage</groupId>
-        <artifactId>spring-usage-examples</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>spring-cloud</artifactId>
+    <artifactId>spring-cloud-01-netflix</artifactId>
     <packaging>pom</packaging>
 
     <modules>
-        <module>spring-cloud-01-netflix</module>
-        <module>spring-cloud-02-consul</module>
-        <module>spring-cloud-03-official</module>
-        <module>spring-cloud-04-alibaba</module>
+        <module>spring-cloud-nfx-01-archaius</module>
+        <module>spring-cloud-nfx-02-eureka</module>
+        <module>spring-cloud-nfx-03-hystrix</module>
+        <module>spring-cloud-nfx-04-ribbon</module>
+        <module>spring-cloud-nfx-05-zuul</module>
+        <module>spring-cloud-nfx-06-assemble</module>
     </modules>
 </project>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.soulballad.usage</groupId>
+        <artifactId>spring-cloud-01-netflix</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>spring-cloud-nfx-03-hystrix</artifactId>
+    <version>${revision}</version>
+    <name>spring-cloud-nfx-03-hystrix</name>
+    <description>Spring Cloud Netflix Hystrix</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>hystrix-demo</module>
+        <module>hystrix-dashboard-demo</module>
+        <module>hystrix-dashboard-turbine</module>
+    </modules>
+
+</project>
