@@ -17,7 +17,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>ofc-feign-eureka</module>
+        <module>ofc-feign-eureka-server</module>
         <module>ofc-feign-user-api</module>
         <module>ofc-feign-user-client</module>
         <module>ofc-feign-user-server</module>

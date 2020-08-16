@@ -10,9 +10,9 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-	<artifactId>ofc-feign-eureka</artifactId>
+	<artifactId>ofc-feign-eureka-server</artifactId>
 	<version>${revision}</version>
-	<name>ofc-feign-eureka</name>
+	<name>ofc-feign-eureka-server</name>
 
 	<properties>
 		<java.version>1.8</java.version>
