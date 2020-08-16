@@ -34,5 +34,5 @@ Content-Type: application/json
 }
 
 ###  DELETE /consumer/user/delete/{id}
-DELETE http://localhost:8080/consumer/user/delete/3
+DELETE http://localhost:8080/consumer/user/delete/4
 Accept: application/json
