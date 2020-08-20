@@ -51,7 +51,7 @@ https://start.spring.io/actuator/info
 
 - [spring-cloud-nfx-01-archaius](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-01-netflix/spring-cloud-nfx-01-archaius): Spring Cloud 整合 Archaius 实现的分布式配置中心方案
 - [spring-cloud-nfx-02-eureka](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-01-netflix/spring-cloud-nfx-02-eureka): Spring Cloud 整合 Eureka 实现的分布式注册中心方案
-- [spring-cloud-nfx-03-hystrix](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-01-netflix/spring-cloud-nfx-03-hystrix): Spring Cloud 整合 Hystrix 实现的分布式限流、熔断方案
+- [spring-cloud-nfx-03-hystrix](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-01-netflix/spring-cloud-nfx-03-hystrix): Spring Cloud 整合 Hystrix 实现的分布式服务降级方案
 - [spring-cloud-nfx-04-ribbon](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-01-netflix/spring-cloud-nfx-04-ribbon): Spring Cloud 整合 Ribbon实现的分布式负载均衡方案
 - [spring-cloud-nfx-05-zuul](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-01-netflix/spring-cloud-nfx-05-zuul): Spring Cloud 整合 Zuul 实现的分布式网关方案
 - [spring-cloud-nfx-06-assemble](https://github.com/Soulballad/spring-usage-examples/tree/master/spring-cloud/spring-cloud-01-netflix/spring-cloud-nfx-06-assemble): Spring Cloud Netflix 组件组合运用
