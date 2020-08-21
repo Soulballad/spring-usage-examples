@@ -13,10 +13,16 @@ import com.netflix.hystrix.HystrixCommandGroupKey;
  */
 public class HelloCommand extends HystrixCommand<String> {
 
+    /**
+     * 继承自 HystrixCommand，定义要支持降级的方法
+     */
     public HelloCommand() {
         super(HystrixCommandGroupKey.Factory.asKey("hello"), 100);
     }
 
+    /**
+     * 正常情况下执行
+     */
     @Override
     protected String run() throws Exception {
 
@@ -25,6 +31,9 @@ public class HelloCommand extends HystrixCommand<String> {
         return "hello hystrix command!";
     }
 
+    /**
+     * 被降级后的执行
+     */
     @Override
     protected String getFallback() {
         return "hystrix command request timeout";

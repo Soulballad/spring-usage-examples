@@ -17,6 +17,10 @@ import com.soulballad.usage.springcloud.command.HelloCommand;
 @RestController
 public class DemoController {
 
+    /**
+     * 设置线程的超时时间是100ms，默认值为50ms
+     * 如果超时触发降级之后，执行 fallbackMethod 中的 timeoutMethod 方法
+     */
     // HystrixCommandProperties
     @GetMapping(value = "/demo")
     @HystrixCommand(fallbackMethod = "timeoutMethod", commandProperties = {
@@ -32,6 +36,9 @@ public class DemoController {
         return "the request cost " + value + " ms, timeout!";
     }
 
+    /**
+     * 使用自定义的 HelloCommand 定义降级策略
+     */
     @GetMapping(value = "/hello")
     public String hello() {
         return new HelloCommand().execute();
