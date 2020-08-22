@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @apiNote : config
  * @since ：2020/6/11 21:08
  */
+// 1. 需要开启actuator端点，然后调用刷新接口才能生效； 2. 多节点的情况下，只有调用了刷新接口的节点生效，其他节点未变；
 @RefreshScope
 @RestController
 public class OfcConfigController {

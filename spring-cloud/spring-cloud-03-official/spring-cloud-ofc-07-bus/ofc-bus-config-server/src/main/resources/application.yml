@@ -23,6 +23,8 @@ spring:
       enabled: true
       trace:
         enabled: true
+      refresh:
+        enabled: true
   kafka:
     consumer:
       # 指定默认消费者 group id
