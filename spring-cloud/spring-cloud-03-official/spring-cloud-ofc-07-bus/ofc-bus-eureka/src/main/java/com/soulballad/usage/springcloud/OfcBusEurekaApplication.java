@@ -7,7 +7,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @EnableEurekaServer
 @SpringBootApplication
-@PropertySource("classpath:kafka.properties")
+//@PropertySource("classpath:kafka.properties")
 public class OfcBusEurekaApplication {
 
     public static void main(String[] args) {
