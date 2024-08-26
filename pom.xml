@@ -34,7 +34,7 @@
         <spring-cloud-cirbak-retry.version>1.0.0.RELEASE</spring-cloud-cirbak-retry.version>
         <platform-bom.version>Cairo-SR5</platform-bom.version>
         <maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
-        <swagger.version>2.9.2</swagger.version>
+        <swagger.version>2.10.0</swagger.version>
         <feign.version>1.4.4.RELEASE</feign.version>
         <knife4j.version>1.9.6</knife4j.version>
         <mybatis-spring-boot.version>2.1.3</mybatis-spring-boot.version>
